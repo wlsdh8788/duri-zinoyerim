@@ -35,6 +35,7 @@ jobs:
         env:
           KTO_SERVICE_KEY: ${{ secrets.KTO_SERVICE_KEY }}
           KOPIS_SERVICE_KEY: ${{ secrets.KOPIS_SERVICE_KEY }}
+          CULTURE_SERVICE_KEY: ${{ secrets.CULTURE_SERVICE_KEY }}
         run: |
           if [ -n "$KTO_SERVICE_KEY" ] || [ -n "$KOPIS_SERVICE_KEY" ]; then
             python scripts/update_events.py
