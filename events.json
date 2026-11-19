@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-19",
-  "auto_update": false,
+  "updated": "2026-11-20 00:32 KST",
+  "auto_update": true,
   "events": [
     {
       "id": "mukho-2026",
@@ -97,7 +97,7 @@
   ],
   "sources": {
     "manual": 4,
-    "tourapi": "미설정",
+    "tourapi": 0,
     "kopis": "미설정"
   }
 }
