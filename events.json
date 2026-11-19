@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-20 00:55 KST",
+  "updated": "2026-11-20 01:16 KST",
   "auto_update": true,
   "events": [
     {
@@ -24,7 +24,11 @@
       "mapQuery": "서울 중구 서울특별시 중구 정동길 3 (정동)",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/01/4060301_image2_1.png",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": true
     },
     {
       "id": "tourapi-2786391",
@@ -48,7 +52,11 @@
       "mapQuery": "부산 수영구 부산광역시 수영구 광안해변로 219 (광안동)",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/97/4163097_image2_1.jpg",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": true
     },
     {
       "id": "tourapi-4060434",
@@ -72,7 +80,11 @@
       "mapQuery": "서울 종로구 서울특별시 종로구 인사동5길 10 (인사동)",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/35/4060435_image2_1.jpg",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": true
     },
     {
       "id": "tourapi-2809535",
@@ -96,7 +108,11 @@
       "mapQuery": "서울 종로구 서울특별시 종로구 종로 54 (관철동)",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/57/4001657_image2_1.jpg",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": true
     },
     {
       "id": "tourapi-3107059",
@@ -120,7 +136,11 @@
       "mapQuery": "서울 중구 서울특별시 중구 세종대로 40 (남대문로4가)",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/99/4001599_image2_1.jpg",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": true
     },
     {
       "id": "tourapi-3473295",
@@ -144,7 +164,11 @@
       "mapQuery": "서울 중구 서울특별시 중구 을지로 281 (을지로7가)",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/09/4046009_image2_1.png",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": true
     },
     {
       "id": "tourapi-292961",
@@ -168,7 +192,11 @@
       "mapQuery": "서울 중구 서울특별시 중구 세종대로 99 (정동)",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/79/4039379_image2_1.jpg",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": true
     },
     {
       "id": "tourapi-2433596",
@@ -192,7 +220,11 @@
       "mapQuery": "인천 영종구 인천광역시 영종구 공항로 272 (운서동)",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/76/4029576_image2_1.jpg",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": true
     },
     {
       "id": "tourapi-3113265",
@@ -216,7 +248,11 @@
       "mapQuery": "경기 안양시 경기도 안양시 만안구 예술공원로 180 (안양동)",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/69/4054469_image2_1.jpg",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": true
     },
     {
       "id": "tourapi-3488421",
@@ -240,7 +276,11 @@
       "mapQuery": "경기 파주시 경기도 파주시 탄현면 헤이리로 16",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/22/4140222_image2_1.jpg",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": true
     },
     {
       "id": "tourapi-3492276",
@@ -264,7 +304,11 @@
       "mapQuery": "인천 제물포구 인천광역시 제물포구 송현동",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/82/4055582_image2_1.png",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": true
     },
     {
       "id": "tourapi-293030",
@@ -288,7 +332,11 @@
       "mapQuery": "경기 안성시 경기도 안성시 보개면 남사당로 198-2",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/32/4039532_image2_1.jpg",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": true,
+      "isLongRunning": true
     },
     {
       "id": "tourapi-4058556",
@@ -312,7 +360,11 @@
       "mapQuery": "경기 수원시 경기도 수원시 영통구 도청로 지하36 (이의동)",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/21/4058721_image2_1.png",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": true
     },
     {
       "id": "tourapi-4062805",
@@ -336,7 +388,11 @@
       "mapQuery": "충북 괴산군 충청북도 괴산군 괴산읍 충민로검승1길 6",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/07/4063007_image2_1.jpg",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": true
     },
     {
       "id": "tourapi-2720203",
@@ -360,7 +416,11 @@
       "mapQuery": "서울 종로구 서울특별시 종로구 세종대로 지하172 (세종로)",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/74/4060474_image2_1.png",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": true
     },
     {
       "id": "tourapi-2598331",
@@ -384,7 +444,11 @@
       "mapQuery": "서울 중구 서울특별시 중구 을지로 지하12 (을지로1가)",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/68/4059668_image2_1.jpg",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": true
     },
     {
       "id": "tourapi-4082595",
@@ -408,7 +472,11 @@
       "mapQuery": "서울 종로구 서울특별시 종로구 효자로13길 45 (효자동)",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/70/4082670_image2_1.png",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": true
     },
     {
       "id": "tourapi-1032770",
@@ -432,7 +500,11 @@
       "mapQuery": "부산 해운대구 부산광역시 해운대구 수영강변대로 120 (우동)",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/20/4064420_image2_1.jpg",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": true
     },
     {
       "id": "tourapi-4098134",
@@ -456,7 +528,11 @@
       "mapQuery": "대전 유성구 대전광역시 유성구 온천로 89 (봉명동)",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/30/4098430_image2_1.jpg",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": true
     },
     {
       "id": "tourapi-2987791",
@@ -480,7 +556,11 @@
       "mapQuery": "경기 파주시 경기도 파주시 문산읍 임진각로 148-40",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/23/4116823_image2_1.jpg",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": false
     },
     {
       "id": "tourapi-4127713",
@@ -504,7 +584,11 @@
       "mapQuery": "서울 종로구 서울특별시 종로구 동숭길 3 (동숭동)",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/18/4127718_image2_1.jpg",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": false
     },
     {
       "id": "tourapi-4124907",
@@ -528,7 +612,11 @@
       "mapQuery": "서울 강동구 서울특별시 강동구 선사로 83-19 (천호동)",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/63/4147163_image2_1.jpg",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": false
     },
     {
       "id": "tourapi-3468240",
@@ -552,7 +640,11 @@
       "mapQuery": "전북 전주시 전북특별자치도 전주시 완산구 전라감영로 55 (중앙동4가)",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/62/4123062_image2_1.jpg",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": false
     },
     {
       "id": "tourapi-4127746",
@@ -576,7 +668,11 @@
       "mapQuery": "서울 중구 서울특별시 중구 퇴계로34길 28 (필동2가)",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/48/4127748_image2_1.jpg",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": false
     },
     {
       "id": "tourapi-3370452",
@@ -600,7 +696,11 @@
       "mapQuery": "대구 수성구 대구광역시 수성구 무학로 112 (두산동)",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/75/4116875_image2_1.jpg",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": false
     },
     {
       "id": "tourapi-2789700",
@@ -624,7 +724,11 @@
       "mapQuery": "경기 파주시 경기도 파주시 소리천로 67 (와동동)",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/81/3566581_image2_1.jpg",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": true
     },
     {
       "id": "tourapi-4144229",
@@ -648,7 +752,11 @@
       "mapQuery": "서울 중구 서울특별시 중구 세종대로 119 (태평로1가)",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/31/4144231_image2_1.jpg",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": true
     },
     {
       "id": "tourapi-4115275",
@@ -672,7 +780,11 @@
       "mapQuery": "서울 종로구 서울특별시 종로구 동숭길 122 (동숭동)",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/01/4115301_image2_1.png",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": false
     },
     {
       "id": "tourapi-588175",
@@ -696,7 +808,11 @@
       "mapQuery": "경북 포항시 경상북도 포항시 북구 해안로 48 (항구동)",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/51/4130851_image2_1.jpg",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": false
     },
     {
       "id": "tourapi-3360113",
@@ -720,7 +836,11 @@
       "mapQuery": "부산 해운대구 부산광역시 해운대구 APEC로 30 (우동)",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/26/4135926_image2_1.png",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": false
     },
     {
       "id": "tourapi-1129018",
@@ -744,7 +864,11 @@
       "mapQuery": "인천 남동구 인천광역시 남동구 예술로 149 (구월동)",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/00/4118300_image2_1.jpg",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": false
     },
     {
       "id": "tourapi-4151220",
@@ -768,7 +892,11 @@
       "mapQuery": "서울 서초구 서울특별시 서초구 강남대로 27 (양재동)",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/59/4155259_image2_1.jpg",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": false
     },
     {
       "id": "tourapi-4151221",
@@ -792,7 +920,11 @@
       "mapQuery": "강원 원주 강원특별자치도 원주시 남산로218번길 7 (학성동)",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/75/4163075_image2_1.png",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": false
     },
     {
       "id": "tourapi-2854855",
@@ -816,7 +948,11 @@
       "mapQuery": "서울 중구 서울특별시 중구 을지로 281 (을지로7가)",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/49/4135249_image2_1.jpg",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": false
     },
     {
       "id": "tourapi-4101384",
@@ -840,7 +976,11 @@
       "mapQuery": "서울 중구 서울특별시 중구 세종대로21길 30 (태평로1가)",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/61/4103061_image2_1.jpg",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": true
     },
     {
       "id": "tourapi-2410727",
@@ -864,7 +1004,11 @@
       "mapQuery": "서울 강남구 서울특별시 강남구 남부순환로 3104 (대치동)",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/27/4118327_image2_1.png",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": false
     },
     {
       "id": "tourapi-3470738",
@@ -888,7 +1032,11 @@
       "mapQuery": "경남 남해군 경상남도 남해군 삼동면 독일로 182",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/48/4136448_image2_1.png",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": false
     },
     {
       "id": "mukho-2026",
@@ -935,7 +1083,11 @@
       "mapQuery": "경기 수원시 경기도 수원시 권선구 세화로134번길 37 (서둔동)",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/09/4106209_image2_1.jpg",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": false
     },
     {
       "id": "tourapi-3395188",
@@ -959,7 +1111,11 @@
       "mapQuery": "전북 순창군 전북특별자치도 순창군 순창읍 장류로 55",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/39/3515039_image2_1.jpg",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": false
     },
     {
       "id": "tourapi-4151224",
@@ -983,7 +1139,11 @@
       "mapQuery": "전북 전주시 전북특별자치도 전주시 완산구 전라감영로 55 (중앙동4가)",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/25/4151225_image2_1.jpg",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": false
     },
     {
       "id": "tourapi-3315407",
@@ -1007,7 +1167,11 @@
       "mapQuery": "인천 제물포구 인천광역시 제물포구 월미로 33 (북성동1가)",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/10/4151210_image2_1.jpg",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": false
     },
     {
       "id": "tourapi-4163259",
@@ -1031,7 +1195,11 @@
       "mapQuery": "서울 종로구 서울특별시 종로구 인사동9길 26 (견지동)",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/60/4163260_image2_1.jpg",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": false
     },
     {
       "id": "gangneung-xmas-2026",
@@ -1101,7 +1269,11 @@
       "mapQuery": "울산 울주군 울산광역시 울주군 삼남읍 울산역로 255",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/24/4144124_image2_1.jpg",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": false
     },
     {
       "id": "tourapi-3437916",
@@ -1125,7 +1297,11 @@
       "mapQuery": "부산 해운대구 부산광역시 해운대구 수영강변대로 120 (우동)",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/49/4130849_image2_1.png",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": false
     },
     {
       "id": "tourapi-4111479",
@@ -1149,7 +1325,11 @@
       "mapQuery": "경남 통영시 경상남도 통영시 산양읍",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/10/4163310_image2_1.png",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": false
     },
     {
       "id": "tourapi-2048902",
@@ -1173,7 +1353,11 @@
       "mapQuery": "부산 해운대구 부산광역시 해운대구 중동 1411-14",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/41/4155841_image2_1.jpg",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": false
     },
     {
       "id": "tourapi-3569496",
@@ -1197,7 +1381,11 @@
       "mapQuery": "전북 전주시 전북특별자치도 전주시 완산구 전라감영로 55 (중앙동4가)",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/65/4163165_image2_1.jpg",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": false
     },
     {
       "id": "tourapi-3545306",
@@ -1221,7 +1409,11 @@
       "mapQuery": "경기 포천시 경기도 포천시 신북면 아트밸리로 234",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/07/4133507_image2_1.jpg",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": false
     },
     {
       "id": "tourapi-4153641",
@@ -1245,7 +1437,11 @@
       "mapQuery": "경북 칠곡군 경상북도 칠곡군 왜관읍 중앙로8길 10",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/43/4153643_image2_1.jpg",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": false
     },
     {
       "id": "tourapi-3522322",
@@ -1269,7 +1465,11 @@
       "mapQuery": "인천 제물포구 인천광역시 제물포구 월미로 33 (북성동1가)",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/24/4136124_image2_1.jpg",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": false
     },
     {
       "id": "tourapi-4108260",
@@ -1293,7 +1493,11 @@
       "mapQuery": "서울 마포구 서울특별시 마포구 월드컵로 251 (성산동)",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/70/4109170_image2_1.jpg",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": false
     },
     {
       "id": "tourapi-1762432",
@@ -1317,7 +1521,11 @@
       "mapQuery": "경기 양평군 경기도 양평군 곱다니길 55-2",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/82/4164382_image2_1.JPG",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": true
     },
     {
       "id": "tourapi-4095478",
@@ -1341,7 +1549,11 @@
       "mapQuery": "부산 해운대구 부산광역시 해운대구 APEC로 55 (우동)",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/64/4095564_image2_1.png",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": false
     },
     {
       "id": "tourapi-3035607",
@@ -1365,7 +1577,11 @@
       "mapQuery": "서울 종로구 서울특별시 종로구 세종대로 지하172 (세종로)",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/78/4153378_image2_1.png",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": false
     },
     {
       "id": "tourapi-2515174",
@@ -1389,7 +1605,11 @@
       "mapQuery": "서울 중구 서울특별시 중구 을지로 281 (을지로7가)",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/18/4165118_image2_1.jpg",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": false
     },
     {
       "id": "tourapi-1095732",
@@ -1413,7 +1633,11 @@
       "mapQuery": "서울 중구 서울특별시 중구 태평로1가",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/35/4147235_image2_1.jpg",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": false
     },
     {
       "id": "tourapi-2785797",
@@ -1437,7 +1661,11 @@
       "mapQuery": "서울 중구 서울특별시 중구 태평로 1가 1",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/70/4152170_image2_1.jpg",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": false
     },
     {
       "id": "tourapi-4115260",
@@ -1461,7 +1689,11 @@
       "mapQuery": "서울 종로구 서울특별시 종로구 동숭길 122 (동숭동)",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/61/4115261_image2_1.png",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": false
     },
     {
       "id": "tourapi-2802077",
@@ -1485,7 +1717,11 @@
       "mapQuery": "서울 강남구 서울특별시 강남구 테헤란로7길 22 (역삼동)",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/12/4165112_image2_1.jpg",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": false
     },
     {
       "id": "tourapi-2630385",
@@ -1509,7 +1745,11 @@
       "mapQuery": "서울 중구 서울특별시 중구 명동길 14 (명동2가)",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/66/4113266_image2_1.jpg",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": false
     },
     {
       "id": "pyeongchang-trout-2027",
@@ -1556,7 +1796,11 @@
       "mapQuery": "강원 화천 강원특별자치도 화천군 화천읍 산천어길 137",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/46/4071246_image2_1.jpg",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": false
     },
     {
       "id": "tourapi-1882134",
@@ -1580,12 +1824,17 @@
       "mapQuery": "강원 철원 강원특별자치도 철원군 동송읍 장흥리 725",
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
-      "lastVerified": "2026-11-20"
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/18/4016918_image2_1.jpg",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": false
     }
   ],
   "sources": {
     "manual": 4,
     "tourapi": 64,
-    "kopis": "미설정"
+    "kopis": "미설정",
+    "culture": "미설정"
   }
 }
