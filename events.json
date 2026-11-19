@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-20 01:35 KST",
+  "updated": "2026-11-20 08:05 KST",
   "auto_update": true,
   "events": [
     {
@@ -27456,6 +27456,34 @@
       "isLongRunning": false
     },
     {
+      "id": "tourapi-3578130",
+      "title": "울산 크리스마스 마켓",
+      "province": "울산",
+      "city": "남구",
+      "category": "축제",
+      "start": "2026-11-27",
+      "end": "2026-12-26",
+      "place": "울산광역시 남구 대공원로 94 (옥동)",
+      "address": "울산광역시 남구 대공원로 94 (옥동)",
+      "price": "요금 확인 필요",
+      "priceType": "unknown",
+      "emoji": "🎉",
+      "theme": "sea",
+      "intro": "울산 남구에서 열리는 축제 정보. 상세 일정과 예약 여부는 공식 출처에서 확인해 줘.",
+      "highlight": "주말 데이트 후보",
+      "status": "자동 수집 · 방문 전 재확인",
+      "sourceLabel": "한국관광공사",
+      "sourceUrl": "https://korean.visitkorea.or.kr/search/search_list.do?keyword=%EC%9A%B8%EC%82%B0%20%ED%81%AC%EB%A6%AC%EC%8A%A4%EB%A7%88%EC%8A%A4%20%EB%A7%88%EC%BC%93",
+      "mapQuery": "울산 남구 울산광역시 남구 대공원로 94 (옥동)",
+      "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
+      "collectionMethod": "한국관광공사 API",
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/40/4153340_image2_1.jpg",
+      "imageType": "관광공사 제공 대표 이미지",
+      "isPermanent": false,
+      "isLongRunning": false
+    },
+    {
       "id": "kopis-PF305816",
       "title": "월드오케스트라페스티벌, 아비 아비탈과 챔버 앙상블 [대구]",
       "province": "대구",
@@ -48088,6 +48116,34 @@
       "lastVerified": "2026-11-20",
       "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF303748_261019_135832.jpg",
       "imageType": "KOPIS 공연 포스터",
+      "isPermanent": false,
+      "isLongRunning": false
+    },
+    {
+      "id": "tourapi-4088149",
+      "title": "발코니 뮤직쇼 앤 스트릿 페스타",
+      "province": "부산",
+      "city": "중구",
+      "category": "축제",
+      "start": "2026-12-05",
+      "end": "2026-12-05",
+      "place": "부산광역시 중구 광복로 72-1 (광복동2가)",
+      "address": "부산광역시 중구 광복로 72-1 (광복동2가)",
+      "price": "요금 확인 필요",
+      "priceType": "unknown",
+      "emoji": "🎉",
+      "theme": "sea",
+      "intro": "부산 중구에서 열리는 축제 정보. 상세 일정과 예약 여부는 공식 출처에서 확인해 줘.",
+      "highlight": "주말 데이트 후보",
+      "status": "자동 수집 · 방문 전 재확인",
+      "sourceLabel": "한국관광공사",
+      "sourceUrl": "https://korean.visitkorea.or.kr/search/search_list.do?keyword=%EB%B0%9C%EC%BD%94%EB%8B%88%20%EB%AE%A4%EC%A7%81%EC%87%BC%20%EC%95%A4%20%EC%8A%A4%ED%8A%B8%EB%A6%BF%20%ED%8E%98%EC%8A%A4%ED%83%80",
+      "mapQuery": "부산 중구 부산광역시 중구 광복로 72-1 (광복동2가)",
+      "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
+      "collectionMethod": "한국관광공사 API",
+      "lastVerified": "2026-11-20",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/37/4166437_image2_1.jpg",
+      "imageType": "관광공사 제공 대표 이미지",
       "isPermanent": false,
       "isLongRunning": false
     },
@@ -85917,7 +85973,7 @@
   ],
   "sources": {
     "manual": 4,
-    "tourapi": 64,
+    "tourapi": 66,
     "kopis": 3005,
     "culture": "오류 · 기존 데이터 사용"
   }
