@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""강원도 행사정보 자동 수집. Python 표준 라이브러리만 사용한다.
+"""전국 행사정보 자동 수집. Python 표준 라이브러리만 사용한다.
 
 API 키는 환경변수 KTO_SERVICE_KEY / KOPIS_SERVICE_KEY로만 전달한다.
 데이터가 실패하면 기존 이벤트를 유지하고 상태를 기록한다.
@@ -18,7 +18,23 @@ import unicodedata
 import xml.etree.ElementTree as ET
 
 ROOT=Path(__file__).resolve().parents[1]
-CITIES=['강릉','동해','속초','양양','삼척','평창','춘천','원주','홍천','횡성','태백','정선','영월','인제','고성','철원','화천','양구']
+# TourAPI 주소에 사용되는 공식 시도명과 약칭을 한 화면용 표기로 정규화한다.
+PROVINCE_ALIASES = {
+    '서울특별시':'서울', '서울':'서울', '부산광역시':'부산', '부산':'부산',
+    '대구광역시':'대구', '대구':'대구', '인천광역시':'인천', '인천':'인천',
+    '광주광역시':'광주', '광주':'광주', '대전광역시':'대전', '대전':'대전',
+    '울산광역시':'울산', '울산':'울산', '세종특별자치시':'세종', '세종':'세종',
+    '경기도':'경기', '경기':'경기',
+    '강원특별자치도':'강원', '강원도':'강원', '강원':'강원',
+    '충청북도':'충북', '충북':'충북', '충청남도':'충남', '충남':'충남',
+    '전북특별자치도':'전북', '전라북도':'전북', '전북':'전북',
+    '전라남도':'전남', '전남':'전남',
+    '경상북도':'경북', '경북':'경북', '경상남도':'경남', '경남':'경남',
+    '제주특별자치도':'제주', '제주도':'제주', '제주':'제주',
+}
+ALIASES_ORDERED = sorted(PROVINCE_ALIASES.items(), key=lambda x: -len(x[0]))
+GANGWON_CITIES = ['강릉','동해','속초','양양','삼척','평창','춘천','원주','홍천','횡성','태백','정선','영월','인제','고성','철원','화천','양구']
+
 SEOUL_TZ=timezone(timedelta(hours=9))
 TODAY=datetime.now(SEOUL_TZ).date()
 BEGIN=TODAY-timedelta(days=80)  # 이미 진행 중인 행사 조회
@@ -32,14 +48,35 @@ def get_bytes(url, params, timeout=25):
         return resp.read()
 
 
-def city_of(value):
-    s=(value or '').replace('강원특별자치도','').replace('강원도','')
-    for c in CITIES:
-        if re.search(r'(?<![가-힣])'+re.escape(c)+r'(?:시|군)?(?![가-힣])',s): return c
-    for c in CITIES:
-        if c in s: return c
-    return None
-
+def location_of(address, area_hint=''):
+    """공식 주소에서 시도/시군구 추출. 확신할 수 없는 행사는 지역 미상으로 구분."""
+    s = ' '.join(str(address or '').split())
+    hint = ' '.join(str(area_hint or '').split())
+    province, remainder = None, s
+    for alias, name in ALIASES_ORDERED:
+        if s == alias or s.startswith(alias + ' '):
+            province, remainder = name, s[len(alias):].strip()
+            break
+    if not province:
+        for alias, name in ALIASES_ORDERED:
+            if hint == alias or hint.startswith(alias + ' '):
+                province = name
+                remainder = s if s and not any(s.startswith(a) for a in PROVINCE_ALIASES) else ''
+                break
+    if not province:
+        for city in GANGWON_CITIES:
+            if s.startswith(city + '시 ') or s.startswith(city + '군 ') or s == city:
+                return '강원', city
+        return None, None
+    if province == '세종':
+        return '세종', '세종'
+    token = remainder.split(' ')[0].strip() if remainder else ''
+    # KOPIS가 시도명만 제공할 때 시설명 등을 시군구로 오인하지 않기 위한 방어
+    if token and not re.fullmatch(r'[가-힣A-Za-z0-9·-]+(?:시|군|구)', token):
+        token = ''
+    if province == '강원' and token.endswith(('시','군')):
+        token = token[:-1]
+    return province, token or province + ' 전체'
 
 def iso_date(value):
     digits=re.sub(r'[^0-9]','',str(value or ''))
@@ -63,28 +100,30 @@ VISUAL={'축제':('🎉','sea'),'공연':('🎵','music'),'전시':('🖼️','m
 def build(raw, category='축제', provider='한국관광공사', code=''):
     title=re.sub(r'<[^>]*>','',str(raw.get('title') or '')).strip()
     addr=str(raw.get('address') or '').strip()
-    city=city_of(addr+' '+str(raw.get('city') or '')) or ('강원 전체' if raw.get('province_wide') else None)
+    province, city = location_of(addr, raw.get('area_hint') or raw.get('province') or raw.get('city') or '')
+    if not province and raw.get('province_wide'):
+        province, city = location_of('', raw.get('area_hint') or '')
     start,end=iso_date(raw.get('start')),iso_date(raw.get('end'))
-    if not title or not city or not start or not end or end<start or end<TODAY.isoformat() or start>END.isoformat():return None
+    if not title or not province or not city or not start or not end or end<start or end<TODAY.isoformat() or start>END.isoformat():return None
     category=classify(title,category)
     emoji,theme=VISUAL.get(category,('🎉','sea'))
     place=str(raw.get('place') or '').strip() or addr or city
     source_url=str(raw.get('url') or '')
     if not source_url.startswith(('http://','https://')):source_url='https://www.google.com/search?q='+quote(title+' '+city)
     return {'id':f'{code}-{str(raw.get("id") or "").strip()}' if raw.get('id') else f'{code}-{title[:20]}-{start}',
-            'title':title,'city':city,'category':category,'start':start,'end':end,
+            'title':title,'province':province,'city':city,'category':category,'start':start,'end':end,
             'place':place,'address':addr,'price':'요금 확인 필요','priceType':'unknown','emoji':emoji,'theme':theme,
-            'intro':f'{city}에서 열리는 {category} 정보. 상세 일정과 예약 여부는 공식 출처에서 확인해 줘.',
+            'intro':f'{province} {city}에서 열리는 {category} 정보. 상세 일정과 예약 여부는 공식 출처에서 확인해 줘.',
             'highlight':'주말 데이트 후보','status':'자동 수집 · 방문 전 재확인','sourceLabel':provider,
-            'sourceUrl':source_url,'mapQuery':f'{city} {place}','note':'외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인',
+            'sourceUrl':source_url,'mapQuery':f'{province} {city} {place}','note':'외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인',
             'collectionMethod':provider+' API','lastVerified':TODAY.isoformat()}
 
 
 def fetch_tourapi(key):
     url='https://apis.data.go.kr/B551011/KorService2/searchFestival2'
     rows=[];page=1
-    # avoid accidentally fetching all Korea: areaCode=32 is Gangwon TourAPI code
-    while page<=20:
+    # 지역코드를 지정하지 않아 전국 행사 검색. pageNo로 끝까지 페이지 이동.
+    while page<=50:
         params={'serviceKey':key,'MobileOS':'ETC','MobileApp':'OurGangwonDate','_type':'json',
                 'eventStartDate':BEGIN.strftime('%Y%m%d'),'eventEndDate':END.strftime('%Y%m%d'),
                 'numOfRows':100,'pageNo':page,'arrange':'A'}
@@ -102,17 +141,20 @@ def fetch_tourapi(key):
                 'url':'https://korean.visitkorea.or.kr/search/search_list.do?keyword='+quote(str(x.get('title') or ''))},
                 category='축제',provider='한국관광공사',code='tourapi')
             if item:rows.append(item)
-        if page*100>=int(body.get('totalCount') or 0) or not batch:break
+        total_count=int(body.get('totalCount') or 0)
+        if page*100>=total_count or not batch:break
+        if page == 50:
+            print(f'주의: 관광공사 전국 조회가 5,000건을 초과해 일부 미수집 (총 {total_count}건)', file=sys.stderr)
         page+=1
     return rows
 
 
 def fetch_kopis(key):
-    # KOPIS 시도 코드: 강원 51 (2026 API 공통코드 기준)
+    # KOPIS 전체 지역 검색: 시도 코드를 지정하지 않는다. 인증키가 있을 때만 사용.
     rows=[];page=1
     while page<=30:
         params={'service':key,'stdate':TODAY.strftime('%Y%m%d'),'eddate':END.strftime('%Y%m%d'),
-                'cpage':page,'rows':100,'signgucode':'51'}
+                'cpage':page,'rows':100}
         data=get_bytes('https://kopis.or.kr/openApi/restful/pblprfr',params)
         root=ET.fromstring(data)
         if root.find('.//errmsg') is not None or root.find('.//error') is not None:
@@ -120,9 +162,9 @@ def fetch_kopis(key):
         batch=root.findall('.//db')
         for e in batch:
             get=lambda k: (e.findtext(k) or '').strip()
-            code=get('mt20id');title=get('prfnm');place=get('fcltynm');city=city_of(get('adres')+' '+get('area')+' '+place)
-            # 일부 공연 API에는 시군구 주소가 없을 수 있음. 강원 전체로 표시하고 출처로 확인.
-            item=build({'id':code,'title':title,'city':city or '강원 전체','address':get('adres') or ((city or '강원 전체')+' '+place),
+            code=get('mt20id');title=get('prfnm');place=get('fcltynm');area=get('area');address=get('adres')
+            # 주소가 없는 공연은 API의 area(시도) 정보를 사용한다.
+            item=build({'id':code,'title':title,'area_hint':area,'address':address or area,
                 'start':get('prfpdfrom'),'end':get('prfpdto'),'place':place,'province_wide':True,
                 'url':'https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id='+quote(code)},
                 category='공연',provider='KOPIS',code='kopis')
@@ -137,7 +179,7 @@ def signature(e):
     title=unicodedata.normalize('NFKC',e.get('title','')).lower()
     title=re.sub(r'^(?:제\d+회\s*)|\b20\d{2}\b','',title)
     title=re.sub(r'[^가-힣a-z0-9]','',title)
-    return (title,e.get('start'),e.get('city'))
+    return (title,e.get('start'),e.get('province') or location_of(e.get('address'))[0],e.get('city'))
 
 
 def read_list(path):
@@ -162,7 +204,7 @@ def update():
             rows=fn(key);success+=1
             stats[src]=len(rows)
             all_rows.extend(rows)
-            print(f'{src}: {len(rows)}건 수집')
+            print(f'{src}: {len(rows)}건 수집 · 시도 {len(set(r.get("province") for r in rows))}곳')
         except Exception as exc:
             stats[src]='오류 · 기존 데이터 사용'
             all_rows.extend(old_by_source[src]);print(f'{src}: {exc}',file=sys.stderr)
