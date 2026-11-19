@@ -108,6 +108,9 @@ def build(raw, category='축제', provider='한국관광공사', code=''):
     category=classify(title,category)
     emoji,theme=VISUAL.get(category,('🎉','sea'))
     place=str(raw.get('place') or '').strip() or addr or city
+    poster=str(raw.get('poster') or raw.get('image') or '').strip()
+    if poster.startswith('http://') and ('kopis.or.kr' in poster or 'visitkorea.or.kr' in poster):poster='https://'+poster[7:]
+    if not poster.startswith('https://'): poster=''
     source_url=str(raw.get('url') or '')
     if not source_url.startswith(('http://','https://')):source_url='https://www.google.com/search?q='+quote(title+' '+city)
     return {'id':f'{code}-{str(raw.get("id") or "").strip()}' if raw.get('id') else f'{code}-{title[:20]}-{start}',
@@ -116,7 +119,10 @@ def build(raw, category='축제', provider='한국관광공사', code=''):
             'intro':f'{province} {city}에서 열리는 {category} 정보. 상세 일정과 예약 여부는 공식 출처에서 확인해 줘.',
             'highlight':'주말 데이트 후보','status':'자동 수집 · 방문 전 재확인','sourceLabel':provider,
             'sourceUrl':source_url,'mapQuery':f'{province} {city} {place}','note':'외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인',
-            'collectionMethod':provider+' API','lastVerified':TODAY.isoformat()}
+            'collectionMethod':provider+' API','lastVerified':TODAY.isoformat(),
+            'posterUrl':poster,'imageType':raw.get('imageType') or ('공식 이미지' if poster else '이미지 없음'),
+            'isPermanent':bool(raw.get('isPermanent') or re.search(r'상설\s*(전시|공연|운영|체험)|상시\s*(운영|개방)',title)),
+            'isLongRunning':(date.fromisoformat(end)-date.fromisoformat(start)).days+1>=60}
 
 
 def fetch_tourapi(key):
@@ -138,7 +144,8 @@ def fetch_tourapi(key):
         for x in batch:
             item=build({'id':x.get('contentid'),'title':x.get('title'),'address':x.get('addr1'),
                 'start':x.get('eventstartdate'),'end':x.get('eventenddate'),'place':x.get('addr1'),
-                'url':'https://korean.visitkorea.or.kr/search/search_list.do?keyword='+quote(str(x.get('title') or ''))},
+                'url':'https://korean.visitkorea.or.kr/search/search_list.do?keyword='+quote(str(x.get('title') or '')),
+                'image':x.get('firstimage') or x.get('firstimage2'),'imageType':'관광공사 제공 대표 이미지'},
                 category='축제',provider='한국관광공사',code='tourapi')
             if item:rows.append(item)
         total_count=int(body.get('totalCount') or 0)
@@ -150,29 +157,83 @@ def fetch_tourapi(key):
 
 
 def fetch_kopis(key):
-    # KOPIS 전체 지역 검색: 시도 코드를 지정하지 않는다. 인증키가 있을 때만 사용.
+    """KOPIS: 요청 날짜 구간 최대 31일 준수, 공식 포스터와 장르를 보존."""
+    rows=[]; seen=set()
+    from_day=TODAY-timedelta(days=30)
+    # KOPIS 목록 API 날짜 최대 31일: 30일 이내 조각으로 조회
+    while from_day<=END:
+        to_day=min(from_day+timedelta(days=29),END)
+        page=1
+        while page<=30:
+            params={'service':key,'stdate':from_day.strftime('%Y%m%d'),
+                    'eddate':to_day.strftime('%Y%m%d'),'cpage':page,'rows':100}
+            root=ET.fromstring(get_bytes('https://kopis.or.kr/openApi/restful/pblprfr',params))
+            error=root.find('.//errmsg')
+            if error is None:error=root.find('.//error')
+            if error is not None:raise RuntimeError('KOPIS error '+''.join(root.itertext())[:150])
+            batch=root.findall('.//db')
+            for e in batch:
+                get=lambda k: (e.findtext(k) or '').strip()
+                code=get('mt20id')
+                if not code or code in seen:continue
+                seen.add(code)
+                title=get('prfnm'); place=get('fcltynm'); area=get('area'); address=get('adres')
+                item=build({'id':code,'title':title,'area_hint':area,'address':address or area,
+                    'start':get('prfpdfrom'),'end':get('prfpdto'),'place':place,'province_wide':True,
+                    'poster':get('poster'),'imageType':'KOPIS 공연 포스터',
+                    'url':'https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id='+quote(code)},
+                    category='공연',provider='KOPIS',code='kopis')
+                if item:rows.append(item)
+            if len(batch)<100:break
+            page+=1
+        if page>30:print('주의: KOPIS 조회 구간당 최대 3000건 제한 도달', file=sys.stderr)
+        from_day=to_day+timedelta(days=1)
+    return rows
+
+def fetch_culture(key):
+    """문화포털 '한눈에보는문화정보' 기간별 공연전시 API (별도 인증키 필요).
+
+    개별 공급기관의 응답 필드가 상이할 수 있어 여러 공개 필드명을 방어적으로 해석한다.
+    실제 API 키로 응답을 검증한 후 운영에 사용해야 한다.
+    """
     rows=[];page=1
-    while page<=30:
-        params={'service':key,'stdate':TODAY.strftime('%Y%m%d'),'eddate':END.strftime('%Y%m%d'),
-                'cpage':page,'rows':100}
-        data=get_bytes('https://kopis.or.kr/openApi/restful/pblprfr',params)
-        root=ET.fromstring(data)
-        if root.find('.//errmsg') is not None or root.find('.//error') is not None:
-            raise RuntimeError('KOPIS error '+''.join(root.itertext())[:150])
-        batch=root.findall('.//db')
+    url='https://apis.data.go.kr/B553457/nopenapi/rest/publicperformancedisplays/period'
+    while page<=50:
+        params={'serviceKey':key,'from':BEGIN.strftime('%Y%m%d'),'to':END.strftime('%Y%m%d'),
+                'cPage':page,'rows':100}
+        root=ET.fromstring(get_bytes(url,params))
+        error=''.join(root.findtext('.//resultCode') or root.findtext('.//returnReasonCode') or '')
+        if error and error not in ('00','0000','0'):
+            raise RuntimeError('문화포털 API 응답코드 '+error+' '+(root.findtext('.//resultMsg') or ''))
+        # 공식 목록 응답: perforList. 호환성 위해 다른 목록 태그도 처리.
+        batch=root.findall('.//perforList')
+        if not batch:batch=root.findall('.//item')
+        if not batch:batch=root.findall('.//list')
+        if not batch:
+            if page==1 and 'error' in root.tag.lower():
+                raise RuntimeError('문화포털 API 오류: '+''.join(root.itertext())[:150])
+            break
         for e in batch:
-            get=lambda k: (e.findtext(k) or '').strip()
-            code=get('mt20id');title=get('prfnm');place=get('fcltynm');area=get('area');address=get('adres')
-            # 주소가 없는 공연은 API의 area(시도) 정보를 사용한다.
-            item=build({'id':code,'title':title,'area_hint':area,'address':address or area,
-                'start':get('prfpdfrom'),'end':get('prfpdto'),'place':place,'province_wide':True,
-                'url':'https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id='+quote(code)},
-                category='공연',provider='KOPIS',code='kopis')
+            fields={child.tag.split('}')[-1].lower(): (child.text or '').strip() for child in e}
+            def get(*keys):
+                return next((fields.get(k.lower(),'') for k in keys if fields.get(k.lower())), '')
+            realm=get('realmName','realm','category','categoryName','genre')
+            if any(k in realm for k in ('전시','미술','사진','디자인','공예')):category='전시'
+            elif any(k in realm for k in ('공연','뮤지컬','연극','콘서트','음악','클래식','오페라','무용')):category='공연'
+            else:continue  # 분류 불명확하면 임의의 행사로 등록하지 않음
+            item=build({'id':get('seq','contentId','id'),'title':get('title','name'),
+                'address':get('placeAddr','placeAddress','address','addr','area'),
+                'area_hint':get('area','sido','region'), 'province_wide':True,
+                'start':get('startDate','startDt','fromDate'), 'end':get('endDate','endDt','toDate'),
+                'place':get('place','placeName','location'),
+                'poster':get('imgUrl','imageUrl','thumbnail','image','poster'),
+                'imageType':'문화포털 제공 이미지',
+                'url':get('url','detailUrl','homepage') or 'https://www.culture.go.kr/portal/cltInfo/oneCltInfo/list.do?menuNo=200010'},
+                category=category,provider='문화포털',code='culture')
             if item:rows.append(item)
         if len(batch)<100:break
         page+=1
     return rows
-
 
 def signature(e):
     # Manual data wins against API data of the same named event and starting date.
@@ -191,11 +252,12 @@ def update():
     manually=read_list(ROOT/'manual_events.json')
     previous=json.loads((ROOT/'events.json').read_text(encoding='utf-8')) if (ROOT/'events.json').exists() else {'events':[]}
     old_by_source={'tourapi':[e for e in previous.get('events',[]) if str(e.get('id','')).startswith('tourapi-')],
-                   'kopis':[e for e in previous.get('events',[]) if str(e.get('id','')).startswith('kopis-')]}
+                   'kopis':[e for e in previous.get('events',[]) if str(e.get('id','')).startswith('kopis-')],
+                   'culture':[e for e in previous.get('events',[]) if str(e.get('id','')).startswith('culture-')]}
     all_rows=list(manually)
     stats={'manual':len(manually)}
     success=0
-    for src,env,fn in [('tourapi','KTO_SERVICE_KEY',fetch_tourapi),('kopis','KOPIS_SERVICE_KEY',fetch_kopis)]:
+    for src,env,fn in [('tourapi','KTO_SERVICE_KEY',fetch_tourapi),('kopis','KOPIS_SERVICE_KEY',fetch_kopis),('culture','CULTURE_SERVICE_KEY',fetch_culture)]:
         key=os.getenv(env,'').strip()
         if not key:
             stats[src]='미설정'
@@ -204,7 +266,7 @@ def update():
             rows=fn(key);success+=1
             stats[src]=len(rows)
             all_rows.extend(rows)
-            print(f'{src}: {len(rows)}건 수집 · 시도 {len(set(r.get("province") for r in rows))}곳')
+            print(f'{src}: {len(rows)}건 수집 · 사진 {sum(bool(r.get("posterUrl")) for r in rows)}건 · 시도 {len(set(r.get("province") for r in rows))}곳')
         except Exception as exc:
             stats[src]='오류 · 기존 데이터 사용'
             all_rows.extend(old_by_source[src]);print(f'{src}: {exc}',file=sys.stderr)

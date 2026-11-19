@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#f7f6fb" />
-  <meta name="description" content="전국의 축제와 데이트 아이디어를 지역별로 고르는 둘만의 캘린더" />
+  <meta name="description" content="전국의 축제, 공연, 전시를 포스터로 골라보는 데이트 캘린더" />
   <title>둘이서 강원 | 강원 축제 데이트 캘린더</title>
   <style>
     [hidden]{display:none!important}
@@ -19,16 +19,32 @@
     .foot{margin-top:45px;padding:25px 0 50px;border-top:1px solid var(--line);font-size:12px;color:#85879a;line-height:1.8}.foot strong{color:#4c5066}.foot a{text-decoration:underline}.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);padding:12px 18px;border-radius:12px;background:#252847;color:white;box-shadow:var(--shadow);z-index:99;font-size:13px;display:none;max-width:90vw;text-align:center}
     @media(max-width:760px){.wrap{padding:0 15px}.navinner{min-height:62px}.brand{font-size:17px}.badge-top{display:none}.share-top{font-size:12px;padding:10px}.hero{padding-top:22px}.hero-panel{grid-template-columns:1fr;min-height:220px}.hero-left{padding:30px 25px}.hero h1{font-size:30px}.hero p{font-size:13px}.hero-right{font-size:60px;position:absolute;right:10px;bottom:5px;opacity:.62}.orb{top:auto;bottom:-165px}.spark{display:none}.tool-panel{padding:14px}.toolbar{grid-template-columns:repeat(3,minmax(0,1fr))}.input-wrap{grid-column:1 / -1}.toolbar select{font-size:12px;min-width:0;padding:0 6px}.grid{grid-template-columns:1fr}.results-header h2{font-size:18px}.results-header small{display:block;margin:3px 0 0}.event h3{font-size:19px}.calendar{padding:12px}.calgrid{gap:3px}.calcell{min-height:66px;padding:5px 3px;border-radius:6px}.num{font-size:10px}.calEvent{font-size:9px;padding:3px;margin-top:3px}}
     @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+    /* v2 poster-first catalogue */
+    .hero{padding:23px 0 12px}.hero-panel{min-height:204px;border-radius:23px}.hero-left{padding:31px 40px}.hero h1{font-size:clamp(25px,3.4vw,37px)}.hero-right{font-size:82px}
+    .tool-panel{margin-top:10px;padding:16px}.results-header{margin-top:25px}.results-header h2{font-size:21px}
+    .grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}
+    .event{border-radius:18px}.art{height:260px;z-index:1;background:#e8e5f0}.art .emoji{font-size:63px}
+    .art.has-image .emoji{display:none}.art .poster-backdrop{display:none}.art.has-image .poster-backdrop{display:block;position:absolute;inset:-20px;width:calc(100% + 40px);height:calc(100% + 40px);object-fit:cover;filter:blur(20px) brightness(.78);opacity:.75;z-index:0}
+    .art .poster-img{position:relative;z-index:1;width:100%;height:100%;object-fit:contain;display:block;filter:drop-shadow(0 5px 12px rgba(0,0,0,.16))}
+    .date-ribbon{z-index:3;top:10px;left:10px;font-size:11px;padding:7px 9px;box-shadow:0 2px 7px rgba(0,0,0,.07)}.heart{z-index:3;top:9px;right:9px;width:35px;height:35px}
+    .eventbody{padding:16px 17px 19px}.event h3{font-size:17px;min-height:45px;margin:0 0 11px}.event .intro{font-size:12px;min-height:0;margin:10px 0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.event .highlight{font-size:11px;padding:8px 10px}.event .meta{font-size:12px}.tags{margin-bottom:9px}.tag{font-size:10px}.cardactions a{font-size:12px;padding:10px 5px}.verified{color:#8688a0;font-size:11px;margin-top:9px}
+    .more-area{text-align:center;margin:24px auto 6px}.more-btn{padding:13px 28px;background:#fff;color:#5245be;border:1px solid #dfdaf7;border-radius:14px;font-weight:800;box-shadow:0 5px 16px rgba(40,30,90,.05)}
+    .long-tag{background:#fff3dd;color:#995c18}.active-tag{background:#e9f6ed;color:#247145}
+    .foot{margin-top:34px}
+    @media(max-width:980px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:760px){.hero-panel{min-height:182px}.hero-left{padding:25px}.hero h1{font-size:27px}.art{height:295px}.grid{grid-template-columns:1fr}.event h3{min-height:0}.eventbody{padding:16px 19px 19px}.toolbar{grid-template-columns:repeat(3,minmax(0,1fr))}}
+    @media(min-width:540px) and (max-width:760px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.art{height:215px}}
   </style>
 </head>
 <body>
-  <header class="nav"><div class="wrap navinner"><div class="brand">둘이서 <em>♥</em> 강원</div><div style="display:flex;align-items:center;gap:8px"><span class="badge-top">전국 축제 · 데이트 캘린더</span><button class="share-top" id="shareAll" type="button">↗ 일정 공유</button></div></div></header>
+  <header class="nav"><div class="wrap navinner"><div class="brand">둘이서 <em>♥</em> 강원</div><div style="display:flex;align-items:center;gap:8px"><span class="badge-top">전국 축제 · 공연 · 전시</span><button class="share-top" id="shareAll" type="button">↗ 일정 공유</button></div></div></header>
   <main class="wrap">
-    <section class="hero" aria-label="소개"><div class="hero-panel"><div class="orb"></div><div class="hero-left"><div class="kicker">OUR LITTLE WEEKEND GUIDE</div><h1>이번 주말,<br>우리 어디 갈까? ♡</h1><p>강릉에서 출발해 전국 어디든, 축제·공연·전시.<br>마음에 드는 행사를 저장하고 서로 공유해 봐.</p></div><div class="hero-right" aria-hidden="true">🧣<span class="spark">✨</span></div></div></section>
-    <section class="tool-panel" aria-label="검색 및 필터"><div class="toolbar"><label class="input-wrap"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="축제·전시·공연·팝업 검색" aria-label="행사 검색"></label><select id="province" aria-label="시도 선택"><option value="all">전국</option><option value="강원">강원</option><option value="서울">서울</option><option value="경기">경기</option><option value="인천">인천</option><option value="부산">부산</option><option value="대구">대구</option><option value="광주">광주</option><option value="대전">대전</option><option value="울산">울산</option><option value="세종">세종</option><option value="충북">충북</option><option value="충남">충남</option><option value="전북">전북</option><option value="전남">전남</option><option value="경북">경북</option><option value="경남">경남</option><option value="제주">제주</option></select><select id="city" aria-label="시군구 선택"><option value="all">시·군·구 전체</option></select><select id="period" aria-label="기간 선택"><option value="upcoming">다가오는 행사</option><option value="weekend">이번 주말</option><option value="month">이번 달</option><option value="all">전체 일정</option></select></div><div class="quickfilters"><button class="pill active" type="button" data-filter="all">전체</button><button class="pill" type="button" data-filter="축제">🎉 축제</button><button class="pill" type="button" data-filter="공연">🎵 공연</button><button class="pill" type="button" data-filter="전시">🖼️ 전시</button><button class="pill" type="button" data-filter="팝업">🛍️ 팝업</button><button class="pill" type="button" data-filter="체험">❄️ 체험</button><button class="pill" type="button" data-filter="야경">🌙 야경</button><button class="pill" type="button" data-filter="favorites">♥ 찜한 행사</button></div></section>
-    <section aria-labelledby="results-title"><div class="results-header"><h2 id="results-title">가볼 만한 행사 <small id="count"></small></h2><div class="views"><button id="cardView" class="view active" type="button">▦ 카드</button><button id="calendarView" class="view" type="button">▣ 달력</button></div></div><div id="cards" class="grid"></div><div id="cal" class="calendar" hidden></div></section>
+    <section class="hero" aria-label="소개"><div class="hero-panel"><div class="orb"></div><div class="hero-left"><div class="kicker">OUR LITTLE WEEKEND GUIDE</div><h1>좋아하는 포스터부터,<br>우리의 다음 데이트 ♡</h1><p>축제·공연·전시를 한곳에.<br>이번 주말 추천은 가볍게, 모든 일정은 필요할 때 찾아봐.</p></div><div class="hero-right" aria-hidden="true">🎟️<span class="spark">✨</span></div></div></section>
+    <section class="tool-panel" aria-label="검색 및 필터"><div class="toolbar"><label class="input-wrap"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="축제·전시·공연·팝업 검색" aria-label="행사 검색"></label><select id="province" aria-label="시도 선택"><option value="all">전국</option><option value="강원">강원</option><option value="서울">서울</option><option value="경기">경기</option><option value="인천">인천</option><option value="부산">부산</option><option value="대구">대구</option><option value="광주">광주</option><option value="대전">대전</option><option value="울산">울산</option><option value="세종">세종</option><option value="충북">충북</option><option value="충남">충남</option><option value="전북">전북</option><option value="전남">전남</option><option value="경북">경북</option><option value="경남">경남</option><option value="제주">제주</option></select><select id="city" aria-label="시군구 선택"><option value="all">시·군·구 전체</option></select><select id="period" aria-label="기간 선택"><option value="upcoming">다가오는 행사</option><option value="weekend">이번 주말</option><option value="month">이번 달</option><option value="all">전체 일정</option></select></div><div class="quickfilters" role="group" aria-label="행사 종류"><button class="pill active" type="button" data-filter="recommend">✨ 추천</button><button class="pill" type="button" data-filter="축제">🎉 축제</button><button class="pill" type="button" data-filter="공연">🎵 공연</button><button class="pill" type="button" data-filter="전시">🖼️ 전시</button><button class="pill" type="button" data-filter="팝업">🛍️ 팝업</button><button class="pill" type="button" data-filter="체험">❄️ 체험</button><button class="pill" type="button" data-filter="야경">🌙 야경</button><button class="pill" type="button" data-filter="longterm">🏛️ 상설·장기</button><button class="pill" type="button" data-filter="favorites">♥ 찜한 행사</button><button class="pill" type="button" data-filter="all">전체 보기</button></div></section>
+    <section aria-labelledby="results-title"><div class="results-header"><h2 id="results-title">이번에 가볼 만한 곳 <small id="count"></small></h2><div class="views"><button id="cardView" class="view active" type="button">▦ 카드</button><button id="calendarView" class="view" type="button">▣ 달력</button></div></div><div id="cards" class="grid"></div><div id="cal" class="calendar" hidden></div><div class="more-area"><button id="loadMore" class="more-btn" type="button" hidden>행사 더 보기 ＋</button></div></section>
   </main>
-  <footer class="foot"><div class="wrap"><strong>둘이서 강원 · 자동수집 연결형</strong><div id="dataStatus">자료 로딩 중 · 초기 자료는 수동 입력, API 자동갱신은 인증키를 연결한 후 작동</div><div>행사 일정과 요금은 변동될 수 있으니 출발 전 반드시 각 행사 출처를 확인해 줘. 즐겨찾기는 이 기기에만 저장돼.</div></div></footer><div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <footer class="foot"><div class="wrap"><strong>둘이서 강원 · 자동수집 연결형</strong><div id="dataStatus">자료 로딩 중 · 초기 자료는 수동 입력, API 자동갱신은 인증키를 연결한 후 작동</div><div>사진·포스터는 데이터 제공처 또는 원저작자에게 권리가 있어. 방문 전 일정·예매·가격을 공식 출처에서 확인해 줘. 찜은 이 기기에만 저장돼.</div></div></footer><div id="toast" class="toast" role="status" aria-live="polite"></div>
   <script>
   let EVENTS = [{"id": "mukho-2026", "title": "2026 묵호 도째비페스타", "city": "동해", "category": "축제", "start": "2026-11-21", "end": "2026-11-22", "place": "동해시 묵호권역 일원", "address": "강원특별자치도 동해시 묵호항 일원", "price": "세부 프로그램별 확인", "priceType": "unknown", "emoji": "🌊", "theme": "sea", "intro": "묵호의 골목과 바다를 걸으며 음악공연과 지역 먹거리를 즐기는 주말 행사.", "highlight": "바닷가 산책 + 묵호 골목 데이트", "status": "확인", "sourceLabel": "동해시 공식 채널", "sourceUrl": "https://pf.kakao.com/_tukxds/posts", "mapQuery": "동해 묵호항여객선터미널", "note": "행사장이 묵호 여러 곳에 분산돼 있어 세부 프로그램 위치 확인 필요", "collectionMethod": "수동 확인", "lastVerified": "2026-11-19"}, {"id": "gangneung-xmas-2026", "title": "제6회 강릉 크리스마스 겨울축제", "city": "강릉", "category": "야경", "start": "2026-11-22", "end": "2027-01-09", "place": "월화거리·안목해변 일원", "address": "강원특별자치도 강릉시 월화거리 및 안목해변", "price": "프로그램별 확인", "priceType": "unknown", "emoji": "🎄", "theme": "christmas", "intro": "크리스마스트리, 야간 조명, 포토존. 12월 23~27일에는 특별행사와 마켓 예정.", "highlight": "크리스마스 포토존 + 저녁 산책", "status": "보도 확인", "sourceLabel": "연합뉴스 행사 안내", "sourceUrl": "https://www.yna.co.kr/view/AKR20261119100300062", "mapQuery": "강릉 월화거리", "note": "11월 22일부터 장식·점등, 주요 마켓 행사는 12월 23~27일 예정", "collectionMethod": "수동 확인", "lastVerified": "2026-11-19"}, {"id": "dandan-2026", "title": "2026 단단단페스티벌", "city": "강릉", "category": "공연", "start": "2026-11-26", "end": "2026-11-28", "place": "강릉단오제전수교육관", "address": "강원특별자치도 강릉시 단오장길 1", "price": "무료 · 사전예매 또는 현장접수", "priceType": "free", "emoji": "🥁", "theme": "music", "intro": "안예은·추다혜차지스 등 다양한 전통·현대 융합 공연을 만날 수 있는 3일간의 축제.", "highlight": "무료 공연 + 실내 데이트", "status": "공식 확인", "sourceLabel": "강릉단오제위원회 공식 안내", "sourceUrl": "https://www.danojefestival.or.kr/kor/dandan/dandan.html", "mapQuery": "강릉단오제전수교육관", "note": "사전예매와 현장 선착순 접수. 공연별 시작시간과 좌석 조건 확인", "collectionMethod": "수동 확인", "lastVerified": "2026-11-19"}, {"id": "pyeongchang-trout-2027", "title": "2027 평창송어축제", "city": "평창", "category": "체험", "start": "2027-01-01", "end": "2027-01-31", "place": "평창군 진부면 오대천 일원", "address": "강원특별자치도 평창군 진부면 경강로 3562", "price": "유료 · 2027년 요금 확인 필요", "priceType": "paid", "emoji": "🐟", "theme": "winter", "intro": "겨울 얼음낚시와 각종 체험을 즐기는 대표 겨울축제. 2027년 상세 프로그램은 갱신 중.", "highlight": "이색 체험 + 겨울 나들이", "status": "세부 일정 확인 필요", "sourceLabel": "한국관광공사 축제 정보", "sourceUrl": "https://app.visitkorea.or.kr/kfes/detail/fstvlDetail.do?fstvlCntntsId=e79ad504-4e44-46d4-950c-cff9292665c1", "mapQuery": "평창송어축제장", "note": "한국관광공사에 1.1~1.31 기재. 2027년 상세내용은 변경 가능", "collectionMethod": "수동 확인", "lastVerified": "2026-11-19"}];
   const today = new Date();today.setHours(0,0,0,0);
@@ -40,7 +56,7 @@
   const E = id=>document.getElementById(id);
   let favoriteIds=[];try{favoriteIds=JSON.parse(localStorage.getItem('ourGangwonSaved')||'[]')}catch(err){favoriteIds=[]}
   if(!Array.isArray(favoriteIds))favoriteIds=[];
-  let currentFilter='all',view='cards',monthCursor=new Date(today.getFullYear(),today.getMonth(),1);
+  let currentFilter='recommend',view='cards',visibleLimit=8,monthCursor=new Date(today.getFullYear(),today.getMonth(),1);
   const persist=()=>{try{localStorage.setItem('ourGangwonSaved',JSON.stringify(favoriteIds))}catch(err){}};
   let toastTimer;
   function toast(msg){clearTimeout(toastTimer);E('toast').textContent=msg;E('toast').style.display='block';toastTimer=setTimeout(()=>E('toast').style.display='none',3400)}
@@ -59,31 +75,83 @@
     E('city').replaceChildren(new Option('시·군·구 전체','all'),...cities.map(c=>new Option(c,c)));
     E('city').value=cities.includes(selected)?selected:'all';
   }
-  function filtered(){
+  function durationDays(e){return Math.round((parse(e.end)-parse(e.start))/86400000)+1}
+  function longKind(e){
+    if(e.isPermanent===true || e.eventType==='상설' || /상설\s*(전시|공연|체험|운영)|상시\s*(운영|개방)/.test(e.title||''))return '상설';
+    if(durationDays(e)>=60)return '장기';
+    return '';
+  }
+  function visible(e){
     const q=E('search').value.trim().toLowerCase(),province=E('province').value,city=E('city').value,period=E('period').value;
     const day=today.getDay(),offset=(6-day+7)%7;
     const saturday=new Date(today);saturday.setDate(today.getDate()+offset);
     const sunday=new Date(saturday);sunday.setDate(saturday.getDate()+1);
     const monthEnd=new Date(today.getFullYear(),today.getMonth()+1,0);
-    return EVENTS.filter(e=>{
-      const start=parse(e.start),end=parse(e.end);
-      if(province!=='all'&&eventProvince(e)!==province)return false;
-      if(city!=='all'&&e.city!==city)return false;
-      if(currentFilter==='favorites'){if(!favoriteIds.includes(e.id))return false}
-      else if(currentFilter!=='all'&&e.category!==currentFilter)return false;
-      if(q&&![e.title,eventProvince(e),e.city,e.place,e.intro,e.highlight].join(' ').toLowerCase().includes(q))return false;
-      if(period==='upcoming'&&end<today)return false;
-      if(period==='weekend'&&(end<saturday||start>sunday))return false;
-      if(period==='month'&&(end<today||start>monthEnd))return false;
-      return true;
-    }).sort((a,b)=>a.start.localeCompare(b.start));
+    const start=parse(e.start),end=parse(e.end);
+    if(province!=='all'&&eventProvince(e)!==province)return false;
+    if(city!=='all'&&e.city!==city)return false;
+    if(currentFilter==='recommend'){
+      if(longKind(e))return false;
+    }else if(currentFilter==='favorites'){
+      if(!favoriteIds.includes(e.id))return false;
+    }else if(currentFilter==='longterm'){
+      if(!longKind(e))return false;
+    }else if(currentFilter!=='all' && e.category!==currentFilter)return false;
+    if(q&&![e.title,eventProvince(e),e.city,e.place,e.intro,e.highlight].join(' ').toLowerCase().includes(q))return false;
+    if(period==='upcoming'&&end<today)return false;
+    if(period==='weekend'&&(end<saturday||start>sunday))return false;
+    if(period==='month'&&(end<today||start>monthEnd))return false;
+    return true;
   }
-  function card(e){const saved=favoriteIds.includes(e.id);return `<article class="event"><div class="art ${e.theme}"><span class="date-ribbon">${escapeHtml(formatRange(e))}</span><div class="emoji" aria-hidden="true">${e.emoji}</div><button type="button" class="heart ${saved?'on':''}" data-fav="${e.id}" aria-label="${escapeHtml(e.title)} ${saved?'찜 해제':'찜하기'}" aria-pressed="${saved}">${saved?'♥':'♡'}</button></div><div class="eventbody"><div class="tags"><span class="tag">${escapeHtml(eventProvince(e)+' · '+e.city)}</span><span class="tag alt">${escapeHtml(e.category)}</span></div><h3>${escapeHtml(e.title)}</h3><p class="meta">📍 ${escapeHtml(e.place)}</p><p class="meta">🎟️ ${escapeHtml(e.price)}</p><p class="meta">🔎 ${escapeHtml(e.collectionMethod || e.sourceLabel || "자료 출처 확인")} · ${escapeHtml(e.status || "출처 확인 권장")}</p><p class="intro">${escapeHtml(e.intro)}</p><div class="highlight">♥ ${escapeHtml(e.highlight)}</div><div class="cardactions"><a class="detail" href="${safeUrl(e.sourceUrl)}" target="_blank" rel="noopener noreferrer" title="${escapeHtml(e.note)}">행사 확인 ↗</a><a class="map" href="https://map.naver.com/p/search/${encodeURIComponent(e.mapQuery)}" target="_blank" rel="noopener noreferrer">지도 보기 ↗</a></div></div></article>`}
+  function filtered(){
+    const list=EVENTS.filter(visible);
+    if(currentFilter==='recommend'){
+      return list.sort((a,b)=>{
+        const score=e=>{
+          const days=Math.max(0,(parse(e.start)-today)/86400000);
+          const ongoing=parse(e.start)<=today&&parse(e.end)>=today;
+          return (ongoing?0:Math.min(days,120)*.8) + (eventProvince(e)==='강원'&&E('province').value==='all'?-10:0) - (e.posterUrl||e.imageUrl?6:0) + (durationDays(e)>30?7:0);
+        };
+        return score(a)-score(b) || a.start.localeCompare(b.start);
+      });
+    }
+    return list.sort((a,b)=>a.start.localeCompare(b.start));
+  }
+  function card(e){
+    const saved=favoriteIds.includes(e.id),kind=longKind(e);
+    const img=safeUrl(e.posterUrl||e.imageUrl||'');
+    const showImage=img!=='#';
+    const art=`<div class="art ${escapeHtml(e.theme||'sea')} ${showImage?'has-image':''}">
+       ${showImage?`<img class="poster-backdrop" alt="" src="${img}" aria-hidden="true"><img class="poster-img" loading="lazy" decoding="async" referrerpolicy="no-referrer" src="${img}" alt="${escapeHtml(e.title)} ${escapeHtml(e.imageType||'공식 이미지')}" onerror="this.closest('.art').classList.remove('has-image');this.remove()">`:''}
+       <span class="date-ribbon">${escapeHtml(formatRange(e))}</span><div class="emoji" aria-hidden="true">${escapeHtml(e.emoji||'🎉')}</div>
+       <button type="button" class="heart ${saved?'on':''}" data-fav="${escapeHtml(e.id)}" aria-label="${escapeHtml(e.title)} ${saved?'찜 해제':'찜하기'}" aria-pressed="${saved}">${saved?'♥':'♡'}</button></div>`;
+    const kindTag=kind?`<span class="tag long-tag">${kind==='상설'?'상설 운영':'장기 진행'}</span>`:'';
+    const current=parse(e.start)<=today&&parse(e.end)>=today;
+    return `<article class="event">${art}<div class="eventbody"><div class="tags"><span class="tag">${escapeHtml(eventProvince(e)+' · '+e.city)}</span><span class="tag alt">${escapeHtml(e.category)}</span>${kindTag}${current?'<span class="tag active-tag">진행 중</span>':''}</div><h3>${escapeHtml(e.title)}</h3><p class="meta">📍 ${escapeHtml(e.place||e.address||e.city)}</p><p class="meta">🎟️ ${escapeHtml(e.price||'요금 확인 필요')}</p><p class="intro">${escapeHtml(e.intro||'방문 전 공식 일정과 예약 조건을 확인해 줘.')}</p><div class="cardactions"><a class="detail" href="${safeUrl(e.sourceUrl)}" target="_blank" rel="noopener noreferrer" title="공식 정보 확인">상세·예매 ↗</a><a class="map" href="https://map.naver.com/p/search/${encodeURIComponent(e.mapQuery||e.place||e.city)}" target="_blank" rel="noopener noreferrer">지도 보기 ↗</a></div><div class="verified">출처: ${escapeHtml(e.sourceLabel||'제공처 확인')} · ${escapeHtml(e.imageType|| (showImage?'대표 이미지':'기본 그래픽'))}</div></div></article>`;
+  }
   function monthCells(items){const first=new Date(monthCursor.getFullYear(),monthCursor.getMonth(),1);const start=new Date(first);start.setDate(first.getDate()-first.getDay());let html='<div class="calgrid">'+['일','월','화','수','목','금','토'].map(d=>`<div class="dayname">${d}</div>`).join('');for(let i=0;i<42;i++){let d=new Date(start);d.setDate(start.getDate()+i);const isMonth=d.getMonth()===first.getMonth(),isToday=d.toDateString()===today.toDateString();const date=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');const active=items.filter(e=>e.start<=date&&e.end>=date);html+=`<div class="calcell ${isMonth?'':'dim'} ${isToday?'today':''}"><div class="num">${d.getDate()}</div>`+active.map(e=>`<a class="calEvent" target="_blank" rel="noopener noreferrer" href="${safeUrl(e.sourceUrl)}" title="${escapeHtml(e.title)}">${escapeHtml(e.title)}</a>`).join('')+'</div>'}return html+'</div>'}
-  function render(){const items=filtered();E('count').textContent=`${items.length}건`;E('cardView').classList.toggle('active',view==='cards');E('calendarView').classList.toggle('active',view==='calendar');E('cards').hidden=view!=='cards';E('cal').hidden=view!=='calendar';if(view==='cards')E('cards').innerHTML=items.length?items.map(card).join(''):'<div class="empty" style="grid-column:1/-1">조건에 맞는 행사가 없어. 지역이나 기간을 바꿔 봐.</div>';else{E('cal').innerHTML=`<div class="calhead"><strong>${monthCursor.getFullYear()}년 ${monthCursor.getMonth()+1}월</strong><div><button type="button" data-month="-1" aria-label="이전 달">‹</button> <button type="button" data-month="1" aria-label="다음 달">›</button></div></div>`+monthCells(items)}}
+  function render(){
+    const items=filtered();
+    const name={recommend:'이번에 가볼 만한 곳',all:'전체 일정',longterm:'상설·장기 행사',favorites:'찜한 데이트',축제:'축제',공연:'공연·콘서트',전시:'전시·미술',팝업:'팝업스토어',체험:'체험',야경:'야경·빛축제'};
+    E('results-title').firstChild.textContent=(name[currentFilter]||'가볼 만한 행사')+' ';
+    E('count').textContent=`${items.length}건`;
+    E('cardView').classList.toggle('active',view==='cards');E('calendarView').classList.toggle('active',view==='calendar');
+    E('cards').hidden=view!=='cards';E('cal').hidden=view!=='calendar';
+    E('loadMore').hidden=(view!=='cards'||items.length<=visibleLimit);
+    E('loadMore').textContent=`행사 더 보기 (${Math.min(visibleLimit,items.length)}/${items.length}) ＋`;
+    if(view==='cards'){
+      let empty='조건에 맞는 행사가 없어. 지역이나 기간을 바꿔 봐.';
+      if(currentFilter==='공연')empty='공연 자동 수집은 KOPIS 인증키가 연결되면 늘어날 수 있어. 현재는 등록된 공연이 없어.';
+      if(currentFilter==='전시')empty='전시 자동 수집은 문화포털 API가 추가로 연결돼야 해. 지금은 등록된 전시가 없어.';
+      E('cards').innerHTML=items.length?items.slice(0,visibleLimit).map(card).join(''):`<div class="empty" style="grid-column:1/-1">${empty}</div>`;
+    }else{
+      E('cal').innerHTML=`<div class="calhead"><strong>${monthCursor.getFullYear()}년 ${monthCursor.getMonth()+1}월</strong><div><button type="button" data-month="-1" aria-label="이전 달">‹</button> <button type="button" data-month="1" aria-label="다음 달">›</button></div></div>`+monthCells(items);
+    }
+  }
   document.addEventListener('click',ev=>{const fav=ev.target.closest('[data-fav]');if(fav){const id=fav.dataset.fav;favoriteIds=favoriteIds.includes(id)?favoriteIds.filter(x=>x!==id):[...favoriteIds,id];persist();render();toast(favoriteIds.includes(id)?'데이트 후보에 저장했어 ♥':'찜 목록에서 뺐어');return}const mon=ev.target.closest('[data-month]');if(mon){monthCursor=new Date(monthCursor.getFullYear(),monthCursor.getMonth()+Number(mon.dataset.month),1);render()}});
-  E('search').addEventListener('input',render);E('city').addEventListener('change',render);E('province').addEventListener('change',()=>{updateCityOptions();render()});E('period').addEventListener('change',render);
-  document.querySelectorAll('[data-filter]').forEach(btn=>btn.addEventListener('click',()=>{currentFilter=btn.dataset.filter;document.querySelectorAll('[data-filter]').forEach(el=>el.classList.toggle('active',el===btn));render()}));
+  E('search').addEventListener('input',()=>{visibleLimit=8;render()});E('city').addEventListener('change',()=>{visibleLimit=8;render()});E('province').addEventListener('change',()=>{visibleLimit=8;updateCityOptions();render()});E('period').addEventListener('change',()=>{visibleLimit=8;render()});
+  document.querySelectorAll('[data-filter]').forEach(btn=>btn.addEventListener('click',()=>{currentFilter=btn.dataset.filter;visibleLimit=8;document.querySelectorAll('[data-filter]').forEach(el=>el.classList.toggle('active',el===btn));render()}));
+  E('loadMore').addEventListener('click',()=>{visibleLimit+=8;render()});
   E('cardView').addEventListener('click',()=>{view='cards';render()});E('calendarView').addEventListener('click',()=>{view='calendar';render()});
   async function shareText(){const saved=EVENTS.filter(e=>favoriteIds.includes(e.id));const items=saved.length?saved:filtered();if(!items.length){toast('공유할 행사가 없어. 검색 조건을 바꿔 봐.');return}const text='♡ 우리 데이트 후보 ♡\n\n'+items.map(e=>`• ${e.title}\n  ${formatRange(e)} · ${e.city} · ${e.place}\n  ${e.sourceUrl}`).join('\n\n')+'\n\n※ 방문 전 공식 안내를 확인해 줘.';try{if(navigator.share){await navigator.share({title:'우리 데이트 후보',text});return}}catch(err){if(err.name==='AbortError')return}try{await navigator.clipboard.writeText(text);toast('데이트 후보를 복사했어. 카톡에 붙여넣으면 돼!')}catch(err){const field=document.createElement('textarea');field.value=text;document.body.appendChild(field);field.select();try{document.execCommand('copy');toast('데이트 후보를 복사했어. 카톡에 붙여넣으면 돼!')}catch(x){toast('복사에 실패했어. 브라우저에서 다시 시도해 줘.')}field.remove()}}
   E('shareAll').addEventListener('click',shareText);
