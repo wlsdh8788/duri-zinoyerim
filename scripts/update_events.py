@@ -87,7 +87,7 @@ def fetch_tourapi(key):
     while page<=20:
         params={'serviceKey':key,'MobileOS':'ETC','MobileApp':'OurGangwonDate','_type':'json',
                 'eventStartDate':BEGIN.strftime('%Y%m%d'),'eventEndDate':END.strftime('%Y%m%d'),
-                'areaCode':'32','numOfRows':100,'pageNo':page,'arrange':'A'}
+                'numOfRows':100,'pageNo':page,'arrange':'A'}
         payload=json.loads(get_bytes(url,params).decode('utf-8'))
         response=payload.get('response') or {}
         header=response.get('header') or {}
