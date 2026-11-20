@@ -213,7 +213,24 @@ def fetch_culture(key):
             'serviceTp': 'A',
         }
         try:
-            raw = get_bytes(url, params, timeout=30)
+            from time import sleep
+            for attempt in range(1, 4):
+                try:
+                    raw = get_bytes(url, params, timeout=30)
+                    break
+                except HTTPError:
+                    raise
+                except OSError as exc:
+                    if attempt == 3:
+                        raise RuntimeError(
+                            f'문화포털 연결 3회 실패 (페이지 {page}): {type(exc).__name__}'
+                        ) from None
+                    print(
+                        f'culture: 연결 지연, 재시도 {attempt}/2 (페이지 {page})',
+                        file=sys.stderr
+                    )
+                    sleep(3 * attempt)
+
         except HTTPError as exc:
             # HTTPError 문자열에는 API키가 포함된 전체 URL이 있을 수 있으므로 출력 금지.
             body = exc.read(500).decode('utf-8', errors='replace')
