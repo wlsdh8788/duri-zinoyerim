@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-20 21:02 KST",
+  "updated": "2026-11-20 21:11 KST",
   "auto_update": true,
   "events": [
     {
@@ -118426,7 +118426,7 @@
   "sources": {
     "manual": 4,
     "tourapi": 66,
-    "kopis": "오류 · 기존 데이터 사용",
+    "kopis": 3154,
     "culture": 1010
   }
 }
