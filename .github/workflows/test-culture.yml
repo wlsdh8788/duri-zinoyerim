@@ -1,0 +1,60 @@
+
+name: Diagnose Culture API
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check culture API
+        env:
+          CULTURE_SERVICE_KEY: ${{ secrets.CULTURE_SERVICE_KEY }}
+        run: |
+          python - <<'PY'
+          import os, time
+          import xml.etree.ElementTree as ET
+          from datetime import date, timedelta
+          from urllib.parse import urlencode, unquote
+          from urllib.request import urlopen
+          from urllib.error import HTTPError
+
+          key = os.environ.get('CULTURE_SERVICE_KEY', '').strip()
+          if not key:
+              raise SystemExit('CULTURE_SERVICE_KEY missing')
+          today = date.today()
+          params = {
+              'serviceKey': unquote(key),
+              'PageNo': 1,
+              'numOfrows': 5,
+              'serviceTp': 'A',
+              'from': today.strftime('%Y%m%d'),
+              'to': (today + timedelta(days=7)).strftime('%Y%m%d'),
+          }
+          url = ('https://apis.data.go.kr/B553457/cultureinfo/period2?'
+                 + urlencode(params))
+          for attempt in range(1, 4):
+              try:
+                  with urlopen(url, timeout=20) as response:
+                      data = response.read()
+                      print('HTTP:', response.status, 'bytes:', len(data))
+                  root = ET.fromstring(data)
+                  code = root.findtext('.//resultCode') or 'none'
+                  print('Result code:', code)
+                  print('Items:', len(root.findall('.//perforList')))
+                  break
+              except HTTPError as error:
+                  print('HTTP error:', error.code)
+                  raise SystemExit(1)
+              except Exception as error:
+                  print('Attempt', attempt, 'failed:',
+                        type(error).__name__,
+                        type(getattr(error, 'reason', None)).__name__)
+                  if attempt == 3:
+                      raise SystemExit('Connection failed after 3 attempts')
+                  time.sleep(3)
+          PY
