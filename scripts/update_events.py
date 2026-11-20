@@ -8,8 +8,9 @@ from __future__ import annotations
 
 from datetime import datetime, date, timedelta, timezone
 from pathlib import Path
-from urllib.parse import urlencode, quote
+from urllib.parse import urlencode, quote, unquote
 from urllib.request import Request, urlopen
+from urllib.error import HTTPError
 import json
 import os
 import re
@@ -109,7 +110,7 @@ def build(raw, category='축제', provider='한국관광공사', code=''):
     emoji,theme=VISUAL.get(category,('🎉','sea'))
     place=str(raw.get('place') or '').strip() or addr or city
     poster=str(raw.get('poster') or raw.get('image') or '').strip()
-    if poster.startswith('http://') and ('kopis.or.kr' in poster or 'visitkorea.or.kr' in poster):poster='https://'+poster[7:]
+    if poster.startswith('http://') and ('kopis.or.kr' in poster or 'visitkorea.or.kr' in poster or 'culture.go.kr' in poster):poster='https://'+poster[7:]
     if not poster.startswith('https://'): poster=''
     source_url=str(raw.get('url') or '')
     if not source_url.startswith(('http://','https://')):source_url='https://www.google.com/search?q='+quote(title+' '+city)
@@ -191,48 +192,94 @@ def fetch_kopis(key):
     return rows
 
 def fetch_culture(key):
-    """문화포털 '한눈에보는문화정보' 기간별 공연전시 API (별도 인증키 필요).
+    """문화포털 공연·전시: 공공데이터포털 현행 period2 API.
 
-    개별 공급기관의 응답 필드가 상이할 수 있어 여러 공개 필드명을 방어적으로 해석한다.
-    실제 API 키로 응답을 검증한 후 운영에 사용해야 한다.
+    공식 페이지 입력값은 PageNo, numOfrows (대소문자 구분)이고
+    serviceTp=A는 공연/전시를 뜻한다. 인증키는 환경변수로만 전달한다.
     """
-    rows=[];page=1
-    url='https://apis.data.go.kr/B553457/nopenapi/rest/publicperformancedisplays/period'
-    while page<=50:
-        params={'serviceKey':key,'from':BEGIN.strftime('%Y%m%d'),'to':END.strftime('%Y%m%d'),
-                'cPage':page,'rows':100}
-        root=ET.fromstring(get_bytes(url,params))
-        error=''.join(root.findtext('.//resultCode') or root.findtext('.//returnReasonCode') or '')
-        if error and error not in ('00','0000','0'):
-            raise RuntimeError('문화포털 API 응답코드 '+error+' '+(root.findtext('.//resultMsg') or ''))
-        # 공식 목록 응답: perforList. 호환성 위해 다른 목록 태그도 처리.
-        batch=root.findall('.//perforList')
-        if not batch:batch=root.findall('.//item')
-        if not batch:batch=root.findall('.//list')
+    rows = []
+    page = 1
+    last_ids = None
+    url = 'https://apis.data.go.kr/B553457/cultureinfo/period2'
+    # 공공데이터포털 인증키가 Encoding 형태여도 한 번만 인코딩되게 변환.
+    key = unquote(key.strip())
+    while page <= 50:
+        params = {
+            'serviceKey': key,
+            'PageNo': page,
+            'numOfrows': 100,
+            'from': BEGIN.strftime('%Y%m%d'),
+            'to': END.strftime('%Y%m%d'),
+            'serviceTp': 'A',
+        }
+        try:
+            raw = get_bytes(url, params, timeout=30)
+        except HTTPError as exc:
+            # HTTPError 문자열에는 API키가 포함된 전체 URL이 있을 수 있으므로 출력 금지.
+            body = exc.read(500).decode('utf-8', errors='replace')
+            body = body.replace(key, '[REDACTED]').replace(quote(key, safe=''), '[REDACTED]')
+            raise RuntimeError(f'문화포털 HTTP {exc.code}: {body[:200]}') from None
+        root = ET.fromstring(raw)
+        rc = (root.findtext('.//resultCode') or root.findtext('.//returnReasonCode') or '').strip()
+        if rc and rc not in ('00', '0000', '0'):
+            msg = (root.findtext('.//resultMsg') or root.findtext('.//returnAuthMsg') or '').strip()
+            raise RuntimeError(f'문화포털 응답 오류 코드 {rc}: {msg[:160]}')
+
+        # 문화포털 데이터는 버전에 따라 perforList, item 등으로 올 수 있음.
+        batch = root.findall('.//perforList')
+        if not batch: batch = root.findall('.//item')
+        if not batch: batch = root.findall('.//list')
         if not batch:
-            if page==1 and 'error' in root.tag.lower():
-                raise RuntimeError('문화포털 API 오류: '+''.join(root.itertext())[:150])
+            if page == 1 and ('error' in root.tag.lower() or 'response' not in root.tag.lower()):
+                summary=' '.join(''.join(root.itertext()).split())[:180]
+                raise RuntimeError('문화포털 빈/오류 응답: '+summary)
             break
+
+        page_ids = []
         for e in batch:
-            fields={child.tag.split('}')[-1].lower(): (child.text or '').strip() for child in e}
-            def get(*keys):
-                return next((fields.get(k.lower(),'') for k in keys if fields.get(k.lower())), '')
-            realm=get('realmName','realm','category','categoryName','genre')
-            if any(k in realm for k in ('전시','미술','사진','디자인','공예')):category='전시'
-            elif any(k in realm for k in ('공연','뮤지컬','연극','콘서트','음악','클래식','오페라','무용')):category='공연'
-            else:continue  # 분류 불명확하면 임의의 행사로 등록하지 않음
-            item=build({'id':get('seq','contentId','id'),'title':get('title','name'),
-                'address':get('placeAddr','placeAddress','address','addr','area'),
-                'area_hint':get('area','sido','region'), 'province_wide':True,
-                'start':get('startDate','startDt','fromDate'), 'end':get('endDate','endDt','toDate'),
-                'place':get('place','placeName','location'),
-                'poster':get('imgUrl','imageUrl','thumbnail','image','poster'),
-                'imageType':'문화포털 제공 이미지',
-                'url':get('url','detailUrl','homepage') or 'https://www.culture.go.kr/portal/cltInfo/oneCltInfo/list.do?menuNo=200010'},
-                category=category,provider='문화포털',code='culture')
-            if item:rows.append(item)
-        if len(batch)<100:break
-        page+=1
+            fields = {child.tag.split('}')[-1].lower(): (child.text or '').strip() for child in e}
+            def get(*names):
+                return next((fields.get(n.lower(), '') for n in names if fields.get(n.lower())), '')
+            seq = get('seq', 'contentId', 'id')
+            page_ids.append(seq or get('title'))
+            realm = get('realmName', 'serviceName', 'realm', 'genre', 'category')
+            if any(word in realm for word in ('전시', '미술', '사진', '공예', '디자인')):
+                category = '전시'
+            elif any(word in realm for word in ('공연', '콘서트', '연극', '뮤지컬', '음악', '오페라', '무용', '발레', '국악')):
+                category = '공연'
+            else:
+                continue  # 불명확한 자료는 임의로 분류하지 않음
+
+            area = get('area', 'sido', 'region')
+            sigungu = get('sigungu', 'city')
+            address = get('placeAddr', 'placeAddress', 'address', 'addr')
+            if not address:
+                address = ' '.join(x for x in (area, sigungu) if x)
+            event = build({
+                'id': seq,
+                'title': get('title', 'name'),
+                'address': address,
+                'area_hint': area,
+                'start': get('startDate', 'startDt', 'fromDate'),
+                'end': get('endDate', 'endDt', 'toDate'),
+                'place': get('place', 'placeName', 'location'),
+                'poster': get('thumbnail', 'imgUrl', 'imageUrl', 'image', 'poster'),
+                'imageType': '문화포털 제공 포스터/이미지',
+                'url': get('url', 'detailUrl', 'homepage') or 'https://www.culture.go.kr/',
+            }, category=category, provider='문화포털', code='culture')
+            if event:
+                rows.append(event)
+
+        # API가 페이지 번호를 무시하고 첫 페이지만 반복하는 경우 무한수집 방지
+        if page_ids == last_ids:
+            print('주의: 문화포털이 동일한 페이지를 반복 반환해 수집 종료', file=sys.stderr)
+            break
+        last_ids = page_ids
+        if len(batch) < 100:
+            break
+        page += 1
+    if page > 50:
+        print('주의: 문화포털 최대 5,000건 제한 도달', file=sys.stderr)
     return rows
 
 def signature(e):
