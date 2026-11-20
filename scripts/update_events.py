@@ -168,7 +168,23 @@ def fetch_kopis(key):
         while page<=30:
             params={'service':key,'stdate':from_day.strftime('%Y%m%d'),
                     'eddate':to_day.strftime('%Y%m%d'),'cpage':page,'rows':100}
-            root=ET.fromstring(get_bytes('https://kopis.or.kr/openApi/restful/pblprfr',params))
+            
+            try:
+                root=ET.fromstring(get_bytes(
+                    'https://kopis.or.kr/openApi/restful/pblprfr',
+                    params
+                ))
+            except HTTPError as exc:
+                print(
+                    f'KOPIS HTTP {exc.code}: '
+                    f'기간 {from_day:%Y%m%d}~{to_day:%Y%m%d}, '
+                    f'페이지 {page}',
+                    file=sys.stderr
+                )
+                raise RuntimeError(
+                    'KOPIS 요청 실패 - 날짜 및 페이지 확인 필요'
+                ) from None
+
             error=root.find('.//errmsg')
             if error is None:error=root.find('.//error')
             if error is not None:raise RuntimeError('KOPIS error '+''.join(root.itertext())[:150])
