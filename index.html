@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#f7f6fb" />
   <meta name="description" content="전국의 축제, 공연, 전시를 포스터로 골라보는 데이트 캘린더" />
-  <title>둘이서 강원 | 강원 축제 데이트 캘린더</title>
+  
+<title>우리두리 | 진오 ♥ 예림</title>
+
   <style>
     [hidden]{display:none!important}
     :root{--ink:#20243a;--muted:#73798b;--purple:#6253e8;--pink:#e65078;--pale:#f7f6fb;--line:#e9e8ef;--white:#fff;--shadow:0 12px 36px rgba(36,38,76,.08)}
@@ -38,9 +40,13 @@
   </style>
 </head>
 <body>
-  <header class="nav"><div class="wrap navinner"><div class="brand">둘이서 <em>♥</em> 강원</div><div style="display:flex;align-items:center;gap:8px"><span class="badge-top">전국 축제 · 공연 · 전시</span><button class="share-top" id="shareAll" type="button">↗ 일정 공유</button></div></div></header>
+  <header class="nav"><div class="wrap navinner"><div class="brand">
+진오 <em>♥</em> 예림 <span style="font-size:.72em;margin-left:10px;font-weight:700">우리두리</span>
+</div><div style="display:flex;align-items:center;gap:8px"><span class="badge-top">전국 축제 · 공연 · 전시</span><button class="share-top" id="shareAll" type="button">↗ 일정 공유</button></div></div></header>
   <main class="wrap">
-    <section class="hero" aria-label="소개"><div class="hero-panel"><div class="orb"></div><div class="hero-left"><div class="kicker">OUR LITTLE WEEKEND GUIDE</div><h1>좋아하는 포스터부터,<br>우리의 다음 데이트 ♡</h1><p>축제·공연·전시를 한곳에.<br>이번 주말 추천은 가볍게, 모든 일정은 필요할 때 찾아봐.</p></div><div class="hero-right" aria-hidden="true">🎟️<span class="spark">✨</span></div></div></section>
+    <section class="hero" aria-label="소개"><div class="hero-panel"><div class="orb"></div><div class="hero-left"><div class="kicker">OUR LITTLE WEEKEND GUIDE</div>
+<h1>우리의 다음 데이트 ♡</h1>
+<p>축제·공연·전시를 한곳에.<br>이번 주말 추천은 가볍게, 모든 일정은 필요할 때 찾아봐.</p></div><div class="hero-right" aria-hidden="true">🎟️<span class="spark">✨</span></div></div></section>
     <section class="tool-panel" aria-label="검색 및 필터"><div class="toolbar"><label class="input-wrap"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="축제·전시·공연·팝업 검색" aria-label="행사 검색"></label><select id="province" aria-label="시도 선택"><option value="all">전국</option><option value="강원">강원</option><option value="서울">서울</option><option value="경기">경기</option><option value="인천">인천</option><option value="부산">부산</option><option value="대구">대구</option><option value="광주">광주</option><option value="대전">대전</option><option value="울산">울산</option><option value="세종">세종</option><option value="충북">충북</option><option value="충남">충남</option><option value="전북">전북</option><option value="전남">전남</option><option value="경북">경북</option><option value="경남">경남</option><option value="제주">제주</option></select><select id="city" aria-label="시군구 선택"><option value="all">시·군·구 전체</option></select><select id="period" aria-label="기간 선택"><option value="upcoming">다가오는 행사</option><option value="weekend">이번 주말</option><option value="month">이번 달</option><option value="all">전체 일정</option></select></div><div class="quickfilters" role="group" aria-label="행사 종류"><button class="pill active" type="button" data-filter="recommend">✨ 추천</button><button class="pill" type="button" data-filter="축제">🎉 축제</button><button class="pill" type="button" data-filter="공연">🎵 공연</button><button class="pill" type="button" data-filter="전시">🖼️ 전시</button><button class="pill" type="button" data-filter="팝업">🛍️ 팝업</button><button class="pill" type="button" data-filter="체험">❄️ 체험</button><button class="pill" type="button" data-filter="야경">🌙 야경</button><button class="pill" type="button" data-filter="longterm">🏛️ 상설·장기</button><button class="pill" type="button" data-filter="favorites">♥ 찜한 행사</button><button class="pill" type="button" data-filter="all">전체 보기</button></div></section>
     <section aria-labelledby="results-title"><div class="results-header"><h2 id="results-title">이번에 가볼 만한 곳 <small id="count"></small></h2><div class="views"><button id="cardView" class="view active" type="button">▦ 카드</button><button id="calendarView" class="view" type="button">▣ 달력</button></div></div><div id="cards" class="grid"></div><div id="cal" class="calendar" hidden></div><div class="more-area"><button id="loadMore" class="more-btn" type="button" hidden>행사 더 보기 ＋</button></div></section>
   </main>
