@@ -51,7 +51,7 @@ def matches_name(text, artist):
     if len(name)<2:
         return False
     if re.fullmatch(r"[가-힣]{2,3}",name):
-        return bool(re.search(r"(?<![가-힣])"+re.escape(name)+r"(?=$|[^가-힣]|콘서트|공연|투어|전국투어|라이브|월드투어|의\s)",source))
+        return bool(re.search(r"(?<![가-힣])"+re.escape(name)+r"(?=$|[^가-힣]|콘서트|공연|투어|전국투어|라이브|월드투어|의|와|과)",source))
     key = clean(name)
     return len(key)>=3 and key in clean(source)
 
