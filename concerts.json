@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "updated": null,
+  "auto_update": false,
+  "selection_note": "KOPIS에서 대중음악 장르와 선정된 가수·그룹을 확인한 공연만 표시. 첫 자동 실행 전.",
+  "stats": {
+    "selected": 0
+  },
+  "performances": []
+}
