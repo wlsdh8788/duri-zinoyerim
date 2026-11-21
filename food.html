@@ -4,16 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f8f7fb">
-  <meta name="description" content="우리두리 먹거리: 데이트 맛집·카페 추천 후보와 네이버 지도 검색을 한곳에서. 강릉 기본 지역.">
-  <title>우리두리 먹거리 | 진오 ♥ 예림</title>
+  <meta name="description" content="우리두리 강릉 먹거리. 한식, 피자, 햄버거, 돈까스, 회 맛집을 음식별로 찾아보고 네이버 지도에서 확인.">
+  <title>우리두리 먹거리 | 강릉 맛집</title>
   <link rel="stylesheet" href="./food.css">
   <link rel="stylesheet" href="./site-nav.css">
 </head>
 <body>
   <header class="nav">
     <div class="wrap navinner">
-      <a class="brand" href="./index.html" aria-label="우리두리 놀거리로 이동">진오 <em>♥</em> 예림 <span>우리두리</span></a>
-      <span class="header-note">우리가 고르는 데이트 맛집</span>
+      <a class="brand" href="./index.html" aria-label="우리두리 놀거리 이동">진오 <em>♥</em> 예림 <span>우리두리</span></a>
+      <span class="header-note">우리의 강릉 맛집 지도</span>
     </div>
   </header>
   <nav class="site-areas" aria-label="우리두리 주요 서비스">
@@ -23,76 +23,67 @@
     </div>
   </nav>
   <main class="wrap">
-    <section class="food-hero" aria-label="먹거리 소개">
-      <div class="hero-card">
-        <span class="hero-kicker">OUR LITTLE FOOD GUIDE</span>
-        <h1>우리 오늘 뭐 먹을까?</h1>
-        <p>데이트 맛집은 골라보고, 더 많은 장소는 네이버 지도에서 찾아봐.</p>
-        <span class="hero-emoji" aria-hidden="true">🍜</span>
-      </div>
+    <section class="food-intro">
+      <div class="food-location">📍 강원특별자치도 강릉시 <span>지역 기본 설정</span></div>
+      <h1>강릉에서 오늘 뭐 먹지? <span aria-hidden="true">🍽️</span></h1>
+      <p>음식 종류를 고르면 강릉 식당이 쭉 나와. 마음에 드는 곳은 네이버 지도로 확인해 봐.</p>
     </section>
 
-    <section class="food-controls" aria-label="맛집 검색 및 취향 필터">
-      <form id="foodSearchForm">
-        <div class="search-row">
-          <label class="search-input">
-            <span aria-hidden="true">⌕</span>
-            <input id="foodSearch" type="search" placeholder="식당·메뉴·지역·분위기 검색" autocomplete="off" maxlength="100" aria-label="맛집 검색어">
-          </label>
-          <select id="foodRegion" aria-label="검색 지역">
-            <option value="강릉" selected>강릉</option>
-            <option value="속초">속초</option>
-            <option value="동해">동해</option>
-            <option value="춘천">춘천</option>
-            <option value="원주">원주</option>
-            <option value="서울">서울</option>
-            <option value="부산">부산</option>
-            <option value="전국">전국</option>
-          </select>
-        </div>
-        <div class="food-chips" role="group" aria-label="식당 종류 및 취향">
-          <button class="food-chip active" type="button" data-food-filter="전체" aria-pressed="true">전체</button>
-          <button class="food-chip" type="button" data-food-filter="한식" aria-pressed="false">🍚 한식</button>
-          <button class="food-chip" type="button" data-food-filter="양식" aria-pressed="false">🍝 양식</button>
-          <button class="food-chip" type="button" data-food-filter="카페" aria-pressed="false">☕ 카페</button>
-          <button class="food-chip" type="button" data-food-filter="바다뷰" aria-pressed="false">🌊 바다뷰</button>
-          <button class="food-chip" type="button" data-food-filter="기념일" aria-pressed="false">💗 기념일</button>
-        </div>
+    <section class="food-search-area" aria-label="강릉 식당 찾기">
+      <form id="foodSearchForm" role="search">
+        <label class="food-search-box">
+          <span aria-hidden="true">⌕</span>
+          <input id="foodSearch" type="search" placeholder="식당 이름·메뉴·동네 검색" autocomplete="off" maxlength="100" aria-label="강릉 맛집 검색어">
+        </label>
       </form>
-      <p class="food-source-brief">추천 후보는 직접 확인한 음식점·카페를 중심으로 표시해. 입력한 검색어는 아래 추천 목록에도 적용돼.</p>
+      <div class="food-category-title">
+        <h2>오늘 먹고 싶은 음식은?</h2>
+        <span>종류별로 골라보기</span>
+      </div>
+      <div class="food-category-grid" role="group" aria-label="음식 종류 선택">
+        <button class="food-category active" data-food-filter="전체" type="button" aria-pressed="true"><span class="food-category-icon">🍽️</span><span>전체</span></button>
+        <button class="food-category" data-food-filter="한식" type="button" aria-pressed="false"><span class="food-category-icon">🍚</span><span>한식</span></button>
+        <button class="food-category" data-food-filter="피자" type="button" aria-pressed="false"><span class="food-category-icon">🍕</span><span>피자</span></button>
+        <button class="food-category" data-food-filter="햄버거" type="button" aria-pressed="false"><span class="food-category-icon">🍔</span><span>햄버거</span></button>
+        <button class="food-category" data-food-filter="돈까스" type="button" aria-pressed="false"><span class="food-category-icon">🍛</span><span>돈까스</span></button>
+        <button class="food-category" data-food-filter="회" type="button" aria-pressed="false"><span class="food-category-icon">🐟</span><span>회·해산물</span></button>
+        <button class="food-category" data-food-filter="양식" type="button" aria-pressed="false"><span class="food-category-icon">🍝</span><span>양식</span></button>
+        <button class="food-category" data-food-filter="카페" type="button" aria-pressed="false"><span class="food-category-icon">☕</span><span>카페</span></button>
+      </div>
     </section>
 
-    <div class="quick-action">
+    <section class="restaurants" aria-labelledby="foodResultsTitle">
+      <div class="food-results-title">
+        <div>
+          <h2 id="foodResultsTitle"><span id="foodCategoryTitle">강릉 전체 맛집</span> <small id="foodCount"></small></h2>
+          <p id="foodStatus" role="status">식당 목록을 불러오는 중...</p>
+        </div>
+        <label class="food-sort">
+          <span class="visually-hidden">식당 정렬 방식</span>
+          <select id="foodSort" aria-label="식당 정렬 방식">
+            <option value="recommended">기본순</option>
+            <option value="name">가나다순</option>
+            <option value="my-rating">내 별점순</option>
+          </select>
+        </label>
+      </div>
+      <div class="food-list" id="foodCards" aria-live="polite"></div>
+      <p class="food-rating-hint">⭐ ‘내 별점순’은 식당별로 직접 매긴 점수를 기준으로 해. 기기에만 저장되며 네이버 방문자 평점이 아니야.</p>
+    </section>
+
+    <section class="food-naver-box" aria-label="네이버 지도에서 더 찾기">
       <div>
-        <strong id="naverSummary">네이버 지도에서 ‘강릉 맛집’ 검색</strong>
-        <p>네이버 지도에서 실제 사진·방문자 리뷰·메뉴·영업시간을 확인할 수 있어.</p>
+        <strong id="naverSummary">네이버 지도에서 ‘강릉 맛집’ 더 찾아보기</strong>
+        <p>목록에 없는 식당과 실제 리뷰·사진·영업시간은 네이버 지도에서 확인해.</p>
       </div>
-      <a class="nav-open" id="naverFind" href="https://map.naver.com/p/search/%EA%B0%95%EB%A6%89%20%EB%A7%9B%EC%A7%91" target="_blank" rel="noopener noreferrer">네이버 지도에서 검색 ↗</a>
-    </div>
-
-    <section aria-labelledby="foodResultsTitle">
-      <div class="section-head">
-        <h2 id="foodResultsTitle">데이트 맛집 후보 <small id="foodCount"></small></h2>
-      </div>
-      <p id="foodStatus" class="food-source-brief" role="status">추천 후보를 불러오는 중...</p>
-      <div id="foodCards" class="food-grid" aria-live="polite"></div>
-    </section>
-
-    <section class="more-section" aria-label="지역별 맛집 빠른 검색">
-      <h3>다른 지역도 바로 찾아볼까?</h3>
-      <p>강릉 밖의 식당 목록은 아직 큐레이션하지 않았어. 아래 검색어를 누르면 네이버 지도 검색 준비가 돼.</p>
-      <div class="suggest-row">
-        <button class="suggest" type="button" data-example-region="속초" data-example-query="대게 맛집"><span>🦀 속초 대게</span><small>검색어 적용 ↗</small></button>
-        <button class="suggest" type="button" data-example-region="동해" data-example-query="바다뷰 카페"><span>🌊 동해 바다뷰</span><small>검색어 적용 ↗</small></button>
-        <button class="suggest" type="button" data-example-region="서울" data-example-query="성수 파스타"><span>🍝 서울 성수 파스타</span><small>검색어 적용 ↗</small></button>
-      </div>
+      <a class="food-naver-btn" id="naverFind" href="https://map.naver.com/p/search/%EA%B0%95%EB%A6%89%20%EB%A7%9B%EC%A7%91" target="_blank" rel="noopener noreferrer">네이버 지도 검색 ↗</a>
     </section>
   </main>
 
-  <footer class="foot"><div class="wrap">
-    <strong>우리두리 · 먹거리</strong>
-    <div>초기 추천 목록은 공개 관광정보·사업장 위치정보에 기반한 편집 후보이며, 네이버 지도 순위나 실시간 리뷰를 복제한 데이터가 아니야.</div>
-    <div>메뉴·가격·휴무·예약·주차는 방문 전 네이버 지도 또는 업소 공식 채널에서 확인해 줘.</div>
+  <footer class="food-footer"><div class="wrap">
+    <strong>우리두리 · 강릉 먹거리</strong>
+    <p>표시된 식당은 공개 정보를 바탕으로 구성한 초기 후보야. 네이버 검색 순위·방문자 리뷰·평점을 복제하지 않았어.</p>
+    <p>영업, 휴무, 메뉴, 가격, 예약과 주차는 방문 전에 네이버 지도에서 확인해 줘.</p>
   </div></footer>
   <script defer src="./food.js"></script>
 </body>
