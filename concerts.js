@@ -52,7 +52,7 @@ function render(){
   const aNow=a.start<=current?0:1,bNow=b.start<=current?0:1;
   return aNow-bNow||a.start.localeCompare(b.start)||a.title.localeCompare(b.title,'ko');
  });
- count.textContent='('+items.length+'건)';
+ if(count)count.textContent='('+items.length+'건)';
  cards.innerHTML=items.length?items.slice(0,show).map(x=>card(x,current)).join(''):
   '<div class="concert-empty">조건에 맞는 유명 가수 콘서트가 아직 없어.<br>검색·지역을 변경하거나 다음 데이터 갱신 후 확인해 줘.</div>';
  more.hidden=items.length<=show;
