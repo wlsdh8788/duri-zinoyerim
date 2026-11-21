@@ -231,6 +231,9 @@ def apply_ticket_overrides(matches, path):
         if urlsplit(notice).scheme != "https" or not any(host == x or host.endswith("."+x) for x in allowed):
             continue
         match["ticketOpenAt"] = opening
+        presale = str(patch.get("ticketPresaleAt", ""))
+        if re.fullmatch(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}\+09:00", presale):
+            match["ticketPresaleAt"] = presale
         match["ticketStatus"] = "announced"
         match["ticketAnnouncementUrl"] = patch["announcementUrl"]
         count += 1
