@@ -59,7 +59,7 @@ function render(){
   const an=a.start<=current?0:1,bn=b.start<=current?0:1;
   return an-bn || a.start.localeCompare(b.start) || a.title.localeCompare(b.title,'ko');
  });
- count.textContent='('+data.length+'건)';
+ if(count)count.textContent='('+data.length+'건)';
  cards.innerHTML=data.length?data.slice(0,shown).map(x=>rowHtml(x,current)).join(''):
  '<div class="musical-empty">조건에 맞는 대형 뮤지컬이 아직 없어.<br>검색이나 지역을 바꾸거나 다음 KOPIS 갱신 후 확인해 줘.</div>';
  more.hidden=data.length<=shown;
