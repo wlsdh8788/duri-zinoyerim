@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-21 10:51 KST",
+  "updated": "2026-11-21 13:25 KST",
   "auto_update": true,
   "events": [
     {
@@ -2517,10 +2517,12 @@
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
       "lastVerified": "2026-11-21",
-      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/35/4060435_image2_1.jpg",
-      "imageType": "관광공사 제공 대표 이미지",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/36/4060436_image2_1.png",
+      "imageType": "관광공사 등록 포스터 · 이미지 제목의 개최연도 일치",
       "isPermanent": false,
-      "isLongRunning": true
+      "isLongRunning": true,
+      "posterSource": "TourAPI/detailImage2",
+      "posterConfidence": "year-matched"
     },
     {
       "id": "tourapi-2809535",
@@ -13661,10 +13663,12 @@
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
       "lastVerified": "2026-11-21",
-      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/81/3566581_image2_1.jpg",
-      "imageType": "관광공사 제공 대표 이미지",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/38/4131538_image2_1.jpg",
+      "imageType": "관광공사 등록 포스터 · 이미지 제목의 개최연도 일치",
       "isPermanent": false,
-      "isLongRunning": true
+      "isLongRunning": true,
+      "posterSource": "TourAPI/detailImage2",
+      "posterConfidence": "year-matched"
     },
     {
       "id": "kopis-PF304943",
@@ -21697,10 +21701,12 @@
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
       "lastVerified": "2026-11-21",
-      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/51/4130851_image2_1.jpg",
-      "imageType": "관광공사 제공 대표 이미지",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/72/4134672_image2_1.jpg",
+      "imageType": "관광공사 등록 포스터 · 이미지 제목의 개최연도 일치",
       "isPermanent": false,
-      "isLongRunning": false
+      "isLongRunning": false,
+      "posterSource": "TourAPI/detailImage2",
+      "posterConfidence": "year-matched"
     },
     {
       "id": "culture-409028",
@@ -21753,10 +21759,12 @@
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
       "lastVerified": "2026-11-21",
-      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/26/4135926_image2_1.png",
-      "imageType": "관광공사 제공 대표 이미지",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/24/4135924_image2_1.png",
+      "imageType": "관광공사 등록 포스터 · 이미지 제목의 개최연도 일치",
       "isPermanent": false,
-      "isLongRunning": false
+      "isLongRunning": false,
+      "posterSource": "TourAPI/detailImage2",
+      "posterConfidence": "year-matched"
     },
     {
       "id": "culture-404267",
@@ -31380,10 +31388,12 @@
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
       "lastVerified": "2026-11-21",
-      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/39/3515039_image2_1.jpg",
-      "imageType": "관광공사 제공 대표 이미지",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/46/4138946_image2_1.png",
+      "imageType": "관광공사 등록 포스터 · 이미지 제목의 개최연도 일치",
       "isPermanent": false,
-      "isLongRunning": false
+      "isLongRunning": false,
+      "posterSource": "TourAPI/detailImage2",
+      "posterConfidence": "year-matched"
     },
     {
       "id": "culture-406500",
@@ -54526,10 +54536,12 @@
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
       "lastVerified": "2026-11-21",
-      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/41/4155841_image2_1.jpg",
-      "imageType": "관광공사 제공 대표 이미지",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/26/4154426_image2_1.jpg",
+      "imageType": "관광공사 등록 포스터 · 이미지 제목의 개최연도 일치",
       "isPermanent": false,
-      "isLongRunning": false
+      "isLongRunning": false,
+      "posterSource": "TourAPI/detailImage2",
+      "posterConfidence": "year-matched"
     },
     {
       "id": "culture-405697",
@@ -57046,10 +57058,12 @@
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
       "lastVerified": "2026-11-21",
-      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/07/4133507_image2_1.jpg",
-      "imageType": "관광공사 제공 대표 이미지",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/83/4154683_image2_1.jpg",
+      "imageType": "관광공사 등록 포스터 · 이미지 제목의 개최연도 일치",
       "isPermanent": false,
-      "isLongRunning": false
+      "isLongRunning": false,
+      "posterSource": "TourAPI/detailImage2",
+      "posterConfidence": "year-matched"
     },
     {
       "id": "culture-407184",
@@ -70570,10 +70584,12 @@
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
       "lastVerified": "2026-11-21",
-      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/82/4164382_image2_1.JPG",
-      "imageType": "관광공사 제공 대표 이미지",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/83/4164383_image2_1.jpg",
+      "imageType": "관광공사 등록 포스터 · 이미지 제목의 개최연도 일치",
       "isPermanent": false,
-      "isLongRunning": true
+      "isLongRunning": true,
+      "posterSource": "TourAPI/detailImage2",
+      "posterConfidence": "year-matched"
     },
     {
       "id": "culture-407519",
@@ -71242,10 +71258,12 @@
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
       "lastVerified": "2026-11-21",
-      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/37/4166437_image2_1.jpg",
-      "imageType": "관광공사 제공 대표 이미지",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/41/4166441_image2_1.png",
+      "imageType": "관광공사 등록 포스터 · 이미지 제목의 개최연도 일치",
       "isPermanent": false,
-      "isLongRunning": false
+      "isLongRunning": false,
+      "posterSource": "TourAPI/detailImage2",
+      "posterConfidence": "year-matched"
     },
     {
       "id": "kopis-PF306423",
@@ -78326,10 +78344,12 @@
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
       "lastVerified": "2026-11-21",
-      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/26/4167626_image2_1.JPG",
-      "imageType": "관광공사 제공 대표 이미지",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/33/4167633_image2_1.png",
+      "imageType": "관광공사 등록 포스터 · 이미지 제목의 개최연도 일치",
       "isPermanent": false,
-      "isLongRunning": false
+      "isLongRunning": false,
+      "posterSource": "TourAPI/detailImage2",
+      "posterConfidence": "year-matched"
     },
     {
       "id": "kopis-PF304507",
@@ -80174,10 +80194,12 @@
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
       "lastVerified": "2026-11-21",
-      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/35/4147235_image2_1.jpg",
-      "imageType": "관광공사 제공 대표 이미지",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/82/4154282_image2_1.jpg",
+      "imageType": "관광공사 등록 포스터 · 이미지 제목의 개최연도 일치",
       "isPermanent": false,
-      "isLongRunning": false
+      "isLongRunning": false,
+      "posterSource": "TourAPI/detailImage2",
+      "posterConfidence": "year-matched"
     },
     {
       "id": "tourapi-2785797",
@@ -80202,10 +80224,12 @@
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
       "lastVerified": "2026-11-21",
-      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/70/4152170_image2_1.jpg",
-      "imageType": "관광공사 제공 대표 이미지",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/75/4152175_image2_1.png",
+      "imageType": "관광공사 등록 포스터 · 이미지 제목의 개최연도 일치",
       "isPermanent": false,
-      "isLongRunning": false
+      "isLongRunning": false,
+      "posterSource": "TourAPI/detailImage2",
+      "posterConfidence": "year-matched"
     },
     {
       "id": "kopis-PF304752",
@@ -100782,10 +100806,12 @@
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
       "lastVerified": "2026-11-21",
-      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/64/3586264_image2_1.jpg",
-      "imageType": "관광공사 제공 대표 이미지",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/80/4168480_image2_1.jpg",
+      "imageType": "관광공사 등록 포스터 · 이미지 제목의 개최연도 일치",
       "isPermanent": false,
-      "isLongRunning": false
+      "isLongRunning": false,
+      "posterSource": "TourAPI/detailImage2",
+      "posterConfidence": "year-matched"
     },
     {
       "id": "kopis-PF297965",
@@ -115010,7 +115036,15 @@
   "sources": {
     "manual": 4,
     "tourapi": 69,
-    "kopis": "오류 · 기존 데이터 사용",
+    "kopis": 3072,
     "culture": 967
+  },
+  "poster_enrichment": {
+    "candidate_events": 70,
+    "checked": 70,
+    "official_posters_added": 13,
+    "unchanged": 56,
+    "year_unconfirmed_skipped": 0,
+    "request_failures": 1
   }
 }
