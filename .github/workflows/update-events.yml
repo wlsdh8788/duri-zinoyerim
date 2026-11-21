@@ -30,6 +30,15 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Validate football updater
+        run: |
+          python -m py_compile scripts/update_sports.py
+          python -m unittest discover -s tests -p 'test_update_sports.py'
+
+      - name: Refresh football schedule
+        if: github.event_name != 'push'
+        run: python scripts/update_sports.py
+
       - name: Refresh event data
         if: github.event_name != 'push'
         env:
@@ -51,11 +60,11 @@ jobs:
       - name: Commit updated data
         if: github.event_name != 'push'
         run: |
-          if ! git diff --quiet -- events.json; then
+          if ! git diff --quiet -- events.json sports.json; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add events.json
-            git commit -m "chore: refresh Gangwon event data"
+            git add events.json sports.json
+            git commit -m "chore: refresh events and football fixtures"
             git push
           else
             echo "No data changes"
