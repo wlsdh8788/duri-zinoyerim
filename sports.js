@@ -37,6 +37,8 @@ function ticketDetails(m,now){
   const presale=/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}\+09:00$/.test(m.ticketPresaleAt||'')?'<div class="football-ticket-date">⭐ 선예매: '+esc(fmtOpen.format(new Date(m.ticketPresaleAt)))+'</div>':'';
   return presale+'<div class="football-ticket-date">🎫 '+prefix+': '+esc(fmtOpen.format(when))+'</div>';
  }
+ // 원정팀으로 출전하는 경기는 예매 오픈일 미확인 문구를 표시하지 않는다.
+ if((m.teamGroup==='gangwon'&&m.away==='강원FC')||(m.teamGroup==='national'&&m.away==='대한민국'))return '';
  return '<div class="football-ticket-date football-ticket-unknown">예매 오픈일 미확인</div>';
 }
 function render(){
