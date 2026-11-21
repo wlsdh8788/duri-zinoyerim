@@ -102,7 +102,7 @@ VISUAL={'축제':('🎉','sea'),'공연':('🎵','music'),'전시':('🖼️','m
 def build(raw, category='축제', provider='한국관광공사', code=''):
     # 뮤지컬 〈데스노트〉 또는 <데스노트> 같은 제목을 HTML 태그로 오인하지 않는다.
     title=unescape(str(raw.get('title') or '')).strip()
-    title=re.sub(r'</?(?:b|strong|em|i|span|font|br)(?:\\s[^>]*)?>','',title,flags=re.I).strip()
+    title=re.sub(r'</?(?:b|strong|em|i|span|font|br)(?:\s[^>]*)?>','',title,flags=re.I).strip()
     addr=str(raw.get('address') or '').strip()
     province, city = location_of(addr, raw.get('area_hint') or raw.get('province') or raw.get('city') or '')
     if not province and raw.get('province_wide'):
