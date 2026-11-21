@@ -1,10 +1,263 @@
 {
   "version": 1,
-  "updated": null,
-  "auto_update": false,
-  "selection_note": "KOPIS 상세 API에서 장르·대표 출연진이 확인된 지정 작품만 표시. 데이터 갱신 작업 실행 전.",
+  "updated": "2026-11-21 14:57 KST",
+  "auto_update": true,
+  "selection_note": "KOPIS에서 뮤지컬 장르 확인 + 사전 지정 대형 작품 + 지정 배우 출연 확인. 배우별 회차 출연은 별도 확인 필요.",
   "stats": {
-    "selected": 0
+    "candidates": 48,
+    "checked": 48,
+    "reused": 0,
+    "selected": 11,
+    "not_selected": 37,
+    "failures": 0,
+    "limited": false,
+    "genre_listing": "ok"
   },
-  "performances": []
+  "performances": [
+    {
+      "id": "kopis-PF300704",
+      "title": "광화문 연가 [부산]",
+      "start": "2026-11-21",
+      "end": "2026-11-22",
+      "province": "부산",
+      "city": "부산 전체",
+      "place": "드림씨어터 [부산] (드림씨어터 [부산] )",
+      "address": "부산광역시",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF300704_260911_135400.gif",
+      "featuredCast": [
+        "차지연",
+        "손준호"
+      ],
+      "castSummary": "손준호, 이석훈, 정용훈, 차지연, 서은광, 류승주, 문진아 등",
+      "genre": "뮤지컬",
+      "ticketUrl": "https://www.ticketlink.co.kr/product/65774",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF300704",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "대표 작품과 KOPIS 등록 출연진 기준"
+    },
+    {
+      "id": "kopis-PF302516",
+      "title": "레베카 [서울]",
+      "start": "2026-11-24",
+      "end": "2027-03-14",
+      "province": "서울",
+      "city": "서울 전체",
+      "place": "충무아트센터 (대극장)",
+      "address": "서울특별시",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF302516_261006_134804.jpg",
+      "featuredCast": [
+        "옥주현",
+        "김우형",
+        "신영숙"
+      ],
+      "castSummary": "김우형, 김호경, 박성혁, 신영숙, 옥주현, 이아름솔, 김다혜 등",
+      "genre": "뮤지컬",
+      "ticketUrl": "https://ticket.melon.com/performance/index.htm?prodId=213984",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF302516",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "대표 작품과 KOPIS 등록 출연진 기준"
+    },
+    {
+      "id": "kopis-PF305104",
+      "title": "광화문 연가 [경주]",
+      "start": "2026-11-28",
+      "end": "2026-11-29",
+      "province": "경북",
+      "city": "경북 전체",
+      "place": "경주예술의전당 (대공연장(화랑홀))",
+      "address": "경상북도",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF305104_261102_144311.jpg",
+      "featuredCast": [
+        "차지연",
+        "손준호"
+      ],
+      "castSummary": "손준호, 이석훈, 정용훈, 차지연, 서은광, 민선예, 문진아 등",
+      "genre": "뮤지컬",
+      "ticketUrl": "",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF305104",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "대표 작품과 KOPIS 등록 출연진 기준"
+    },
+    {
+      "id": "kopis-PF302677",
+      "title": "미세스 다웃파이어 [서울]",
+      "start": "2026-12-03",
+      "end": "2027-02-21",
+      "province": "서울",
+      "city": "서울 전체",
+      "place": "GS아트센터 (GS아트센터)",
+      "address": "서울특별시",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF302677_261007_113759.jpg",
+      "featuredCast": [
+        "박혜나",
+        "정성화"
+      ],
+      "castSummary": "황정민, 정성화, 정상훈, 박혜나, 장은아, 이지훈, 김다현 등",
+      "genre": "뮤지컬",
+      "ticketUrl": "",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF302677",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "대표 작품과 KOPIS 등록 출연진 기준"
+    },
+    {
+      "id": "kopis-PF303043",
+      "title": "스위니토드 (SWEENEY TODD)",
+      "start": "2026-12-04",
+      "end": "2027-05-02",
+      "province": "서울",
+      "city": "서울 전체",
+      "place": "디큐브링크아트센터 (디큐브씨어터)",
+      "address": "서울특별시",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF303043_261012_171201.gif",
+      "featuredCast": [
+        "조승우",
+        "김소현",
+        "김주택"
+      ],
+      "castSummary": "조승우, 강필석, 김주택, 전미도, 김소현, 박지연, 서영주 등",
+      "genre": "뮤지컬",
+      "ticketUrl": "https://www.ticketlink.co.kr/product/66145",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF303043",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "대표 작품과 KOPIS 등록 출연진 기준"
+    },
+    {
+      "id": "kopis-PF301066",
+      "title": "광화문 연가 [대구]",
+      "start": "2026-12-05",
+      "end": "2026-12-06",
+      "province": "대구",
+      "city": "대구 전체",
+      "place": "계명아트센터 (계명아트센터)",
+      "address": "대구광역시",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF301066_260916_135304.jpg",
+      "featuredCast": [
+        "차지연",
+        "손준호"
+      ],
+      "castSummary": "손준호, 이석훈, 정용훈, 차지연, 서은광, 류승주, 민선예 등",
+      "genre": "뮤지컬",
+      "ticketUrl": "",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF301066",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "대표 작품과 KOPIS 등록 출연진 기준"
+    },
+    {
+      "id": "kopis-PF302015",
+      "title": "시카고 [서울]",
+      "start": "2026-12-05",
+      "end": "2027-03-14",
+      "province": "서울",
+      "city": "서울 전체",
+      "place": "LG아트센터 서울 (LG SIGNATURE 홀)",
+      "address": "서울특별시",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF302015_260929_151431.gif",
+      "featuredCast": [
+        "최정원",
+        "윤공주"
+      ],
+      "castSummary": "최정원, 윤공주, 이지연, 박은혜, 황미영, 김수하, 박건형 등",
+      "genre": "뮤지컬",
+      "ticketUrl": "",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF302015",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "대표 작품과 KOPIS 등록 출연진 기준"
+    },
+    {
+      "id": "kopis-PF301439",
+      "title": "광화문 연가 [인천]",
+      "start": "2026-12-19",
+      "end": "2026-12-20",
+      "province": "인천",
+      "city": "인천 전체",
+      "place": "인천문화예술회관 (대공연장)",
+      "address": "인천광역시",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF301439_260921_143643.gif",
+      "featuredCast": [
+        "차지연",
+        "손준호"
+      ],
+      "castSummary": "손준호, 이석훈, 정용훈, 차지연, 서은광, 류승주, 문진아 등",
+      "genre": "뮤지컬",
+      "ticketUrl": "https://www.ticketlink.co.kr/product/65773",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF301439",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "대표 작품과 KOPIS 등록 출연진 기준"
+    },
+    {
+      "id": "kopis-PF302842",
+      "title": "오페라의 유령 40주년 스페셜 시즌",
+      "start": "2026-12-22",
+      "end": "2027-02-28",
+      "province": "서울",
+      "city": "서울 전체",
+      "place": "블루스퀘어 (우리은행홀 (구. 인터파크홀, 구. 신한카드홀) )",
+      "address": "서울특별시",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF302842_261008_143949.jpg",
+      "featuredCast": [
+        "최재림",
+        "박강현",
+        "전동석"
+      ],
+      "castSummary": "최재림, 전동석, 박강현, 이해원, 최선호, 송원근, 김성식 등",
+      "genre": "뮤지컬",
+      "ticketUrl": "",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF302842",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "대표 작품과 KOPIS 등록 출연진 기준"
+    },
+    {
+      "id": "kopis-PF301867",
+      "title": "광화문 연가 [세종]",
+      "start": "2026-12-26",
+      "end": "2026-12-27",
+      "province": "세종",
+      "city": "세종",
+      "place": "세종예술의전당 (대공연장)",
+      "address": "세종특별자치시",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF301867_260928_163139.gif",
+      "featuredCast": [
+        "차지연",
+        "손준호"
+      ],
+      "castSummary": "손준호, 이석훈, 정용훈, 차지연, 민선예, 박세미, 기세중 등",
+      "genre": "뮤지컬",
+      "ticketUrl": "",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF301867",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "대표 작품과 KOPIS 등록 출연진 기준"
+    },
+    {
+      "id": "kopis-PF301001",
+      "title": "광화문 연가 [수원]",
+      "start": "2027-01-02",
+      "end": "2027-01-03",
+      "province": "경기",
+      "city": "경기 전체",
+      "place": "경기아트센터(구. 경기도문화의전당) (대극장)",
+      "address": "경기도",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF301001_260915_143727.gif",
+      "featuredCast": [
+        "차지연",
+        "손준호"
+      ],
+      "castSummary": "손준호, 정용훈, 이석훈, 차지연, 류승주, 문진아, 박세미 등",
+      "genre": "뮤지컬",
+      "ticketUrl": "",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF301001",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "대표 작품과 KOPIS 등록 출연진 기준"
+    }
+  ]
 }
