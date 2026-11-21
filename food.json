@@ -1,0 +1,170 @@
+{
+  "version": 1,
+  "updated": "2026-11-21",
+  "method": "공개 관광정보 및 사업장 정보로 수동 확인한 우리두리 초기 후보. 네이버 플레이스 리뷰·별점 데이터를 수집한 자료가 아님.",
+  "defaultRegion": "강릉",
+  "places": [
+    {
+      "id": "gn-donghwagarden",
+      "name": "강릉짬뽕순두부 동화가든 본점",
+      "city": "강릉",
+      "district": "초당",
+      "type": "한식",
+      "tags": [
+        "순두부",
+        "강릉 대표음식",
+        "점심"
+      ],
+      "address": "강원특별자치도 강릉시 초당순두부길77번길 15",
+      "note": "짬뽕순두부를 찾을 때 살펴볼 후보",
+      "sourceName": "한국관광공사 대한민국 구석구석",
+      "sourceUrl": "https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?menuSn=&vcontsId=49998",
+      "verifiedAt": "2026-11-21",
+      "emoji": "🍲"
+    },
+    {
+      "id": "gn-chodanggrandma",
+      "name": "초당할머니순두부",
+      "city": "강릉",
+      "district": "초당",
+      "type": "한식",
+      "tags": [
+        "순두부",
+        "강릉 대표음식",
+        "점심"
+      ],
+      "address": "강원특별자치도 강릉시 초당순두부길 77",
+      "note": "담백한 초당순두부 식사를 찾을 때 살펴볼 후보",
+      "sourceName": "한국관광공사 대한민국 구석구석",
+      "sourceUrl": "https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=174296",
+      "verifiedAt": "2026-11-21",
+      "emoji": "🥣"
+    },
+    {
+      "id": "gn-chodangbistro",
+      "name": "초당비스트로",
+      "city": "강릉",
+      "district": "초당",
+      "type": "양식",
+      "tags": [
+        "파스타",
+        "데이트",
+        "초당"
+      ],
+      "address": "강원특별자치도 강릉시 초당순두부길 19",
+      "note": "초당동에서 양식 메뉴를 찾을 때 살펴볼 후보",
+      "sourceName": "공개 사업장 위치정보",
+      "sourceUrl": "",
+      "verifiedAt": "2026-11-21",
+      "emoji": "🍝"
+    },
+    {
+      "id": "gn-aseutta",
+      "name": "아스따",
+      "city": "강릉",
+      "district": "시내",
+      "type": "양식",
+      "tags": [
+        "파스타",
+        "데이트",
+        "강릉역 주변"
+      ],
+      "address": "강원특별자치도 강릉시 남구길10번길 14",
+      "note": "강릉역 근처 파스타 데이트 후보",
+      "sourceName": "공개 사업장 위치정보",
+      "sourceUrl": "",
+      "verifiedAt": "2026-11-21",
+      "emoji": "🍝"
+    },
+    {
+      "id": "gn-doublet",
+      "name": "더블티다이닝",
+      "city": "강릉",
+      "district": "초당",
+      "type": "양식",
+      "tags": [
+        "기념일",
+        "코스요리",
+        "특별한 날"
+      ],
+      "address": "강원특별자치도 강릉시 초당순두부길55번길 38 3층",
+      "note": "기념일에 코스식사를 고려할 때 살펴볼 후보. 예약 조건 확인 필요",
+      "sourceName": "공개 사업장 위치정보",
+      "sourceUrl": "",
+      "verifiedAt": "2026-11-21",
+      "emoji": "🍽️"
+    },
+    {
+      "id": "gn-buttervilla",
+      "name": "버터빌라",
+      "city": "강릉",
+      "district": "경포·강문",
+      "type": "양식",
+      "tags": [
+        "피자",
+        "파스타",
+        "데이트"
+      ],
+      "address": "강원특별자치도 강릉시 해안로 210 더 그로브 테이블 S동 102호",
+      "note": "바닷가 권역에서 이탈리안 메뉴를 찾을 때 살펴볼 후보",
+      "sourceName": "공개 사업장 위치정보",
+      "sourceUrl": "",
+      "verifiedAt": "2026-11-21",
+      "emoji": "🍕"
+    },
+    {
+      "id": "gn-bossanova",
+      "name": "보사노바 커피로스터스 강릉점",
+      "city": "강릉",
+      "district": "안목",
+      "type": "카페",
+      "tags": [
+        "바다뷰",
+        "커피",
+        "데이트"
+      ],
+      "address": "강원특별자치도 강릉시 창해로14번길 28",
+      "note": "안목해변 커피거리의 바다 전망 카페 후보",
+      "sourceName": "공개 사업장 위치정보",
+      "sourceUrl": "",
+      "verifiedAt": "2026-11-21",
+      "emoji": "☕"
+    },
+    {
+      "id": "gn-346coffee",
+      "name": "346커피스토리",
+      "city": "강릉",
+      "district": "경포·강문",
+      "type": "카페",
+      "tags": [
+        "바다뷰",
+        "베이커리",
+        "데이트"
+      ],
+      "address": "강원특별자치도 강릉시 창해로 348",
+      "note": "강문해변 근처 카페·베이커리 후보",
+      "sourceName": "공개 사업장 위치정보",
+      "sourceUrl": "",
+      "verifiedAt": "2026-11-21",
+      "emoji": "🥐"
+    },
+    {
+      "id": "gn-terarosa-sacheon",
+      "name": "테라로사 커피 사천점",
+      "city": "강릉",
+      "district": "사천",
+      "type": "카페",
+      "tags": [
+        "커피",
+        "바다 산책",
+        "데이트"
+      ],
+      "address": "강원특별자치도 강릉시 사천면 해안로 6",
+      "note": "사천해변 권역에서 커피·산책을 함께 고려할 때 살펴볼 후보",
+      "sourceName": "공개 사업장 위치정보",
+      "sourceUrl": "",
+      "verifiedAt": "2026-11-21",
+      "emoji": "☕"
+    }
+  ]
+}
