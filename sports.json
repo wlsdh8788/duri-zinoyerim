@@ -2,7 +2,7 @@
   "version": 1,
   "updated": "2026-11-21",
   "auto_update": false,
-  "message": "공식 발표를 확인한 경기만 표시. 자동 일정 연동은 아직 연결 전이며 일정 변경 가능.",
+  "message": "강원FC 공식 경기장·예매처 정보를 제공하며 자동 갱신은 첫 실행 후 확인. 국가대표 새 일정은 공식 API 연동 전. 예매 오픈일은 확인 시에만 표시.",
   "matches": [
     {
       "id": "gangwon-20261121-daejeon",
@@ -12,9 +12,15 @@
       "time": "16:30",
       "home": "강원FC",
       "away": "대전하나시티즌",
-      "venue": "",
+      "venue": "강릉하이원아레나",
       "sourceName": "K리그 공식 경기일정",
-      "sourceUrl": "https://portal.kleague.com/view/schedule/list.do"
+      "sourceUrl": "https://portal.kleague.com/view/schedule/list.do",
+      "isHome": true,
+      "localHome": "강릉",
+      "domesticNational": false,
+      "ticketInfoUrl": "https://nol.yanolja.com/ticket/genre/sports/gangwonfc",
+      "ticketStatus": "unconfirmed",
+      "ticketOpenAt": ""
     },
     {
       "id": "gangwon-20261126-kitchee",
@@ -24,9 +30,15 @@
       "time": "19:00",
       "home": "강원FC",
       "away": "킷치 SC",
-      "venue": "",
+      "venue": "강릉종합운동장",
       "sourceName": "K리그 공식 경기일정",
-      "sourceUrl": "https://portal.kleague.com/view/schedule/list.do"
+      "sourceUrl": "https://portal.kleague.com/view/schedule/list.do",
+      "isHome": true,
+      "localHome": "강릉",
+      "domesticNational": false,
+      "ticketInfoUrl": "https://nol.yanolja.com/ticket/genre/sports/gangwonfc",
+      "ticketStatus": "unconfirmed",
+      "ticketOpenAt": ""
     },
     {
       "id": "gangwon-20261129-incheon",
@@ -36,9 +48,15 @@
       "time": "16:30",
       "home": "인천 유나이티드",
       "away": "강원FC",
-      "venue": "",
+      "venue": "인천",
       "sourceName": "K리그 공식 경기일정",
-      "sourceUrl": "https://portal.kleague.com/view/schedule/list.do"
+      "sourceUrl": "https://portal.kleague.com/view/schedule/list.do",
+      "isHome": false,
+      "localHome": "",
+      "domesticNational": false,
+      "ticketInfoUrl": "",
+      "ticketStatus": "unconfirmed",
+      "ticketOpenAt": ""
     },
     {
       "id": "gangwon-20261203-phnompenh",
@@ -50,7 +68,13 @@
       "away": "강원FC",
       "venue": "",
       "sourceName": "K리그 공식 경기일정",
-      "sourceUrl": "https://portal.kleague.com/view/schedule/list.do"
+      "sourceUrl": "https://portal.kleague.com/view/schedule/list.do",
+      "isHome": false,
+      "localHome": "",
+      "domesticNational": false,
+      "ticketInfoUrl": "",
+      "ticketStatus": "unconfirmed",
+      "ticketOpenAt": ""
     },
     {
       "id": "korea-20261113-saudi",
@@ -62,7 +86,13 @@
       "away": "사우디아라비아",
       "venue": "카타르 도하",
       "sourceName": "대한축구협회 공식 일정·공식 파트너 경기 안내",
-      "sourceUrl": "https://img01.kfa.or.kr/live/live.php?act=match_schedule"
+      "sourceUrl": "https://img01.kfa.or.kr/live/live.php?act=match_schedule",
+      "isHome": false,
+      "localHome": "",
+      "domesticNational": false,
+      "ticketInfoUrl": "",
+      "ticketStatus": "unconfirmed",
+      "ticketOpenAt": ""
     },
     {
       "id": "korea-20261117-qatar",
@@ -74,7 +104,18 @@
       "away": "카타르",
       "venue": "카타르 도하",
       "sourceName": "대한축구협회 공식 일정·공식 파트너 경기 안내",
-      "sourceUrl": "https://img01.kfa.or.kr/live/live.php?act=match_schedule"
+      "sourceUrl": "https://img01.kfa.or.kr/live/live.php?act=match_schedule",
+      "isHome": false,
+      "localHome": "",
+      "domesticNational": false,
+      "ticketInfoUrl": "",
+      "ticketStatus": "unconfirmed",
+      "ticketOpenAt": ""
     }
-  ]
+  ],
+  "source_status": {
+    "gangwon": "awaiting_first_automated_check",
+    "national": "official_api_not_connected"
+  },
+  "last_checked": null
 }
