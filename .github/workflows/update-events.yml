@@ -49,6 +49,11 @@ jobs:
         run: |
           python -m unittest discover -s tests -p 'test_food_page.py'
           node --check food.js
+          python -m unittest discover -s tests -p 'test_food_public.py'
+          python -m py_compile scripts/update_food_public.py
+
+      - name: Refresh Gangneung restaurants from official LOCALDATA
+        run: python scripts/update_food_public.py
 
       - name: Refresh football schedule
         if: github.event_name != 'push'
@@ -87,11 +92,11 @@ jobs:
       - name: Commit updated data
         if: github.event_name != 'push'
         run: |
-          if ! git diff --quiet -- events.json sports.json musicals.json concerts.json; then
+          git add events.json sports.json musicals.json concerts.json food-public.json
+          if ! git diff --cached --quiet; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add events.json sports.json musicals.json concerts.json
-            git commit -m "chore: refresh event sports musical and concert listings"
+            git commit -m "chore: refresh event and restaurant listings"
             git push
           else
             echo "No data changes"
@@ -100,7 +105,7 @@ jobs:
       - name: Prepare safe public files
         run: |
           mkdir -p _site
-          cp index.html events.json sports.json sports.js sports.css musicals.json musicals.js musicals.css concerts.json concerts.js concerts.css food.html food.json food.js food.css site-nav.css _site/
+          cp index.html events.json sports.json sports.js sports.css musicals.json musicals.js musicals.css concerts.json concerts.js concerts.css food.html food.json food-public.json food-config.js food.js food.css site-nav.css _site/
           touch _site/.nojekyll
 
       - uses: actions/configure-pages@v5
@@ -118,6 +123,8 @@ jobs:
           test -s _site/concerts.css
           test -s _site/food.html
           test -s _site/food.json
+          test -s _site/food-public.json
+          test -s _site/food-config.js
           test -s _site/food.js
           test -s _site/food.css
           test -s _site/site-nav.css
