@@ -59,11 +59,10 @@ function render(){
  document.getElementById('footballCount').textContent='('+matches.length+'건)';
  cards.innerHTML=matches.length?matches.slice(0,60).map(m=>{
   const local=localType(m),kind=local==='gangneung'?'🟠 강릉 홈경기':local==='chuncheon'?'🟠 춘천 홈경기':local==='korea'?'🇰🇷 국내 A매치':'';
-  const official=safeLink(m.sourceUrl),ticket=ticketLink(m),notice=safeLink(m.ticketAnnouncementUrl);
+  const ticket=ticketLink(m),notice=safeLink(m.ticketAnnouncementUrl);
   const dateText=esc(fmt.format(kick(m)))+' · '+esc(m.time||'시간 미정')+' KST';
   const venueText=m.venue?' · '+esc(m.venue):' · 경기장 미확인';
-  const links=(official==='#'?'':'<a class="football-link" href="'+esc(official)+'" target="_blank" rel="noopener noreferrer">공식 일정 ↗</a>')
-    +(ticket==='#'?'':'<a class="football-link football-ticket" href="'+esc(ticket)+'" target="_blank" rel="noopener noreferrer">공식 예매처 확인 ↗</a>')
+  const links=(ticket==='#'?'':'<a class="football-link football-ticket" href="'+esc(ticket)+'" target="_blank" rel="noopener noreferrer">공식 예매처 확인 ↗</a>')
     +(notice==='#'?'':'<a class="football-link" href="'+esc(notice)+'" target="_blank" rel="noopener noreferrer">예매 공지 ↗</a>');
   return '<article class="football-match">'+
    '<div class="football-top"><strong>'+esc(m.competition||'축구 경기')+'</strong><span>'+(kick(m)<now?'지난 경기':'경기 예정')+'</span></div>'+
