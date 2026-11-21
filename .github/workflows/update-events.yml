@@ -89,8 +89,21 @@ jobs:
 
       - uses: actions/configure-pages@v5
 
-      - uses: actions/upload-pages-artifact@v3
+      - name: Verify GitHub Pages bundle
+        run: |
+          test -s _site/index.html
+          test -s _site/events.json
+          test -s _site/sports.json
+          test -s _site/musicals.json
+          test -s _site/musicals.js
+          test -s _site/musicals.css
+          echo "GitHub Pages site files verified."
+          ls -lh _site/
+
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v4
         with:
+          name: github-pages
           path: _site
 
       - id: deployment
