@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-21 14:56 KST",
+  "updated": "2026-11-21 15:04 KST",
   "auto_update": true,
   "events": [
     {
@@ -54536,12 +54536,10 @@
       "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
       "collectionMethod": "한국관광공사 API",
       "lastVerified": "2026-11-21",
-      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/26/4154426_image2_1.jpg",
-      "imageType": "관광공사 등록 포스터 · 이미지 제목의 개최연도 일치",
+      "posterUrl": "https://tong.visitkorea.or.kr/cms/resource/41/4155841_image2_1.jpg",
+      "imageType": "관광공사 제공 대표 이미지",
       "isPermanent": false,
-      "isLongRunning": false,
-      "posterSource": "TourAPI/detailImage2",
-      "posterConfidence": "year-matched"
+      "isLongRunning": false
     },
     {
       "id": "culture-405697",
@@ -77253,34 +77251,6 @@
       "collectionMethod": "문화포털 API",
       "lastVerified": "2026-11-21",
       "posterUrl": "https://www.culture.go.kr/upload/rdf/26/11/rdf_2026111321175520293.gif",
-      "imageType": "문화포털 제공 포스터/이미지",
-      "isPermanent": false,
-      "isLongRunning": false
-    },
-    {
-      "id": "culture-408637",
-      "title": "장문영 바이올린 독주회 \"모차르트 소나타 전곡 시리즈 I\"",
-      "province": "서울",
-      "city": "서초구",
-      "category": "공연",
-      "start": "2026-12-10",
-      "end": "2026-12-10",
-      "place": "예술의전당 [서울] 인춘아트홀",
-      "address": "서울 서초구",
-      "price": "요금 확인 필요",
-      "priceType": "unknown",
-      "emoji": "🎵",
-      "theme": "music",
-      "intro": "서울 서초구에서 열리는 공연 정보. 상세 일정과 예약 여부는 공식 출처에서 확인해 줘.",
-      "highlight": "주말 데이트 후보",
-      "status": "자동 수집 · 방문 전 재확인",
-      "sourceLabel": "문화포털",
-      "sourceUrl": "https://www.culture.go.kr/",
-      "mapQuery": "서울 서초구 예술의전당 [서울] 인춘아트홀",
-      "note": "외부 데이터 자동 수집. 상세 프로그램과 변경사항은 출처 확인",
-      "collectionMethod": "문화포털 API",
-      "lastVerified": "2026-11-21",
-      "posterUrl": "https://www.culture.go.kr/upload/ucms/oneCltInfo/2026/202611/ac0141eb827f434f9658ee5e8b45685b.jpg",
       "imageType": "문화포털 제공 포스터/이미지",
       "isPermanent": false,
       "isLongRunning": false
@@ -115036,22 +115006,22 @@
   "sources": {
     "manual": 4,
     "tourapi": 69,
-    "kopis": "오류 · 기존 데이터 사용",
+    "kopis": 3072,
     "culture": 967
   },
   "poster_enrichment": {
     "candidate_events": 70,
     "checked": 70,
-    "official_posters_added": 13,
+    "official_posters_added": 12,
     "unchanged": 56,
     "year_unconfirmed_skipped": 0,
-    "request_failures": 1
+    "request_failures": 2
   },
   "official_site_poster_scan": {
-    "candidate_events": 79,
+    "candidate_events": 80,
     "pages_checked": 5,
     "official_posters_added": 0,
-    "unchanged": 79,
+    "unchanged": 80,
     "request_failures": 1
   },
   "official_post_discovery": {
