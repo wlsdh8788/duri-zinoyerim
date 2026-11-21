@@ -35,6 +35,11 @@ jobs:
           python -m py_compile scripts/update_sports.py
           python -m unittest discover -s tests -p 'test_update_sports.py'
 
+      - name: Validate musical selection rules
+        run: |
+          python -m py_compile scripts/update_musicals.py scripts/update_events.py
+          python -m unittest discover -s tests -p 'test_update_musicals.py'
+
       - name: Refresh football schedule
         if: github.event_name != 'push'
         run: python scripts/update_sports.py
@@ -57,13 +62,19 @@ jobs:
             echo "API secrets not set: publishing existing manual data."
           fi
 
+      - name: Refresh curated commercial musicals
+        if: github.event_name != 'push'
+        env:
+          KOPIS_SERVICE_KEY: ${{ secrets.KOPIS_SERVICE_KEY }}
+        run: python scripts/update_musicals.py
+
       - name: Commit updated data
         if: github.event_name != 'push'
         run: |
-          if ! git diff --quiet -- events.json sports.json; then
+          if ! git diff --quiet -- events.json sports.json musicals.json; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add events.json sports.json
+            git add events.json sports.json musicals.json
             git commit -m "chore: refresh events and football fixtures"
             git push
           else
@@ -73,7 +84,7 @@ jobs:
       - name: Prepare safe public files
         run: |
           mkdir -p _site
-          cp index.html events.json sports.json sports.js sports.css _site/
+          cp index.html events.json sports.json sports.js sports.css musicals.json musicals.js musicals.css _site/
           touch _site/.nojekyll
 
       - uses: actions/configure-pages@v5
