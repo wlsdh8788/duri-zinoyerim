@@ -68,7 +68,7 @@ def category_for(name: str, kind: str) -> str:
 
 
 def district_for(address: str) -> str:
-    found = re.search(r"\b(주문진읍|(?:[가-힣]{2,8})(?:면|동))\b", address.split("강릉시", 1)[-1])
+    found = re.search(r"\b(주문진읍|(?:[가-힣]{1,8})(?:읍|면|동))\b", address.split("강릉시", 1)[-1])
     return found.group(1) if found else "강릉"
 
 
