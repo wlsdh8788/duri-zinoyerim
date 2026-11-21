@@ -45,6 +45,11 @@ jobs:
           python -m py_compile scripts/update_concerts.py
           python -m unittest discover -s tests -p 'test_update_concerts.py'
 
+      - name: Validate food discovery page
+        run: |
+          python -m unittest discover -s tests -p 'test_food_page.py'
+          node --check food.js
+
       - name: Refresh football schedule
         if: github.event_name != 'push'
         run: python scripts/update_sports.py
@@ -95,7 +100,7 @@ jobs:
       - name: Prepare safe public files
         run: |
           mkdir -p _site
-          cp index.html events.json sports.json sports.js sports.css musicals.json musicals.js musicals.css concerts.json concerts.js concerts.css _site/
+          cp index.html events.json sports.json sports.js sports.css musicals.json musicals.js musicals.css concerts.json concerts.js concerts.css food.html food.json food.js food.css site-nav.css _site/
           touch _site/.nojekyll
 
       - uses: actions/configure-pages@v5
@@ -111,6 +116,11 @@ jobs:
           test -s _site/concerts.json
           test -s _site/concerts.js
           test -s _site/concerts.css
+          test -s _site/food.html
+          test -s _site/food.json
+          test -s _site/food.js
+          test -s _site/food.css
+          test -s _site/site-nav.css
           echo "GitHub Pages site files verified."
           ls -lh _site/
 
