@@ -1,4 +1,11 @@
 {
   "description": "경기별 공식 발표가 확인된 경우에만 예매 시작 일시 추가. 날짜는 한국시간 +09:00, announcementUrl은 공식 공지 링크.",
-  "matches": {}
+  "matches": {
+    "gangwon-20261206-seoul": {
+      "ticketOpenAt": "2026-11-28T14:00+09:00",
+      "ticketPresaleAt": "2026-11-27T14:00+09:00",
+      "announcementUrl": "https://nol.yanolja.com/ticket/genre/sports/gangwonfc",
+      "note": "NOL 티켓 2026.12.6 FC서울전 일반·선예매 공지"
+    }
+  }
 }
