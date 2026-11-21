@@ -10,7 +10,7 @@ from __future__ import annotations
 from datetime import datetime, timedelta, timezone, date
 from html import unescape
 from pathlib import Path
-from urllib.parse import quote, urlsplit
+from urllib.parse import quote, urlsplit, urlencode
 from urllib.request import Request, urlopen
 import json
 import os
@@ -133,6 +133,71 @@ def build_musical(event: dict, detail: ET.Element, actors: list[str]) -> dict | 
         "selection": "대표 작품과 KOPIS 등록 출연진 기준",
     }
 
+def iso_from_kopis(value: str) -> str:
+    digits = re.sub(r"[^0-9]", "", str(value or ""))
+    if len(digits) < 8:
+        return ""
+    try:
+        return date(int(digits[:4]), int(digits[4:6]), int(digits[6:8])).isoformat()
+    except ValueError:
+        return ""
+
+def list_musical_candidates(key: str, titles: list[str], exclusions: list[str]) -> list[dict]:
+    """GGGA(뮤지컬) 장르 전용 KOPIS 목록으로 일반 공연 수집의 누락을 보완."""
+    today = datetime.now(KST).date()
+    first_day, end_day = today - timedelta(days=30), today + timedelta(days=120)
+    results = []
+    seen = set()
+    aliases = {
+        "서울특별시":"서울","경기도":"경기","인천광역시":"인천",
+        "부산광역시":"부산","대구광역시":"대구","울산광역시":"울산",
+        "대전광역시":"대전","광주광역시":"광주","세종특별자치시":"세종",
+        "강원특별자치도":"강원","강원도":"강원",
+        "충청남도":"충남","충청북도":"충북",
+        "전라남도":"전남","전북특별자치도":"전북",
+        "경상남도":"경남","경상북도":"경북","제주특별자치도":"제주",
+    }
+    while first_day <= end_day:
+        last_day = min(first_day + timedelta(days=29), end_day)
+        for page in range(1, 8):
+            params = {
+                "service":key, "stdate":first_day.strftime("%Y%m%d"),
+                "eddate":last_day.strftime("%Y%m%d"),"cpage":page,
+                "rows":100,"shcate":"GGGA",
+            }
+            url = "https://kopis.or.kr/openApi/restful/pblprfr?" + urlencode(params)
+            request = Request(url, headers={"User-Agent":"UriDuriMusicals/1.0", "Accept":"application/xml"})
+            with urlopen(request,timeout=16) as response:
+                root = ET.fromstring(response.read(1_600_000))
+            if root.find(".//errmsg") is not None:
+                raise ValueError("KOPIS genre listing returned error")
+            batch = root.findall(".//db")
+            for item in batch:
+                get = lambda name:(item.findtext(name) or "").strip()
+                pf_id = get("mt20id")
+                title = unescape(get("prfnm"))
+                if not re.fullmatch(r"PF\d+",pf_id) or pf_id in seen:
+                    continue
+                seen.add(pf_id)
+                if not title_matches(title,titles,exclusions):
+                    continue
+                starts,ends = iso_from_kopis(get("prfpdfrom")),iso_from_kopis(get("prfpdto"))
+                if not starts or not ends or ends < today.isoformat():
+                    continue
+                province = aliases.get(get("area"),get("area"))
+                results.append({
+                    "id":"kopis-"+pf_id,"title":title,
+                    "start":starts,"end":ends,"province":province,
+                    "city":province+" 전체" if province else "",
+                    "place":get("fcltynm"),"address":"",
+                    "posterUrl":get("poster"),
+                })
+            if len(batch) < 100:
+                break
+        first_day = last_day + timedelta(days=1)
+    return results
+
+
 def update():
     cfg = json.loads((ROOT / "musical_criteria.json").read_text(encoding="utf-8"))
     output = ROOT / "musicals.json"
@@ -147,9 +212,20 @@ def update():
         and e.get("end", "") >= today
         and title_matches(e.get("title", ""), cfg["known_titles"], cfg["exclude_title_contains"])
     ]
+    listing_status = "ok"
+    try:
+        extra = list_musical_candidates(os.getenv("KOPIS_SERVICE_KEY", "").strip(), cfg["known_titles"], cfg["exclude_title_contains"]) if os.getenv("KOPIS_SERVICE_KEY") else []
+        pool_ids = {e["id"] for e in pool}
+        for e in extra:
+            if e["id"] not in pool_ids:
+                pool.append(e)
+                pool_ids.add(e["id"])
+    except Exception as exc:
+        listing_status = "error_" + type(exc).__name__
+        print("musicals: 별도 장르 목록 조회 실패 (" + type(exc).__name__ + ")", file=sys.stderr)
     pool.sort(key=lambda e: (e.get("start", ""), e.get("title", "")))
     # API 호출 과다 방지를 위해 검증할 작품 수 제한 (목록 누락 가능성은 상태에 표시)
-    cap = 60
+    cap = 80
     to_check = pool[:cap]
     key = os.getenv("KOPIS_SERVICE_KEY", "").strip()
     if not key:
@@ -193,6 +269,7 @@ def update():
     status = {
         "candidates":len(pool), "checked":checked, "reused":reused, "selected":len(found),
         "not_selected":excluded, "failures":failed, "limited":len(pool)>cap,
+        "genre_listing":listing_status,
     }
     output.write_text(json.dumps({
         "version":1,"updated":now.strftime("%Y-%m-%d %H:%M KST"),
