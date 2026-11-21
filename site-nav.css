@@ -1,0 +1,10 @@
+/* 공통: 우리두리 놀거리/먹거리 대주제 */
+.site-areas{background:#fff;border-bottom:1px solid #e9e8ef}
+.site-areas-inner{max-width:1110px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:9px 22px}
+.site-area{min-height:44px;display:flex;align-items:center;justify-content:center;gap:8px;border:1px solid #e8e6ee;border-radius:12px;background:#f8f7fb;color:#595d71;font-weight:800;font-size:14px;text-decoration:none}
+.site-area.active{background:#252942;border-color:#252942;color:#fff}
+.site-area:focus-visible{outline:3px solid #887be0;outline-offset:2px}
+@media(max-width:760px){
+ .site-areas-inner{padding:8px 14px;gap:7px}
+ .site-area{min-height:43px;font-size:13px;border-radius:11px}
+}
