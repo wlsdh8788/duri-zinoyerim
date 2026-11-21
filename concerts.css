@@ -1,0 +1,53 @@
+/* 콘서트 카드 및 어디서나 보이는 대표 메뉴 */
+.section-nav{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:9px;overflow:visible}
+.section-nav .section-tab{min-width:0;width:100%}
+.concert-section{margin:18px 0 26px}
+.concert-head h2{font-size:24px;margin:0 0 7px;letter-spacing:-.8px}
+.concert-head p{font-size:13px;color:#70778b;line-height:1.7;margin:0 0 16px}
+.concert-filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.concert-filter{padding:9px 15px;border:1px solid #e2e1eb;border-radius:99px;background:#fff;color:#61657a;font-size:13px;font-weight:800}
+.concert-filter.active{background:#252942;border-color:#252942;color:#fff}
+.concert-toolbar{display:grid;grid-template-columns:minmax(0,1fr) 160px;gap:9px;margin-bottom:10px}
+.concert-toolbar input,.concert-toolbar select{min-width:0;width:100%;height:45px;padding:0 12px;border:1px solid #e1dfea;border-radius:12px;background:#fff;color:#23263f;font-size:13px}
+.concert-status{font-size:12px;color:#777d8f;margin:0 0 14px;line-height:1.6}
+.concert-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.concert-card{background:#fff;border:1px solid #e8e6ef;border-radius:17px;overflow:hidden;display:flex;min-width:0;box-shadow:0 7px 20px rgba(26,25,67,.025)}
+.concert-poster{width:34%;flex:none;min-height:200px;background:linear-gradient(135deg,#dbe8f9,#b8b1e4);overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center}
+.concert-poster img{display:block;width:100%;height:100%;position:absolute;inset:0;object-fit:contain}
+.concert-poster.concert-broken:after{content:'🎤';font-size:42px;position:relative}
+.concert-empty-poster{font-size:42px}
+.concert-info{padding:14px;display:flex;flex-direction:column;gap:8px;flex:1;min-width:0}
+.concert-info h3{font-size:17px;line-height:1.4;letter-spacing:-.4px;margin:0;overflow-wrap:anywhere}
+.concert-info p{margin:0;color:#686c80;font-size:12px;line-height:1.55}
+.concert-artists{color:#5549a3!important}
+.concert-badges{display:flex;gap:6px;flex-wrap:wrap}
+.concert-badge{background:#eeeaff;color:#6252af;padding:5px 8px;font-weight:800;font-size:10px;border-radius:7px}
+.concert-badge.region{background:#f5f5f8;color:#7b7d8d}
+.concert-links{display:flex;flex-wrap:wrap;gap:7px;margin-top:auto}
+.concert-links a{flex:1 1 100px;text-align:center;border-radius:9px;background:#f0edff;color:#5b48bb;font-size:12px;font-weight:800;padding:10px 7px;white-space:nowrap}
+.concert-links .concert-book{background:#252942;color:#fff}
+.concert-empty{grid-column:1/-1;background:#fff;border:1px dashed #dedbea;padding:33px 15px;border-radius:15px;text-align:center;font-size:13px;line-height:1.9;color:#74788a}
+.concert-note{font-size:12px;color:#828599;line-height:1.7;margin:14px 0}
+.concert-more-wrap{text-align:center;margin-top:18px}
+.concert-more{padding:10px 20px;border:1px solid #e2dff1;background:#fff;border-radius:11px;font-size:13px;font-weight:800;color:#5546b4}
+@media(max-width:900px){.section-nav .section-name{font-size:13px}.section-nav .section-tab{padding:12px 8px}}
+@media(max-width:760px){
+  /* 모바일에서 5개 메뉴가 항상 전부 보이는 3열/2행 구성 */
+  .section-nav{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;overflow:visible!important;gap:7px;padding:0;margin:12px 0 9px}
+  .section-nav .section-tab{min-width:0!important;width:100%!important;min-height:51px!important;max-width:none;flex:none;padding:8px 3px!important;border-radius:11px;justify-content:center;align-items:center;text-align:center}
+  .section-nav .section-name{font-size:clamp(10px,2.9vw,13px)!important;white-space:normal;word-break:keep-all;line-height:1.4}
+  .section-nav .section-tab small{display:none}
+  .concert-head h2{font-size:20px}
+  .concert-section{margin:15px 0 22px}
+  .concert-grid{grid-template-columns:1fr;gap:10px}
+  .concert-card{border-radius:14px}
+  .concert-poster{min-height:175px;width:34%}
+  .concert-info{padding:12px;gap:7px}
+  .concert-info h3{font-size:15px}
+  .concert-info p{font-size:11.5px}
+  .concert-links a{font-size:11px;padding:9px 6px}
+  .concert-toolbar{grid-template-columns:minmax(0,1fr) 115px;gap:7px}
+  .concert-toolbar input,.concert-toolbar select{height:43px}
+}
+@media(max-width:350px){.section-nav .section-name{font-size:10px!important}}
+
