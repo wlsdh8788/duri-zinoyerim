@@ -145,6 +145,7 @@
 
   </style>
   <link rel="stylesheet" href="./sports.css">
+  <link rel="stylesheet" href="./musicals.css">
 </head>
 <body>
   <header class="nav"><div class="wrap navinner"><div class="brand">진오 <em>♥</em> 예림 <span style="font-size:.72em;margin-left:10px;font-weight:700">우리두리</span></div><div style="display:flex;align-items:center;gap:8px"><span class="badge-top">전국 축제 · 공연 · 전시</span><button class="share-top" id="shareAll" type="button">↗ 일정 공유</button></div></div></header>
@@ -155,6 +156,7 @@
       <button class="section-tab" type="button" data-section="longterm" aria-pressed="false"><span class="section-name">🏛️ 상설·장기 행사</span><small>상설 운영 · 30일 이상</small></button>
       <button class="section-tab" type="button" data-section="favorites" aria-pressed="false"><span class="section-name">♥ 찜한 행사</span><small>저장한 데이트 후보</small></button>
       <button class="section-tab" id="soccerTab" type="button" aria-pressed="false"><span class="section-name">⚽ 축구 경기</span><small>국가대표 · 강원FC</small></button>
+      <button class="section-tab" id="musicalTab" type="button" aria-pressed="false"><span class="section-name">🎭 인기 뮤지컬</span><small>스타 출연 · 대표 작품</small></button>
     </nav>
     <section class="discovery" aria-label="행사 탐색">
       <section class="tool-panel mobile-tools" aria-label="검색 및 필터">
@@ -193,6 +195,25 @@
         <a href="https://portal.kleague.com/view/schedule/list.do" target="_blank" rel="noopener noreferrer">K리그 공식 일정</a>과
         <a href="https://img01.kfa.or.kr/live/live.php?act=match_schedule" target="_blank" rel="noopener noreferrer">대한축구협회 일정</a>을 다시 확인해 줘. 예매 여부는 별도로 확인해야 해.
       </div>
+    </section>
+    <section id="musicalSection" class="musical-section" aria-labelledby="musicalTitle" hidden>
+      <div class="musical-head">
+        <h2 id="musicalTitle">🎭 인기 상업 뮤지컬 <small id="musicalCount"></small></h2>
+        <p>《데스노트》처럼 잘 알려진 작품 중 KOPIS에서 뮤지컬 장르와 주요 출연진이 확인된 공연만 모았어.</p>
+      </div>
+      <div class="musical-filters" aria-label="뮤지컬 개막 상태">
+        <button type="button" class="musical-filter active" data-musical-filter="all" aria-pressed="true">전체</button>
+        <button type="button" class="musical-filter" data-musical-filter="playing" aria-pressed="false">공연 중</button>
+        <button type="button" class="musical-filter" data-musical-filter="upcoming" aria-pressed="false">개막 예정</button>
+      </div>
+      <div class="musical-toolbar">
+        <input type="search" id="musicalSearch" placeholder="작품명 · 배우 이름 검색" aria-label="뮤지컬 작품명과 출연 배우 검색">
+        <select id="musicalRegion" aria-label="뮤지컬 지역 선택"><option value="all">전국</option><option value="capital">수도권</option><option value="other">그 외 지역</option></select>
+      </div>
+      <div id="musicalStatus" class="musical-status" role="status">KOPIS 공연 정보를 불러오는 중...</div>
+      <div class="musical-grid" id="musicalCards" aria-live="polite"></div>
+      <div class="musical-more-wrap"><button id="musicalMore" class="musical-more" type="button" hidden>뮤지컬 더 보기 ＋</button></div>
+      <p class="musical-note">작품 및 출연 배우는 KOPIS 등록 정보 기준이야. 특정 배우의 회차별 출연과 실제 예매 가능 여부는 공식 공연 정보·예매처에서 확인해 줘. 인기·상업성 분류는 우리두리의 편집 기준이며 객관적인 공식 인증은 아니야.</p>
     </section>
     <section id="eventResults" aria-labelledby="results-title"><div class="results-header"><div><h2 id="results-title">다가오는 행사 <small id="count"></small></h2><div class="results-subtitle" id="sectionHelp">상설·장기 행사는 별도 메뉴에서 확인할 수 있어.</div></div></div><div id="cards" class="grid"></div><div class="more-area"><button id="loadMore" class="more-btn" type="button" hidden>행사 더 보기 ＋</button></div></section>
   </main>
@@ -482,4 +503,5 @@
   loadEvents();
   </script>
   <script defer src="./sports.js"></script>
+  <script defer src="./musicals.js"></script>
 </body></html>
