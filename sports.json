@@ -111,6 +111,26 @@
       "ticketInfoUrl": "",
       "ticketStatus": "unconfirmed",
       "ticketOpenAt": ""
+    },
+    {
+      "id": "gangwon-20261206-seoul",
+      "teamGroup": "gangwon",
+      "competition": "K리그1",
+      "date": "2026-12-06",
+      "time": "14:00",
+      "home": "강원FC",
+      "away": "FC서울",
+      "venue": "강릉하이원아레나",
+      "sourceName": "NOL 티켓 강원FC 공식 경기 목록",
+      "sourceUrl": "https://nol.yanolja.com/ticket/genre/sports/gangwonfc",
+      "isHome": true,
+      "localHome": "강릉",
+      "domesticNational": false,
+      "ticketInfoUrl": "https://nol.yanolja.com/ticket/genre/sports/gangwonfc",
+      "ticketStatus": "announced",
+      "ticketOpenAt": "2026-11-28T14:00+09:00",
+      "ticketPresaleAt": "2026-11-27T14:00+09:00",
+      "ticketAnnouncementUrl": "https://nol.yanolja.com/ticket/genre/sports/gangwonfc"
     }
   ],
   "source_status": {
