@@ -36,6 +36,7 @@
     .section-nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:16px 0 10px}
     .section-tab{display:flex;flex-direction:column;align-items:flex-start;gap:6px;min-height:82px;padding:15px 18px;text-align:left;background:#fff;border:1px solid var(--line);border-radius:16px;color:#55586b;transition:border-color .15s,background .15s,transform .15s}
     .section-tab:hover{transform:translateY(-1px);border-color:#b5adf5}.section-tab.active{background:var(--ink);color:#fff;border-color:var(--ink);box-shadow:0 7px 18px rgba(32,36,58,.13)}
+    #musicalTab,#concertTab{justify-content:center}
     .section-name{font-size:16px;font-weight:800}.section-tab small{font-size:12px;color:inherit;opacity:.74}
     .section-description{color:#777b8c;margin:20px 0 -13px;font-size:13px}
     .toolbar.scope-noperiod{grid-template-columns:minmax(0,1fr) 160px 170px}
@@ -156,8 +157,8 @@
       <button class="section-tab active" type="button" data-section="upcoming" aria-pressed="true"><span class="section-name">📅 다가오는 행사</span><small>새로운 축제·공연·전시</small></button>
       <button class="section-tab" type="button" data-section="longterm" aria-pressed="false"><span class="section-name">🏛️ 상설·장기</span><small>상설 운영 · 30일 이상</small></button>
       <button class="section-tab" id="soccerTab" type="button" aria-pressed="false"><span class="section-name">⚽ 축구</span><small>국가대표 · 강원FC</small></button>
-      <button class="section-tab" id="musicalTab" type="button" aria-pressed="false"><span class="section-name">🎭 뮤지컬</span><small>스타 출연 · 대표 작품</small></button>
-      <button class="section-tab" id="concertTab" type="button" aria-pressed="false"><span class="section-name">🎤 콘서트</span><small>유명 가수 · 전국 공연</small></button>
+      <button class="section-tab" id="musicalTab" type="button" aria-pressed="false"><span class="section-name">🎭 뮤지컬</span></button>
+      <button class="section-tab" id="concertTab" type="button" aria-pressed="false"><span class="section-name">🎤 콘서트</span></button>
     </nav>
     <section class="discovery" aria-label="행사 탐색">
       <section class="tool-panel mobile-tools" aria-label="검색 및 필터">
