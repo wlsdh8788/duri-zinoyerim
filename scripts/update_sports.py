@@ -224,7 +224,11 @@ def apply_ticket_overrides(matches, path):
         if not re.fullmatch(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}\+09:00", opening):
             continue
         # 예매 시작일이 공식 공지된 경우에만 표시
-        if not str(patch.get("announcementUrl", "")).startswith("https://"):
+        notice = str(patch.get("announcementUrl", ""))
+        from urllib.parse import urlsplit
+        host = (urlsplit(notice).hostname or "").lower()
+        allowed = ("gangwon-fc.com", "kfa.or.kr", "playkfa.com", "nol.yanolja.com", "nol.interpark.com")
+        if urlsplit(notice).scheme != "https" or not any(host == x or host.endswith("."+x) for x in allowed):
             continue
         match["ticketOpenAt"] = opening
         match["ticketStatus"] = "announced"
@@ -251,7 +255,8 @@ def main():
     merged, changed = merge(original, pulled, current)
     ticket_count = apply_ticket_overrides(merged, ROOT / "sports_ticket_overrides.json")
     document["matches"] = merged
-    document["updated"] = current.isoformat()
+    if pulled:
+        document["updated"] = current.isoformat()
     document["last_checked"] = datetime.now(KST).isoformat(timespec="minutes")
     document["auto_update"] = bool(pulled)
     document["source_status"] = statuses
