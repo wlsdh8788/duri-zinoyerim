@@ -144,6 +144,7 @@
     @media(max-width:360px){.event{grid-template-columns:98px minmax(0,1fr)}.event .art{width:98px}.section-name{font-size:10px}.nav .brand{font-size:13.5px}}
 
   </style>
+  <link rel="stylesheet" href="./sports.css">
 </head>
 <body>
   <header class="nav"><div class="wrap navinner"><div class="brand">진오 <em>♥</em> 예림 <span style="font-size:.72em;margin-left:10px;font-weight:700">우리두리</span></div><div style="display:flex;align-items:center;gap:8px"><span class="badge-top">전국 축제 · 공연 · 전시</span><button class="share-top" id="shareAll" type="button">↗ 일정 공유</button></div></div></header>
@@ -153,6 +154,7 @@
       <button class="section-tab active" type="button" data-section="upcoming" aria-pressed="true"><span class="section-name">📅 다가오는 행사</span><small>새로운 축제·공연·전시</small></button>
       <button class="section-tab" type="button" data-section="longterm" aria-pressed="false"><span class="section-name">🏛️ 상설·장기 행사</span><small>상설 운영 · 30일 이상</small></button>
       <button class="section-tab" type="button" data-section="favorites" aria-pressed="false"><span class="section-name">♥ 찜한 행사</span><small>저장한 데이트 후보</small></button>
+      <button class="section-tab" id="soccerTab" type="button" aria-pressed="false"><span class="section-name">⚽ 축구 경기</span><small>국가대표 · 강원FC</small></button>
     </nav>
     <section class="discovery" aria-label="행사 탐색">
       <section class="tool-panel mobile-tools" aria-label="검색 및 필터">
@@ -171,7 +173,27 @@
         <button class="date-choice" type="button" data-date="custom" aria-pressed="false">날짜 선택</button>
       </div><label id="dateInputWrap" hidden>방문할 날짜 <input id="customDate" type="date" aria-label="방문 날짜 직접 선택"></label></section>
     </section>
-    <section aria-labelledby="results-title"><div class="results-header"><div><h2 id="results-title">다가오는 행사 <small id="count"></small></h2><div class="results-subtitle" id="sectionHelp">상설·장기 행사는 별도 메뉴에서 확인할 수 있어.</div></div></div><div id="cards" class="grid"></div><div class="more-area"><button id="loadMore" class="more-btn" type="button" hidden>행사 더 보기 ＋</button></div></section>
+    <section id="footballSection" class="football-area" aria-labelledby="footballTitle" hidden>
+      <div class="football-intro"><h2 id="footballTitle">⚽ 축구 경기 <small id="footballCount"></small></h2><p>강원FC와 대한민국 국가대표팀 경기 일정을 팀·상대팀·기간으로 검색해 봐.</p></div>
+      <div class="football-filters" aria-label="팀 필터">
+        <button type="button" class="football-filter active" data-soccer-filter="all" aria-pressed="true">전체</button>
+        <button type="button" class="football-filter" data-soccer-filter="gangwon" aria-pressed="false">🟠 강원FC</button>
+        <button type="button" class="football-filter" data-soccer-filter="national" aria-pressed="false">🇰🇷 대한민국 대표팀</button>
+      </div>
+      <div class="football-toolbar">
+        <input id="footballSearch" type="search" placeholder="상대팀·대회명 검색" aria-label="축구 일정 검색">
+        <select id="footballWhen" aria-label="축구 일정 기간">
+          <option value="upcoming">다가오는 경기</option><option value="all">전체 경기</option><option value="past">지난 경기</option>
+        </select>
+      </div>
+      <div id="footballStatus" class="football-status" role="status">경기 일정을 불러오는 중...</div>
+      <div id="footballCards" class="football-list" aria-live="polite"></div>
+      <div class="football-hint">경기 일정은 변경될 수 있어. 방문 전에
+        <a href="https://portal.kleague.com/view/schedule/list.do" target="_blank" rel="noopener noreferrer">K리그 공식 일정</a>과
+        <a href="https://img01.kfa.or.kr/live/live.php?act=match_schedule" target="_blank" rel="noopener noreferrer">대한축구협회 일정</a>을 다시 확인해 줘. 예매 여부는 별도로 확인해야 해.
+      </div>
+    </section>
+    <section id="eventResults" aria-labelledby="results-title"><div class="results-header"><div><h2 id="results-title">다가오는 행사 <small id="count"></small></h2><div class="results-subtitle" id="sectionHelp">상설·장기 행사는 별도 메뉴에서 확인할 수 있어.</div></div></div><div id="cards" class="grid"></div><div class="more-area"><button id="loadMore" class="more-btn" type="button" hidden>행사 더 보기 ＋</button></div></section>
   </main>
   <dialog id="detailDialog" class="modal-event" aria-label="행사 상세정보"><button class="modal-close" id="modalClose" type="button" aria-label="닫기">×</button><div id="dialogContent"></div></dialog>
   <footer class="foot"><div class="wrap"><strong>진오 ♥ 예림 · 우리두리</strong><div id="dataStatus">자료 로딩 중 · 초기 자료는 수동 입력, API 자동갱신은 인증키를 연결한 후 작동</div></div></footer><div id="toast" class="toast" role="status" aria-live="polite"></div>
@@ -458,4 +480,5 @@
   updateCityOptions();
   loadEvents();
   </script>
+  <script defer src="./sports.js"></script>
 </body></html>
