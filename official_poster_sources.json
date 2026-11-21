@@ -1,0 +1,15 @@
+{
+  "official_hosts": [
+    "dhfesta.or.kr",
+    "dctf.or.kr"
+  ],
+  "sources": [
+    {
+      "title_contains": "도째비페스타",
+      "year": 2026,
+      "city": "동해",
+      "url": "https://dhfesta.or.kr/dmdf/",
+      "publisher": "동해시·동해문화관광재단"
+    }
+  ]
+}
