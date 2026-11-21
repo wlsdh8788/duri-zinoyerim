@@ -2,8 +2,44 @@
   "version": 1,
   "updated": "2026-11-21",
   "auto_update": false,
-  "message": "강원FC 공식 경기장·예매처 정보를 제공하며 자동 갱신은 첫 실행 후 확인. 국가대표 새 일정은 공식 API 연동 전. 예매 오픈일은 확인 시에만 표시.",
+  "message": "강원FC 공식 경기일정 페이지 확인. 국가대표 새 경기 자동수집은 미연동; 예매 시작일은 공식 공지가 있는 경우에만 표시.",
   "matches": [
+    {
+      "id": "korea-20261113-saudi",
+      "teamGroup": "national",
+      "competition": "남자 A매치 친선경기",
+      "date": "2026-11-13",
+      "time": "23:30",
+      "home": "대한민국",
+      "away": "사우디아라비아",
+      "venue": "카타르 도하",
+      "sourceName": "대한축구협회 공식 일정·공식 파트너 경기 안내",
+      "sourceUrl": "https://img01.kfa.or.kr/live/live.php?act=match_schedule",
+      "isHome": false,
+      "localHome": "",
+      "domesticNational": false,
+      "ticketInfoUrl": "",
+      "ticketStatus": "unconfirmed",
+      "ticketOpenAt": ""
+    },
+    {
+      "id": "korea-20261117-qatar",
+      "teamGroup": "national",
+      "competition": "남자 A매치 친선경기",
+      "date": "2026-11-17",
+      "time": "23:00",
+      "home": "대한민국",
+      "away": "카타르",
+      "venue": "카타르 도하",
+      "sourceName": "대한축구협회 공식 일정·공식 파트너 경기 안내",
+      "sourceUrl": "https://img01.kfa.or.kr/live/live.php?act=match_schedule",
+      "isHome": false,
+      "localHome": "",
+      "domesticNational": false,
+      "ticketInfoUrl": "",
+      "ticketStatus": "unconfirmed",
+      "ticketOpenAt": ""
+    },
     {
       "id": "gangwon-20261121-daejeon",
       "teamGroup": "gangwon",
@@ -77,42 +113,6 @@
       "ticketOpenAt": ""
     },
     {
-      "id": "korea-20261113-saudi",
-      "teamGroup": "national",
-      "competition": "남자 A매치 친선경기",
-      "date": "2026-11-13",
-      "time": "23:30",
-      "home": "대한민국",
-      "away": "사우디아라비아",
-      "venue": "카타르 도하",
-      "sourceName": "대한축구협회 공식 일정·공식 파트너 경기 안내",
-      "sourceUrl": "https://img01.kfa.or.kr/live/live.php?act=match_schedule",
-      "isHome": false,
-      "localHome": "",
-      "domesticNational": false,
-      "ticketInfoUrl": "",
-      "ticketStatus": "unconfirmed",
-      "ticketOpenAt": ""
-    },
-    {
-      "id": "korea-20261117-qatar",
-      "teamGroup": "national",
-      "competition": "남자 A매치 친선경기",
-      "date": "2026-11-17",
-      "time": "23:00",
-      "home": "대한민국",
-      "away": "카타르",
-      "venue": "카타르 도하",
-      "sourceName": "대한축구협회 공식 일정·공식 파트너 경기 안내",
-      "sourceUrl": "https://img01.kfa.or.kr/live/live.php?act=match_schedule",
-      "isHome": false,
-      "localHome": "",
-      "domesticNational": false,
-      "ticketInfoUrl": "",
-      "ticketStatus": "unconfirmed",
-      "ticketOpenAt": ""
-    },
-    {
       "id": "gangwon-20261206-seoul",
       "teamGroup": "gangwon",
       "competition": "K리그1",
@@ -134,8 +134,8 @@
     }
   ],
   "source_status": {
-    "gangwon": "awaiting_first_automated_check",
+    "gangwon": "no_new_verified_games",
     "national": "official_api_not_connected"
   },
-  "last_checked": null
+  "last_checked": "2026-11-21T14:23+09:00"
 }
