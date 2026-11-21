@@ -182,6 +182,38 @@
   const parse = s=>new Date(s+'T00:00:00');
   const formatRange=e=>fmt.format(parse(e.start))+' ~ '+fmt.format(parse(e.end));
   const escapeHtml=s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#39;');
+  // 외부 API가 제목에 넣은 HTML 엔티티를 화면 출력 전에 복원한다.
+  // HTML 삽입 방지를 위해 실제 출력할 때는 escapeHtml()을 그대로 적용한다.
+  function decodeEventTitle(value){
+    const entities={amp:'&',lt:'<',gt:'>',quot:'"',apos:"'",nbsp:' ',middot:'·',ndash:'–',mdash:'—',hellip:'…',laquo:'«',raquo:'»'};
+    let title=String(value??'');
+    for(let pass=0;pass<3;pass++){
+      const next=title.replace(/&(#x[0-9a-f]+|#\d+|[a-z][a-z0-9]+);/gi,(match,entity)=>{
+        if(entity[0]==='#'){
+          const hexadecimal=/^#x/i.test(entity);
+          const num=Number.parseInt(entity.slice(hexadecimal?2:1),hexadecimal?16:10);
+          return Number.isInteger(num)&&num>0&&num<=0x10ffff&&!(num>=0xd800&&num<=0xdfff)?String.fromCodePoint(num):match;
+        }
+        return Object.hasOwn(entities,entity.toLowerCase())?entities[entity.toLowerCase()]:match;
+      });
+      if(next===title)break;
+      title=next;
+    }
+    return title.replace(/\s+/g,' ').trim();
+  }
+  // 요금이 실제로 알려져 있을 때만 안내한다.
+  function displayPrice(event){
+    const value=String(event.price||'').trim();
+    if(!value)return '';
+    if(/요금\s*확인|가격\s*확인|입장료\s*확인|요금\s*미정|가격\s*미정|정보\s*없음|미제공|별도\s*문의|프로그램별\s*확인|세부\s*프로그램별\s*확인|^확인\s*필요$/.test(value)){
+      if(event.priceType==='free'||/^무료(?:\s|$)/.test(value))return '무료';
+      if(event.priceType==='paid'||/^유료(?:\s|$)/.test(value))return '유료';
+      return '';
+    }
+    if(event.priceType==='unknown'&&!/(?:^무료|^유료|\d[\d,]*\s*원)/.test(value))return '';
+    return value;
+  }
+
   const safeUrl=s=>{try{const u=new URL(s);return ['https:','http:'].includes(u.protocol)?escapeHtml(u.href):'#'}catch(e){return '#'}};
   const E = id=>document.getElementById(id);
   let favoriteIds=[];try{favoriteIds=JSON.parse(localStorage.getItem('ourGangwonSaved')||'[]')}catch(err){favoriteIds=[]}
@@ -265,7 +297,7 @@
   function cleanForDisplay(items){
     const seen=new Map(),result=[];
     for(const row of items){
-      const e={...row},key=matchingKey(e);
+      const e={...row,title:decodeEventTitle(row.title)},key=matchingKey(e);
       if(!key){result.push(e);continue;}
       if(!seen.has(key)){seen.set(key,result.length);result.push(e);continue;}
       const i=seen.get(key),previous=result[i];
@@ -342,10 +374,11 @@
     const img=safeUrl(e.posterUrl||e.imageUrl||'');
     const hasImg=img!=='#';
     const id=escapeHtml(e.id),title=escapeHtml(e.title);
+    const price=displayPrice(e);
     const media=hasImg?`<img class="poster-backdrop" alt="" src="${img}" aria-hidden="true" loading="lazy"><img class="poster-img" src="${img}" alt="${title} 포스터" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.closest('.art').classList.remove('has-image');this.closest('.art').querySelectorAll('.poster-img,.poster-backdrop').forEach(n=>n.remove())">`:'';
     const art=`<div class="art ${escapeHtml(e.theme||'sea')} ${hasImg?'has-image':''}"><button type="button" class="art-open" data-detail="${id}" aria-label="${title} 상세보기">${media}<span class="emoji" aria-hidden="true">${escapeHtml(e.emoji||'🎉')}</span></button><button type="button" class="heart ${saved?'on':''}" data-fav="${id}" aria-label="${title} ${saved?'찜 해제':'찜하기'}" aria-pressed="${saved}">${saved?'♥':'♡'}</button></div>`;
     const tags=`<div class="tags"><span class="tag">${escapeHtml(regionLabel(e))}</span><span class="tag alt">${escapeHtml(e.category||'행사')}</span>${kind?`<span class="tag long-tag">${kind==='상설'?'상설':'장기'}</span>`:''}</div>`;
-    return `<article class="event">${art}<div class="eventbody">${tags}<h3><button class="title-button" data-detail="${id}" type="button">${title}</button></h3><p class="meta date-meta">📅 ${escapeHtml(formatRange(e))}</p><p class="meta">📍 ${escapeHtml(e.place||e.address||regionLabel(e))}</p><div class="card-tail"><span class="price">${escapeHtml(e.price||'요금 확인')}</span><button class="more-detail" type="button" data-detail="${id}">자세히 ›</button></div></div></article>`;
+    return `<article class="event">${art}<div class="eventbody">${tags}<h3><button class="title-button" data-detail="${id}" type="button">${title}</button></h3><p class="meta date-meta">📅 ${escapeHtml(formatRange(e))}</p><p class="meta">📍 ${escapeHtml(e.place||e.address||regionLabel(e))}</p><div class="card-tail">${price?`<span class="price">${escapeHtml(price)}</span>`:''}<button class="more-detail" type="button" data-detail="${id}">자세히 ›</button></div></div></article>`;
   }
   function render(){
     const items=filtered();
@@ -370,7 +403,7 @@
     const row=(k,v)=>`<dt>${k}</dt><dd>${escapeHtml(v||'확인 필요')}</dd>`;
     const maps='https://map.naver.com/p/search/'+encodeURIComponent(e.mapQuery||e.place||e.city||e.title);
     const official=safeUrl(e.sourceUrl);
-    E('dialogContent').innerHTML=`<div class="modal-photo">${media}</div><div class="modal-body"><div class="modal-kicker">${escapeHtml(regionLabel(e))} · ${escapeHtml(e.category||'행사')}</div><h2>${escapeHtml(e.title)}</h2><dl class="modal-info">${row('기간',formatRange(e))}${row('장소',e.place||e.address)}${row('요금',e.price||'요금 확인 필요')}</dl><div class="modal-summary">${escapeHtml([e.intro,e.highlight,e.note].filter(Boolean).join('\n\n')||'세부 내용은 공식 사이트에서 확인할 수 있어.')}</div><div class="modal-links"><a target="_blank" rel="noopener noreferrer" href="${official}">공식 정보·예매 ↗</a><a target="_blank" rel="noopener noreferrer" href="${safeUrl(maps)}">지도에서 보기 ↗</a></div><div class="modal-source">출처: ${escapeHtml(e.sourceLabel||'제공처 미확인')} · 일정과 가격은 방문 전 공식 안내 확인</div></div>`;
+    E('dialogContent').innerHTML=`<div class="modal-photo">${media}</div><div class="modal-body"><div class="modal-kicker">${escapeHtml(regionLabel(e))} · ${escapeHtml(e.category||'행사')}</div><h2>${escapeHtml(e.title)}</h2><dl class="modal-info">${row('기간',formatRange(e))}${row('장소',e.place||e.address)}${displayPrice(e)?row('요금',displayPrice(e)):''}</dl><div class="modal-summary">${escapeHtml([e.intro,e.highlight,e.note].filter(Boolean).join('\n\n')||'세부 내용은 공식 사이트에서 확인할 수 있어.')}</div><div class="modal-links"><a target="_blank" rel="noopener noreferrer" href="${official}">공식 정보·예매 ↗</a><a target="_blank" rel="noopener noreferrer" href="${safeUrl(maps)}">지도에서 보기 ↗</a></div><div class="modal-source">출처: ${escapeHtml(e.sourceLabel||'제공처 미확인')} · 일정과 가격은 방문 전 공식 안내 확인</div></div>`;
     E('detailDialog').showModal();
     E('modalClose').focus();
   }
