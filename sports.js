@@ -34,7 +34,8 @@ function ticketDetails(m,now){
  if(verified){
   const when=new Date(raw);
   const prefix=when>now?'예매 오픈 예정':'예매 시작일';
-  return '<div class="football-ticket-date">🎫 '+prefix+': '+esc(fmtOpen.format(when))+'</div>';
+  const presale=/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}\+09:00$/.test(m.ticketPresaleAt||'')?'<div class="football-ticket-date">⭐ 선예매: '+esc(fmtOpen.format(new Date(m.ticketPresaleAt)))+'</div>':'';
+  return presale+'<div class="football-ticket-date">🎫 '+prefix+': '+esc(fmtOpen.format(when))+'</div>';
  }
  return '<div class="football-ticket-date football-ticket-unknown">예매 오픈일 미확인</div>';
 }
