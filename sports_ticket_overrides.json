@@ -1,0 +1,4 @@
+{
+  "description": "경기별 공식 발표가 확인된 경우에만 예매 시작 일시 추가. 날짜는 한국시간 +09:00, announcementUrl은 공식 공지 링크.",
+  "matches": {}
+}
