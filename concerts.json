@@ -1,10 +1,1060 @@
 {
   "version": 1,
-  "updated": null,
-  "auto_update": false,
-  "selection_note": "KOPIS에서 대중음악 장르와 선정된 가수·그룹을 확인한 공연만 표시. 첫 자동 실행 전.",
+  "updated": "2026-11-21 16:12 KST",
+  "auto_update": true,
+  "selection_note": "유명가수는 사이트 편집 목록 기준. KOPIS 대중음악 장르·공연명 또는 출연진 확인. 예매·출연 변경은 공식 출처 재확인.",
   "stats": {
-    "selected": 0
+    "candidates": 53,
+    "checked": 53,
+    "selected": 52,
+    "reused": 0,
+    "excluded": 1,
+    "failures": 0,
+    "limited": false,
+    "genre_listing": "ok",
+    "pages": 17,
+    "capped": false
   },
-  "performances": []
+  "performances": [
+    {
+      "id": "kopis-PF301234",
+      "title": "로이킴 LIVE TOUR, R: O: Y in SEOUL",
+      "start": "2026-11-20",
+      "end": "2026-11-22",
+      "province": "서울",
+      "city": "서울 전체",
+      "place": "올림픽공원 (KSPO DOME(체조경기장))",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF301234_261006_164647.gif",
+      "artists": [
+        "로이킴"
+      ],
+      "castSummary": "김상우",
+      "genre": "대중음악",
+      "ticketUrl": "",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF301234",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF300854",
+      "title": "AKMU CONCERT: 소문의 낙원 (Paradise of Rumors) [대구]",
+      "start": "2026-11-21",
+      "end": "2026-11-22",
+      "province": "대구",
+      "city": "대구 전체",
+      "place": "엑스코(exco) (제1전시장(서관))",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF300854_260914_145607.jpg",
+      "artists": [
+        "AKMU"
+      ],
+      "castSummary": "이찬혁, 이수현",
+      "genre": "대중음악",
+      "ticketUrl": "",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF300854",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF304727",
+      "title": "수험생 쉼표콘서트: 10CM & 소수빈 (수험생 전용)",
+      "start": "2026-11-21",
+      "end": "2026-11-21",
+      "province": "경기",
+      "city": "경기 전체",
+      "place": "용인포은아트홀 (용인포은아트홀)",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF304727_261028_144933.gif",
+      "artists": [
+        "10CM"
+      ],
+      "castSummary": "소수빈, 권정열",
+      "genre": "대중음악",
+      "ticketUrl": "",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF304727",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF304724",
+      "title": "수험생 쉼표콘서트: 10CM & 소수빈 (일반＋수험생)",
+      "start": "2026-11-21",
+      "end": "2026-11-21",
+      "province": "경기",
+      "city": "경기 전체",
+      "place": "용인포은아트홀 (용인포은아트홀)",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF304724_261028_144437.gif",
+      "artists": [
+        "10CM"
+      ],
+      "castSummary": "소수빈, 권정열",
+      "genre": "대중음악",
+      "ticketUrl": "",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF304724",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF298444",
+      "title": "이승철 40주년 콘서트, THE VOICE: LEE SEUNG CHU [대전]",
+      "start": "2026-11-22",
+      "end": "2026-11-22",
+      "province": "대전",
+      "city": "대전 전체",
+      "place": "대전컨벤션센터 (DCC) (제2전시장)",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF298444_260813_141357.jpg",
+      "artists": [
+        "이승철"
+      ],
+      "castSummary": "이승철",
+      "genre": "대중음악",
+      "ticketUrl": "",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF298444",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF301808",
+      "title": "여전히 소란스럽게 Vol.04 노브레인 with 10CM",
+      "start": "2026-11-25",
+      "end": "2026-11-25",
+      "province": "서울",
+      "city": "서울 전체",
+      "place": "무신사 개러지 (구. 왓챠홀) (무신사 개러지 (구. 왓챠홀) )",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF301808_260928_142517.jpg",
+      "artists": [
+        "10CM"
+      ],
+      "castSummary": " ",
+      "genre": "대중음악",
+      "ticketUrl": "https://ticket.melon.com/performance/index.htm?prodId=213947",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF301808",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF305461",
+      "title": "김광석 30주기 특별공연: 광석이 다시 만나기 [제천]",
+      "start": "2026-11-27",
+      "end": "2026-11-27",
+      "province": "충북",
+      "city": "충북 전체",
+      "place": "제천예술의전당 (대공연장)",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF305461_261104_141338.gif",
+      "artists": [
+        "김광석"
+      ],
+      "castSummary": "박학기, 장필순, 권오준, 정영아, 염주현, 이필원, 조규원 등",
+      "genre": "대중음악",
+      "ticketUrl": "",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF305461",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF306150",
+      "title": "레브드집시 콘서트: 김광석 Meets Gypsy Jazz [대전]",
+      "start": "2026-11-27",
+      "end": "2026-11-27",
+      "province": "대전",
+      "city": "대전 전체",
+      "place": "대전예술가의집 (누리홀)",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF306150_261111_154733.jpg",
+      "artists": [
+        "김광석"
+      ],
+      "castSummary": "이한호, 이소영, 이한샘, 권대한, 한요한, 이관우, 배중현 등",
+      "genre": "대중음악",
+      "ticketUrl": "",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF306150",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF301499",
+      "title": "조용필 & 위대한 탄생 전국투어 콘서트 [서울]",
+      "start": "2026-11-27",
+      "end": "2026-11-29",
+      "province": "서울",
+      "city": "서울 전체",
+      "place": "올림픽공원 (KSPO DOME(체조경기장))",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF301499_260921_170434.jpg",
+      "artists": [
+        "조용필"
+      ],
+      "castSummary": "조용필",
+      "genre": "대중음악",
+      "ticketUrl": "",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF301499",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF301914",
+      "title": "영탁 단독 콘서트: TAK SHOW5 [대구]",
+      "start": "2026-11-28",
+      "end": "2026-11-29",
+      "province": "대구",
+      "city": "대구 전체",
+      "place": "엑스코(exco) (전시6홀)",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF301914_260929_101711.jpg",
+      "artists": [
+        "영탁"
+      ],
+      "castSummary": "박영탁",
+      "genre": "대중음악",
+      "ticketUrl": "https://ticket.melon.com/performance/index.htm?prodId=213944",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF301914",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF304581",
+      "title": "이무진 전국투어 콘서트, 겨울 인사: From Winter [고양]",
+      "start": "2026-11-28",
+      "end": "2026-11-29",
+      "province": "경기",
+      "city": "경기 전체",
+      "place": "고양아람누리 (아람극장)",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF304581_261027_132951.gif",
+      "artists": [
+        "이무진"
+      ],
+      "castSummary": "이무진",
+      "genre": "대중음악",
+      "ticketUrl": "",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF304581",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF298491",
+      "title": "이승철 40주년 콘서트: THE VOICE: LEE SEUNG CHUL [대구]",
+      "start": "2026-11-28",
+      "end": "2026-11-28",
+      "province": "대구",
+      "city": "대구 전체",
+      "place": "엑스코(exco) (제1전시장(서관))",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF298491_260813_160812.jpg",
+      "artists": [
+        "이승철"
+      ],
+      "castSummary": "이승철",
+      "genre": "대중음악",
+      "ticketUrl": "",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF298491",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF305520",
+      "title": "잔나비 2026 ASIA TOUR FINAL: 스웨트 앤 스타더스트 [부산]",
+      "start": "2026-11-28",
+      "end": "2026-11-29",
+      "province": "부산",
+      "city": "부산 전체",
+      "place": "벡스코 (BEXCO) (오디토리움)",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF305520_261105_110321.png",
+      "artists": [
+        "잔나비"
+      ],
+      "castSummary": "최정훈, 김도형",
+      "genre": "대중음악",
+      "ticketUrl": "",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF305520",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF297746",
+      "title": "이승철 40주년 콘서트, THE VOICE: LEE SEUNG CHU [서울]",
+      "start": "2026-12-04",
+      "end": "2026-12-06",
+      "province": "서울",
+      "city": "서울 전체",
+      "place": "올림픽공원 (KSPO DOME(체조경기장))",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF297746_260805_132158.jpg",
+      "artists": [
+        "이승철"
+      ],
+      "castSummary": "이승철",
+      "genre": "대중음악",
+      "ticketUrl": "",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF297746",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF306571",
+      "title": "케이윌 & 김보경 WITH YOU 송년콘서트 [고령]",
+      "start": "2026-12-04",
+      "end": "2026-12-04",
+      "province": "경북",
+      "city": "경북 전체",
+      "place": "경북고령대가야문화누리 (구. 대가야국악당) (대공연장 (우륵홀) )",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF306571_261116_160201.jpg",
+      "artists": [
+        "케이윌"
+      ],
+      "castSummary": "김형수, 김보경",
+      "genre": "대중음악",
+      "ticketUrl": "",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF306571",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF300910",
+      "title": "AKMU CONCERT: 소문의 낙원 (Paradise of Rumors) [대전]",
+      "start": "2026-12-05",
+      "end": "2026-12-06",
+      "province": "대전",
+      "city": "대전 전체",
+      "place": "대전컨벤션센터 (DCC) (제2전시장)",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF300910_260914_171757.jpg",
+      "artists": [
+        "AKMU"
+      ],
+      "castSummary": "이수현, 이찬혁",
+      "genre": "대중음악",
+      "ticketUrl": "",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF300910",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF302170",
+      "title": "비 (RAIN) 콘서트: THE SMOKE",
+      "start": "2026-12-05",
+      "end": "2026-12-06",
+      "province": "서울",
+      "city": "서울 전체",
+      "place": "올림픽공원 (올림픽홀)",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF302170_260930_155921.jpg",
+      "artists": [
+        "RAIN"
+      ],
+      "castSummary": "정지훈",
+      "genre": "대중음악",
+      "ticketUrl": "",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF302170",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF304971",
+      "title": "이승환 콘서트: Back To Basics",
+      "start": "2026-12-09",
+      "end": "2026-12-17",
+      "province": "서울",
+      "city": "서울 전체",
+      "place": "NOL 씨어터 합정(구, 신한카드 SOL페이 스퀘어) (동양생명홀)",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF304971_261030_151914.gif",
+      "artists": [
+        "이승환"
+      ],
+      "castSummary": "이승환, 홍준호, 이근후, 최훈, 신석철, 양문희",
+      "genre": "대중음악",
+      "ticketUrl": "",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF304971",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF304054",
+      "title": "정승환 10주년 콘서트: 발라드 좋아하세요?",
+      "start": "2026-12-11",
+      "end": "2026-12-13",
+      "province": "서울",
+      "city": "서울 전체",
+      "place": "경희대학교 평화의전당 (경희대학교 평화의전당)",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF304054_261021_151300.jpg",
+      "artists": [
+        "정승환"
+      ],
+      "castSummary": "정승환",
+      "genre": "대중음악",
+      "ticketUrl": "",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF304054",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF306275",
+      "title": "케이윌 x 소향, 송년콘서트: Happy ending [김천]",
+      "start": "2026-12-11",
+      "end": "2026-12-11",
+      "province": "경북",
+      "city": "경북 전체",
+      "place": "김천시문화예술회관 (대공연장)",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF306275_261112_144611.jpg",
+      "artists": [
+        "케이윌"
+      ],
+      "castSummary": "김형수, 김소향",
+      "genre": "대중음악",
+      "ticketUrl": "",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF306275",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF303557",
+      "title": "백지영 전국투어 콘서트: 백일몽 [부산]",
+      "start": "2026-12-12",
+      "end": "2026-12-12",
+      "province": "부산",
+      "city": "부산 전체",
+      "place": "부산시민회관 (대극장)",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF303557_261103_165047.gif",
+      "artists": [
+        "백지영"
+      ],
+      "castSummary": "백지영",
+      "genre": "대중음악",
+      "ticketUrl": "",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF303557",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF298469",
+      "title": "이승철 40주년 콘서트, THE VOICE: LEE SEUNG CHUL [인천]",
+      "start": "2026-12-12",
+      "end": "2026-12-12",
+      "province": "인천",
+      "city": "인천 전체",
+      "place": "네이버 아레나 앳 인스파이어(구. 인스파이어 엔터테인먼트 리조트)\t (아레나)",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF298469_260813_151004.jpg",
+      "artists": [
+        "이승철"
+      ],
+      "castSummary": "이승철",
+      "genre": "대중음악",
+      "ticketUrl": "",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF298469",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF301534",
+      "title": "조용필 & 위대한탄생 콘서트 [부산]",
+      "start": "2026-12-12",
+      "end": "2026-12-13",
+      "province": "부산",
+      "city": "부산 전체",
+      "place": "벡스코 (BEXCO) (제1전시장)",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF301534_260922_110614.jpg",
+      "artists": [
+        "조용필"
+      ],
+      "castSummary": "조용필 등",
+      "genre": "대중음악",
+      "ticketUrl": "",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF301534",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF306544",
+      "title": "케미콘서트 시즌11, 케이윌 X 나윤권 [하남]",
+      "start": "2026-12-12",
+      "end": "2026-12-12",
+      "province": "경기",
+      "city": "경기 전체",
+      "place": "하남문화예술회관 (검단홀(대극장))",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF306544_261116_150225.gif",
+      "artists": [
+        "케이윌"
+      ],
+      "castSummary": "김형수, 황윤권",
+      "genre": "대중음악",
+      "ticketUrl": "",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF306544",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF307107",
+      "title": "DAY6 Special Concert: The Present",
+      "start": "2026-12-18",
+      "end": "2026-12-20",
+      "province": "서울",
+      "city": "서울 전체",
+      "place": "올림픽공원 (KSPO DOME(체조경기장))",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF307107_261120_144210.gif",
+      "artists": [
+        "DAY6"
+      ],
+      "castSummary": " ",
+      "genre": "대중음악",
+      "ticketUrl": "",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF307107",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF303493",
+      "title": "이찬원 콘서트: 찬스 감사제: 함께여서 찬란했습니다",
+      "start": "2026-12-18",
+      "end": "2026-12-20",
+      "province": "경기",
+      "city": "경기 전체",
+      "place": "킨텍스 (제1전시장 5홀)",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF303493_261015_151253.jpg",
+      "artists": [
+        "이찬원"
+      ],
+      "castSummary": "이찬원",
+      "genre": "대중음악",
+      "ticketUrl": "",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF303493",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF304645",
+      "title": "자우림 단독 콘서트: MIDNIGHT EXPRESS [서울]",
+      "start": "2026-12-18",
+      "end": "2026-12-20",
+      "province": "서울",
+      "city": "서울 전체",
+      "place": "올림픽공원 (올림픽홀)",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF304645_261028_104244.gif",
+      "artists": [
+        "자우림"
+      ],
+      "castSummary": "이선규, 김윤아, 김진만",
+      "genre": "대중음악",
+      "ticketUrl": "",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF304645",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF300887",
+      "title": "AKMU CONCERT: 소문의 낙원 (Paradise of Rumors) [부산]",
+      "start": "2026-12-19",
+      "end": "2026-12-20",
+      "province": "부산",
+      "city": "부산 전체",
+      "place": "벡스코 (BEXCO) (제1전시장)",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF300887_260914_161938.jpg",
+      "artists": [
+        "AKMU"
+      ],
+      "castSummary": "이찬혁, 이수현",
+      "genre": "대중음악",
+      "ticketUrl": "",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF300887",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF302861",
+      "title": "LE SSERAFIM TOUR: PUREFLOW [오사카]",
+      "start": "2026-12-19",
+      "end": "2026-12-20",
+      "province": "해외",
+      "city": "해외 전체",
+      "place": "교세라 돔 오사카 (KYOCERA DOME OSAKA) (KYOCERA DOME OSAKA)",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF302861_261012_103309.gif",
+      "artists": [
+        "LE SSERAFIM"
+      ],
+      "castSummary": " ",
+      "genre": "대중음악",
+      "ticketUrl": "",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF302861",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF303658",
+      "title": "백지영 전국투어 콘서트: 백일몽 [대구]",
+      "start": "2026-12-19",
+      "end": "2026-12-19",
+      "province": "경북",
+      "city": "경북 전체",
+      "place": "천마아트센터 (그랜드홀)",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF303658_261022_153516.gif",
+      "artists": [
+        "백지영"
+      ],
+      "castSummary": "백지영",
+      "genre": "대중음악",
+      "ticketUrl": "",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF303658",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF303398",
+      "title": "영탁 단독 콘서트: TAK SHOW5 [인천]",
+      "start": "2026-12-19",
+      "end": "2026-12-20",
+      "province": "인천",
+      "city": "인천 전체",
+      "place": "인천남동체육관 (인천남동체육관)",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF303398_261015_103548.jpg",
+      "artists": [
+        "영탁"
+      ],
+      "castSummary": "박영탁",
+      "genre": "대중음악",
+      "ticketUrl": "https://ticket.melon.com/performance/index.htm?prodId=214039",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF303398",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF304657",
+      "title": "이무진 전국투어 콘서트, 겨울 인사: From Winter [대구]",
+      "start": "2026-12-19",
+      "end": "2026-12-20",
+      "province": "대구",
+      "city": "대구 전체",
+      "place": "경북대학교 (글로벌플라자 대강당(공연장))",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF304657_261028_110903.gif",
+      "artists": [
+        "이무진"
+      ],
+      "castSummary": "이무진",
+      "genre": "대중음악",
+      "ticketUrl": "",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF304657",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF301562",
+      "title": "조용필 & 위대한탄생 콘서트 [대구]",
+      "start": "2026-12-19",
+      "end": "2026-12-19",
+      "province": "대구",
+      "city": "대구 전체",
+      "place": "엑스코(exco) (제1전시장(서관))",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF301562_260922_132420.jpg",
+      "artists": [
+        "조용필"
+      ],
+      "castSummary": "조용필 등",
+      "genre": "대중음악",
+      "ticketUrl": "",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF301562",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF300124",
+      "title": "Rain Tree Concert [서울]",
+      "start": "2026-12-20",
+      "end": "2026-12-20",
+      "province": "서울",
+      "city": "서울 전체",
+      "place": "예스24 원더로크홀 (예스24 원더로크홀)",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF300124_260904_111331.jpg",
+      "artists": [
+        "RAIN"
+      ],
+      "castSummary": " ",
+      "genre": "대중음악",
+      "ticketUrl": "",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF300124",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF298473",
+      "title": "이승철 40주년 콘서트: THE VOICE: LEE SEUNG CHUL [부산]",
+      "start": "2026-12-24",
+      "end": "2026-12-24",
+      "province": "부산",
+      "city": "부산 전체",
+      "place": "벡스코 (BEXCO) (제1전시장)",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF298473_260813_151514.jpg",
+      "artists": [
+        "이승철"
+      ],
+      "castSummary": "이승철",
+      "genre": "대중음악",
+      "ticketUrl": "",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF298473",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF300915",
+      "title": "AKMU CONCERT: 소문의 낙원 (Paradise of Rumors) [전남 광주]",
+      "start": "2026-12-25",
+      "end": "2026-12-25",
+      "province": "전남광주통합특별시",
+      "city": "전남광주통합특별시 전체",
+      "place": "김대중컨벤션센터 (다목적홀)",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF300915_260914_172748.jpg",
+      "artists": [
+        "AKMU"
+      ],
+      "castSummary": "이수현, 이찬혁",
+      "genre": "대중음악",
+      "ticketUrl": "",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF300915",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF304737",
+      "title": "이무진 전국투어 콘서트, 겨울 인사: From Winter [부산]",
+      "start": "2026-12-25",
+      "end": "2026-12-26",
+      "province": "부산",
+      "city": "부산 전체",
+      "place": "부산시민회관 (대극장)",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF304737_261028_150732.gif",
+      "artists": [
+        "이무진"
+      ],
+      "castSummary": "이무진",
+      "genre": "대중음악",
+      "ticketUrl": "",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF304737",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF305472",
+      "title": "자우림 단독 콘서트: MIDNIGHT EXPRESS [부산]",
+      "start": "2026-12-25",
+      "end": "2026-12-25",
+      "province": "부산",
+      "city": "부산 전체",
+      "place": "벡스코 (BEXCO) (오디토리움)",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF305472_261104_143304.gif",
+      "artists": [
+        "자우림"
+      ],
+      "castSummary": " ",
+      "genre": "대중음악",
+      "ticketUrl": "",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF305472",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF301701",
+      "title": "조용필 & 위대한탄생 콘서트 [대전]",
+      "start": "2026-12-26",
+      "end": "2026-12-26",
+      "province": "대전",
+      "city": "대전 전체",
+      "place": "대전컨벤션센터 (DCC) (제2전시장)",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF301701_260923_141025.jpg",
+      "artists": [
+        "조용필"
+      ],
+      "castSummary": "조용필",
+      "genre": "대중음악",
+      "ticketUrl": "",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF301701",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF304722",
+      "title": "백지영 전국투어 콘서트: 백일몽 [서울]",
+      "start": "2026-12-27",
+      "end": "2026-12-27",
+      "province": "서울",
+      "city": "서울 전체",
+      "place": "코엑스 (D홀)",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF304722_261028_143941.gif",
+      "artists": [
+        "백지영"
+      ],
+      "castSummary": "백지영",
+      "genre": "대중음악",
+      "ticketUrl": "https://www.ticketlink.co.kr/product/66555",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF304722",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF305815",
+      "title": "성시경 연말 콘서트: 성시경",
+      "start": "2026-12-31",
+      "end": "2027-01-03",
+      "province": "서울",
+      "city": "서울 전체",
+      "place": "올림픽공원 (KSPO DOME(체조경기장))",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF305815_261109_145843.gif",
+      "artists": [
+        "성시경"
+      ],
+      "castSummary": "성시경",
+      "genre": "대중음악",
+      "ticketUrl": "",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF305815",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF305492",
+      "title": "자우림 단독 콘서트: MIDNIGHT EXPRESS [대전]",
+      "start": "2027-01-02",
+      "end": "2027-01-02",
+      "province": "대전",
+      "city": "대전 전체",
+      "place": "충남대학교 정심화국제문화회관 (정심화홀)",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF305492_261104_154110.gif",
+      "artists": [
+        "자우림"
+      ],
+      "castSummary": "이선규, 김진만, 김윤아",
+      "genre": "대중음악",
+      "ticketUrl": "",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF305492",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF301683",
+      "title": "조용필 & 위대한탄생 콘서트 [광주]",
+      "start": "2027-01-02",
+      "end": "2027-01-02",
+      "province": "전남광주통합특별시",
+      "city": "전남광주통합특별시 전체",
+      "place": "김대중컨벤션센터 (전시장)",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF301683_260923_133130.jpg",
+      "artists": [
+        "조용필"
+      ],
+      "castSummary": "조용필",
+      "genre": "대중음악",
+      "ticketUrl": "",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF301683",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF306578",
+      "title": "한로로 5th 단독콘서트: 물음표",
+      "start": "2027-01-02",
+      "end": "2027-01-03",
+      "province": "인천",
+      "city": "인천 전체",
+      "place": "네이버 아레나 앳 인스파이어(구. 인스파이어 엔터테인먼트 리조트)\t (아레나)",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF306578_261116_161238.gif",
+      "artists": [
+        "한로로"
+      ],
+      "castSummary": "한지수",
+      "genre": "대중음악",
+      "ticketUrl": "https://ticket.melon.com/performance/index.htm?prodId=214165",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF306578",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF305664",
+      "title": "백지영 전국투어 콘서트: 백일몽 [고양]",
+      "start": "2027-01-09",
+      "end": "2027-01-09",
+      "province": "경기",
+      "city": "경기 전체",
+      "place": "고양아람누리 (아람극장)",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF305664_261106_124608.png",
+      "artists": [
+        "백지영"
+      ],
+      "castSummary": "백지영",
+      "genre": "대중음악",
+      "ticketUrl": "https://nol.yanolja.com/ticket/products/26015872",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF305664",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF305460",
+      "title": "자우림 단독 콘서트: MIDNIGHT EXPRESS 2026-2027 [대구]",
+      "start": "2027-01-09",
+      "end": "2027-01-09",
+      "province": "대구",
+      "city": "대구 전체",
+      "place": "엑스코(exco) (오디토리움)",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF305460_261104_141337.gif",
+      "artists": [
+        "자우림"
+      ],
+      "castSummary": "이선규, 김진만, 김윤아",
+      "genre": "대중음악",
+      "ticketUrl": "",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF305460",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF301684",
+      "title": "조용필 & 위대한탄생 콘서트 [인천]",
+      "start": "2027-01-09",
+      "end": "2027-01-09",
+      "province": "인천",
+      "city": "인천 전체",
+      "place": "송도컨벤시아 (송도컨벤시아)",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF301684_260923_133218.jpg",
+      "artists": [
+        "조용필"
+      ],
+      "castSummary": "조용필 등",
+      "genre": "대중음악",
+      "ticketUrl": "",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF301684",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF305189",
+      "title": "NCT WISH 2nd CONCERT TOUR INTO THE WISH: Face Our WISH [서울]",
+      "start": "2027-01-15",
+      "end": "2027-01-16",
+      "province": "서울",
+      "city": "서울 전체",
+      "place": "고척스카이돔 (고척스카이돔)",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF305189_261103_100858.jpg",
+      "artists": [
+        "NCT"
+      ],
+      "castSummary": " ",
+      "genre": "대중음악",
+      "ticketUrl": "https://ticket.melon.com/performance/index.htm?prodId=214071",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF305189",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF305672",
+      "title": "백지영 전국투어 콘서트: 백일몽 [대전]",
+      "start": "2027-01-16",
+      "end": "2027-01-16",
+      "province": "대전",
+      "city": "대전 전체",
+      "place": "충남대학교 정심화국제문화회관 (정심화홀)",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF305672_261106_131806.jpg",
+      "artists": [
+        "백지영"
+      ],
+      "castSummary": "백지영",
+      "genre": "대중음악",
+      "ticketUrl": "",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF305672",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF306015",
+      "title": "영탁 단독 콘서트: TAK SHOW5 [부산]",
+      "start": "2027-01-16",
+      "end": "2027-01-17",
+      "province": "부산",
+      "city": "부산 전체",
+      "place": "벡스코 (BEXCO) (제1전시장 3홀)",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF306015_261111_100753.jpg",
+      "artists": [
+        "영탁"
+      ],
+      "castSummary": "박영탁",
+      "genre": "대중음악",
+      "ticketUrl": "https://ticket.melon.com/performance/index.htm?prodId=214232",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF306015",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF302528",
+      "title": "에픽하이 콘서트",
+      "start": "2027-01-22",
+      "end": "2027-01-24",
+      "province": "서울",
+      "city": "서울 전체",
+      "place": "올림픽공원 (KSPO DOME(체조경기장))",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF302528_261006_140550.jpg",
+      "artists": [
+        "에픽하이"
+      ],
+      "castSummary": " ",
+      "genre": "대중음악",
+      "ticketUrl": "https://ticket.melon.com/performance/index.htm?prodId=213943",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF302528",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF306754",
+      "title": "SUPER JUNIOR-83z FANCON TOUR: 1983 [부산]",
+      "start": "2027-01-23",
+      "end": "2027-01-24",
+      "province": "부산",
+      "city": "부산 전체",
+      "place": "KBS홀 [부산] (KBS홀 [부산])",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF306754_261118_100834.jpg",
+      "artists": [
+        "SUPER JUNIOR"
+      ],
+      "castSummary": "김희철, 박정수",
+      "genre": "대중음악",
+      "ticketUrl": "https://ticket.melon.com/performance/index.htm?prodId=214290",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF306754",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-21",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    }
+  ]
 }
