@@ -7,6 +7,7 @@ API 키는 환경변수 KTO_SERVICE_KEY / KOPIS_SERVICE_KEY로만 전달한다.
 from __future__ import annotations
 
 from datetime import datetime, date, timedelta, timezone
+from html import unescape
 from pathlib import Path
 from urllib.parse import urlencode, quote, unquote
 from urllib.request import Request, urlopen
@@ -99,7 +100,9 @@ def classify(title, default='축제'):
 VISUAL={'축제':('🎉','sea'),'공연':('🎵','music'),'전시':('🖼️','music'),'팝업':('🛍️','christmas'),'체험':('🎿','winter'),'야경':('🌙','christmas')}
 
 def build(raw, category='축제', provider='한국관광공사', code=''):
-    title=re.sub(r'<[^>]*>','',str(raw.get('title') or '')).strip()
+    # 뮤지컬 〈데스노트〉 또는 <데스노트> 같은 제목을 HTML 태그로 오인하지 않는다.
+    title=unescape(str(raw.get('title') or '')).strip()
+    title=re.sub(r'</?(?:b|strong|em|i|span|font|br)(?:\\s[^>]*)?>','',title,flags=re.I).strip()
     addr=str(raw.get('address') or '').strip()
     province, city = location_of(addr, raw.get('area_hint') or raw.get('province') or raw.get('city') or '')
     if not province and raw.get('province_wide'):
