@@ -40,6 +40,7 @@ jobs:
           if [ -n "$KTO_SERVICE_KEY" ] || [ -n "$KOPIS_SERVICE_KEY" ]; then
             python scripts/update_events.py
             python scripts/enrich_posters.py
+            python scripts/enrich_official_sites.py
           else
             echo "API secrets not set: publishing existing manual data."
           fi
