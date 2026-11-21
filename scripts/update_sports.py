@@ -108,6 +108,10 @@ def parse_gangwon_tokens(tokens, today=None):
         if header:
             year, month = int(header[1]), int(header[2])
             continue
+        # 공식 페이지가 연도와 월을 별도 태그로 나눠 보내는 경우도 지원
+        if re.fullmatch(r"20\d{2}", token) and i + 1 < len(tokens) and re.fullmatch(r"0?[1-9]|1[0-2]", tokens[i + 1]):
+            year, month = int(token), int(tokens[i + 1])
+            continue
         hit = DATE_LINE.match(token)
         if not hit:
             continue
