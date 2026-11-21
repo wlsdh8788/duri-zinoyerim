@@ -8,7 +8,7 @@ const search=document.getElementById('concertSearch');
 const region=document.getElementById('concertRegion');
 const count=document.getElementById('concertCount');
 const more=document.getElementById('concertMore');
-let rows=[],meta={},loaded=false,show=12,mode='all';
+let rows=[],meta={},loaded=false,show=12,mode='all',loadError='';
 const e=s=>String(s??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#39;');
 const day=()=>new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Seoul',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
 const nice=d=>String(d||'').replace(/^(\d{4})-(\d{2})-(\d{2})$/,(_,y,m,x)=>y+'. '+Number(m)+'. '+Number(x)+'.');
@@ -56,7 +56,7 @@ function render(){
  cards.innerHTML=items.length?items.slice(0,show).map(x=>card(x,current)).join(''):
   '<div class="concert-empty">조건에 맞는 유명 가수 콘서트가 아직 없어.<br>검색·지역을 변경하거나 다음 데이터 갱신 후 확인해 줘.</div>';
  more.hidden=items.length<=show;
- state.textContent='기준 '+(meta.updated||'미확인')+' · '+(meta.auto_update?'KOPIS 대중음악 자동 수집':'자동 수집 대기')+' · '+rows.length+'건';
+ state.textContent=loadError||('기준 '+(meta.updated||'미확인')+' · '+(meta.auto_update?'KOPIS 대중음악 자동 수집':'자동 수집 대기')+' · '+rows.length+'건');
 }
 async function load(){
  if(loaded)return;loaded=true;
@@ -68,7 +68,7 @@ async function load(){
   rows=meta.performances.filter(x=>x&&x.id&&x.title&&/^\d{4}-\d{2}-\d{2}$/.test(x.start||'')
    &&/^\d{4}-\d{2}-\d{2}$/.test(x.end||'')&&x.end>=x.start&&Array.isArray(x.artists)&&x.artists.length>0);
  }catch(err){
-  loaded=false;state.textContent='콘서트 목록을 불러오지 못했어. GitHub Actions 배포 상태를 확인해 줘.';
+  loaded=false;loadError='콘서트 목록을 불러오지 못했어. GitHub Actions 배포 상태를 확인해 줘.';
  }
  render();
 }
