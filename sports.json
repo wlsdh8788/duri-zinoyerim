@@ -1,0 +1,80 @@
+{
+  "version": 1,
+  "updated": "2026-11-21",
+  "auto_update": false,
+  "message": "공식 발표를 확인한 경기만 표시. 자동 일정 연동은 아직 연결 전이며 일정 변경 가능.",
+  "matches": [
+    {
+      "id": "gangwon-20261121-daejeon",
+      "teamGroup": "gangwon",
+      "competition": "K리그1",
+      "date": "2026-11-21",
+      "time": "16:30",
+      "home": "강원FC",
+      "away": "대전하나시티즌",
+      "venue": "",
+      "sourceName": "K리그 공식 경기일정",
+      "sourceUrl": "https://portal.kleague.com/view/schedule/list.do"
+    },
+    {
+      "id": "gangwon-20261126-kitchee",
+      "teamGroup": "gangwon",
+      "competition": "AFC 클럽대회",
+      "date": "2026-11-26",
+      "time": "19:00",
+      "home": "강원FC",
+      "away": "킷치 SC",
+      "venue": "",
+      "sourceName": "K리그 공식 경기일정",
+      "sourceUrl": "https://portal.kleague.com/view/schedule/list.do"
+    },
+    {
+      "id": "gangwon-20261129-incheon",
+      "teamGroup": "gangwon",
+      "competition": "K리그1",
+      "date": "2026-11-29",
+      "time": "16:30",
+      "home": "인천 유나이티드",
+      "away": "강원FC",
+      "venue": "",
+      "sourceName": "K리그 공식 경기일정",
+      "sourceUrl": "https://portal.kleague.com/view/schedule/list.do"
+    },
+    {
+      "id": "gangwon-20261203-phnompenh",
+      "teamGroup": "gangwon",
+      "competition": "AFC 클럽대회",
+      "date": "2026-12-03",
+      "time": "21:15",
+      "home": "프놈펜 크라운",
+      "away": "강원FC",
+      "venue": "",
+      "sourceName": "K리그 공식 경기일정",
+      "sourceUrl": "https://portal.kleague.com/view/schedule/list.do"
+    },
+    {
+      "id": "korea-20261113-saudi",
+      "teamGroup": "national",
+      "competition": "남자 A매치 친선경기",
+      "date": "2026-11-13",
+      "time": "23:30",
+      "home": "대한민국",
+      "away": "사우디아라비아",
+      "venue": "카타르 도하",
+      "sourceName": "대한축구협회 공식 일정·공식 파트너 경기 안내",
+      "sourceUrl": "https://img01.kfa.or.kr/live/live.php?act=match_schedule"
+    },
+    {
+      "id": "korea-20261117-qatar",
+      "teamGroup": "national",
+      "competition": "남자 A매치 친선경기",
+      "date": "2026-11-17",
+      "time": "23:00",
+      "home": "대한민국",
+      "away": "카타르",
+      "venue": "카타르 도하",
+      "sourceName": "대한축구협회 공식 일정·공식 파트너 경기 안내",
+      "sourceUrl": "https://img01.kfa.or.kr/live/live.php?act=match_schedule"
+    }
+  ]
+}
