@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "updated": null,
+  "auto_update": false,
+  "selection_note": "KOPIS 상세 API에서 장르·대표 출연진이 확인된 지정 작품만 표시. 데이터 갱신 작업 실행 전.",
+  "stats": {
+    "selected": 0
+  },
+  "performances": []
+}
