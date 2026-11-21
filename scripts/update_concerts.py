@@ -52,6 +52,9 @@ def matches_name(text, artist):
         return False
     if re.fullmatch(r"[가-힣]{2,3}",name):
         return bool(re.search(r"(?<![가-힣])"+re.escape(name)+r"(?=$|[^가-힣]|콘서트|공연|투어|전국투어|라이브|월드투어|의|와|과)",source))
+    # 짧은 영문 그룹 이름은 다른 영단어의 일부로 등장해도 일치시키지 않는다.
+    if re.fullmatch(r"[A-Za-z0-9]{3,5}",name):
+        return bool(re.search(r"(?<![A-Za-z])"+re.escape(name)+r"(?![A-Za-z])",source,re.I))
     key = clean(name)
     return len(key)>=3 and key in clean(source)
 
