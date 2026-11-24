@@ -1,18 +1,18 @@
 {
   "version": 1,
-  "updated": "2026-11-24 08:24 KST",
+  "updated": "2026-11-25 08:17 KST",
   "auto_update": true,
   "selection_note": "유명가수는 사이트 편집 목록 기준. KOPIS 대중음악 장르·공연명 또는 출연진 확인. 예매·출연 변경은 공식 출처 재확인.",
   "stats": {
-    "candidates": 45,
-    "checked": 45,
-    "selected": 47,
+    "candidates": 51,
+    "checked": 51,
+    "selected": 50,
     "reused": 0,
-    "excluded": 0,
-    "failures": 45,
+    "excluded": 1,
+    "failures": 0,
     "limited": false,
-    "genre_listing": "error_URLError",
-    "pages": 0,
+    "genre_listing": "ok",
+    "pages": 17,
     "capped": false
   },
   "performances": [
@@ -33,7 +33,7 @@
       "ticketUrl": "https://ticket.melon.com/performance/index.htm?prodId=213947",
       "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF301808",
       "sourceName": "KOPIS 공연예술통합전산망",
-      "verifiedOn": "2026-11-23",
+      "verifiedOn": "2026-11-25",
       "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
     },
     {
@@ -53,7 +53,7 @@
       "ticketUrl": "",
       "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF305461",
       "sourceName": "KOPIS 공연예술통합전산망",
-      "verifiedOn": "2026-11-23",
+      "verifiedOn": "2026-11-25",
       "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
     },
     {
@@ -73,7 +73,7 @@
       "ticketUrl": "",
       "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF306150",
       "sourceName": "KOPIS 공연예술통합전산망",
-      "verifiedOn": "2026-11-23",
+      "verifiedOn": "2026-11-25",
       "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
     },
     {
@@ -93,7 +93,7 @@
       "ticketUrl": "",
       "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF301499",
       "sourceName": "KOPIS 공연예술통합전산망",
-      "verifiedOn": "2026-11-23",
+      "verifiedOn": "2026-11-25",
       "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
     },
     {
@@ -113,7 +113,7 @@
       "ticketUrl": "https://ticket.melon.com/performance/index.htm?prodId=213944",
       "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF301914",
       "sourceName": "KOPIS 공연예술통합전산망",
-      "verifiedOn": "2026-11-23",
+      "verifiedOn": "2026-11-25",
       "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
     },
     {
@@ -133,7 +133,7 @@
       "ticketUrl": "",
       "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF304581",
       "sourceName": "KOPIS 공연예술통합전산망",
-      "verifiedOn": "2026-11-23",
+      "verifiedOn": "2026-11-25",
       "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
     },
     {
@@ -153,7 +153,7 @@
       "ticketUrl": "",
       "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF298491",
       "sourceName": "KOPIS 공연예술통합전산망",
-      "verifiedOn": "2026-11-23",
+      "verifiedOn": "2026-11-25",
       "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
     },
     {
@@ -173,7 +173,7 @@
       "ticketUrl": "",
       "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF305520",
       "sourceName": "KOPIS 공연예술통합전산망",
-      "verifiedOn": "2026-11-23",
+      "verifiedOn": "2026-11-25",
       "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
     },
     {
@@ -193,7 +193,7 @@
       "ticketUrl": "",
       "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF297746",
       "sourceName": "KOPIS 공연예술통합전산망",
-      "verifiedOn": "2026-11-23",
+      "verifiedOn": "2026-11-25",
       "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
     },
     {
@@ -213,7 +213,7 @@
       "ticketUrl": "",
       "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF306571",
       "sourceName": "KOPIS 공연예술통합전산망",
-      "verifiedOn": "2026-11-23",
+      "verifiedOn": "2026-11-25",
       "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
     },
     {
@@ -233,7 +233,7 @@
       "ticketUrl": "",
       "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF300910",
       "sourceName": "KOPIS 공연예술통합전산망",
-      "verifiedOn": "2026-11-23",
+      "verifiedOn": "2026-11-25",
       "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
     },
     {
@@ -253,7 +253,7 @@
       "ticketUrl": "",
       "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF302170",
       "sourceName": "KOPIS 공연예술통합전산망",
-      "verifiedOn": "2026-11-23",
+      "verifiedOn": "2026-11-25",
       "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
     },
     {
@@ -273,7 +273,7 @@
       "ticketUrl": "",
       "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF304971",
       "sourceName": "KOPIS 공연예술통합전산망",
-      "verifiedOn": "2026-11-23",
+      "verifiedOn": "2026-11-25",
       "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
     },
     {
@@ -293,7 +293,7 @@
       "ticketUrl": "",
       "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF304054",
       "sourceName": "KOPIS 공연예술통합전산망",
-      "verifiedOn": "2026-11-23",
+      "verifiedOn": "2026-11-25",
       "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
     },
     {
@@ -313,7 +313,27 @@
       "ticketUrl": "",
       "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF306275",
       "sourceName": "KOPIS 공연예술통합전산망",
-      "verifiedOn": "2026-11-23",
+      "verifiedOn": "2026-11-25",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF307346",
+      "title": "DSAC 시즌 콘서트, 송년콘서트: 국카스텐 X 더베인",
+      "start": "2026-12-12",
+      "end": "2026-12-12",
+      "province": "대구",
+      "city": "대구 전체",
+      "place": "달서아트센터 (구. 웃는얼굴아트센터) (청룡홀)",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF307346_261124_134332.jpg",
+      "artists": [
+        "국카스텐"
+      ],
+      "castSummary": " ",
+      "genre": "대중음악",
+      "ticketUrl": "",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF307346",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-25",
       "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
     },
     {
@@ -333,7 +353,7 @@
       "ticketUrl": "",
       "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF303557",
       "sourceName": "KOPIS 공연예술통합전산망",
-      "verifiedOn": "2026-11-23",
+      "verifiedOn": "2026-11-25",
       "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
     },
     {
@@ -353,7 +373,7 @@
       "ticketUrl": "",
       "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF298469",
       "sourceName": "KOPIS 공연예술통합전산망",
-      "verifiedOn": "2026-11-23",
+      "verifiedOn": "2026-11-25",
       "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
     },
     {
@@ -373,7 +393,7 @@
       "ticketUrl": "",
       "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF301534",
       "sourceName": "KOPIS 공연예술통합전산망",
-      "verifiedOn": "2026-11-23",
+      "verifiedOn": "2026-11-25",
       "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
     },
     {
@@ -393,7 +413,27 @@
       "ticketUrl": "",
       "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF306544",
       "sourceName": "KOPIS 공연예술통합전산망",
-      "verifiedOn": "2026-11-23",
+      "verifiedOn": "2026-11-25",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF307260",
+      "title": "10CM & 카더가든, Winter Live in 삼척",
+      "start": "2026-12-18",
+      "end": "2026-12-18",
+      "province": "강원",
+      "city": "강원 전체",
+      "place": "삼척문화예술회관 (대공연장)",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF307260_261123_161254.gif",
+      "artists": [
+        "10CM"
+      ],
+      "castSummary": "권정열, 차정원",
+      "genre": "대중음악",
+      "ticketUrl": "",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF307260",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-25",
       "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
     },
     {
@@ -413,7 +453,7 @@
       "ticketUrl": "",
       "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF307107",
       "sourceName": "KOPIS 공연예술통합전산망",
-      "verifiedOn": "2026-11-23",
+      "verifiedOn": "2026-11-25",
       "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
     },
     {
@@ -433,7 +473,7 @@
       "ticketUrl": "",
       "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF303493",
       "sourceName": "KOPIS 공연예술통합전산망",
-      "verifiedOn": "2026-11-23",
+      "verifiedOn": "2026-11-25",
       "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
     },
     {
@@ -453,7 +493,7 @@
       "ticketUrl": "",
       "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF304645",
       "sourceName": "KOPIS 공연예술통합전산망",
-      "verifiedOn": "2026-11-22",
+      "verifiedOn": "2026-11-25",
       "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
     },
     {
@@ -473,7 +513,7 @@
       "ticketUrl": "",
       "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF300887",
       "sourceName": "KOPIS 공연예술통합전산망",
-      "verifiedOn": "2026-11-22",
+      "verifiedOn": "2026-11-25",
       "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
     },
     {
@@ -493,7 +533,7 @@
       "ticketUrl": "",
       "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF302861",
       "sourceName": "KOPIS 공연예술통합전산망",
-      "verifiedOn": "2026-11-22",
+      "verifiedOn": "2026-11-25",
       "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
     },
     {
@@ -513,7 +553,7 @@
       "ticketUrl": "",
       "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF303658",
       "sourceName": "KOPIS 공연예술통합전산망",
-      "verifiedOn": "2026-11-23",
+      "verifiedOn": "2026-11-25",
       "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
     },
     {
@@ -533,7 +573,7 @@
       "ticketUrl": "https://ticket.melon.com/performance/index.htm?prodId=214039",
       "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF303398",
       "sourceName": "KOPIS 공연예술통합전산망",
-      "verifiedOn": "2026-11-22",
+      "verifiedOn": "2026-11-25",
       "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
     },
     {
@@ -553,7 +593,7 @@
       "ticketUrl": "",
       "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF304657",
       "sourceName": "KOPIS 공연예술통합전산망",
-      "verifiedOn": "2026-11-22",
+      "verifiedOn": "2026-11-25",
       "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
     },
     {
@@ -573,7 +613,7 @@
       "ticketUrl": "",
       "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF301562",
       "sourceName": "KOPIS 공연예술통합전산망",
-      "verifiedOn": "2026-11-22",
+      "verifiedOn": "2026-11-25",
       "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
     },
     {
@@ -593,7 +633,7 @@
       "ticketUrl": "",
       "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF300124",
       "sourceName": "KOPIS 공연예술통합전산망",
-      "verifiedOn": "2026-11-22",
+      "verifiedOn": "2026-11-25",
       "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
     },
     {
@@ -613,7 +653,7 @@
       "ticketUrl": "",
       "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF298473",
       "sourceName": "KOPIS 공연예술통합전산망",
-      "verifiedOn": "2026-11-23",
+      "verifiedOn": "2026-11-25",
       "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
     },
     {
@@ -633,7 +673,7 @@
       "ticketUrl": "",
       "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF300915",
       "sourceName": "KOPIS 공연예술통합전산망",
-      "verifiedOn": "2026-11-23",
+      "verifiedOn": "2026-11-25",
       "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
     },
     {
@@ -653,7 +693,7 @@
       "ticketUrl": "",
       "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF304737",
       "sourceName": "KOPIS 공연예술통합전산망",
-      "verifiedOn": "2026-11-23",
+      "verifiedOn": "2026-11-25",
       "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
     },
     {
@@ -673,7 +713,7 @@
       "ticketUrl": "",
       "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF305472",
       "sourceName": "KOPIS 공연예술통합전산망",
-      "verifiedOn": "2026-11-23",
+      "verifiedOn": "2026-11-25",
       "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
     },
     {
@@ -693,7 +733,7 @@
       "ticketUrl": "",
       "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF301701",
       "sourceName": "KOPIS 공연예술통합전산망",
-      "verifiedOn": "2026-11-23",
+      "verifiedOn": "2026-11-25",
       "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
     },
     {
@@ -713,7 +753,7 @@
       "ticketUrl": "https://www.ticketlink.co.kr/product/66555",
       "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF304722",
       "sourceName": "KOPIS 공연예술통합전산망",
-      "verifiedOn": "2026-11-23",
+      "verifiedOn": "2026-11-25",
       "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
     },
     {
@@ -733,7 +773,7 @@
       "ticketUrl": "",
       "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF305815",
       "sourceName": "KOPIS 공연예술통합전산망",
-      "verifiedOn": "2026-11-23",
+      "verifiedOn": "2026-11-25",
       "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
     },
     {
@@ -753,7 +793,7 @@
       "ticketUrl": "",
       "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF305492",
       "sourceName": "KOPIS 공연예술통합전산망",
-      "verifiedOn": "2026-11-23",
+      "verifiedOn": "2026-11-25",
       "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
     },
     {
@@ -773,7 +813,7 @@
       "ticketUrl": "",
       "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF301683",
       "sourceName": "KOPIS 공연예술통합전산망",
-      "verifiedOn": "2026-11-23",
+      "verifiedOn": "2026-11-25",
       "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
     },
     {
@@ -793,7 +833,27 @@
       "ticketUrl": "https://ticket.melon.com/performance/index.htm?prodId=214165",
       "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF306578",
       "sourceName": "KOPIS 공연예술통합전산망",
-      "verifiedOn": "2026-11-23",
+      "verifiedOn": "2026-11-25",
+      "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
+    },
+    {
+      "id": "kopis-PF307350",
+      "title": "EXO-KASE Fancon Tour: SILENT CITY [서울]",
+      "start": "2027-01-09",
+      "end": "2027-01-10",
+      "province": "서울",
+      "city": "서울 전체",
+      "place": "고려대학교 화정체육관 (주경기장)",
+      "posterUrl": "https://www.kopis.or.kr/upload/pfmPoster/PF_PF307350_261124_134941.png",
+      "artists": [
+        "EXO"
+      ],
+      "castSummary": " ",
+      "genre": "대중음악",
+      "ticketUrl": "https://ticket.melon.com/performance/index.htm?prodId=214310",
+      "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF307350",
+      "sourceName": "KOPIS 공연예술통합전산망",
+      "verifiedOn": "2026-11-25",
       "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
     },
     {
@@ -813,7 +873,7 @@
       "ticketUrl": "https://nol.yanolja.com/ticket/products/26015872",
       "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF305664",
       "sourceName": "KOPIS 공연예술통합전산망",
-      "verifiedOn": "2026-11-23",
+      "verifiedOn": "2026-11-25",
       "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
     },
     {
@@ -833,7 +893,7 @@
       "ticketUrl": "",
       "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF305460",
       "sourceName": "KOPIS 공연예술통합전산망",
-      "verifiedOn": "2026-11-23",
+      "verifiedOn": "2026-11-25",
       "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
     },
     {
@@ -853,7 +913,7 @@
       "ticketUrl": "",
       "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF301684",
       "sourceName": "KOPIS 공연예술통합전산망",
-      "verifiedOn": "2026-11-23",
+      "verifiedOn": "2026-11-25",
       "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
     },
     {
@@ -873,7 +933,7 @@
       "ticketUrl": "https://ticket.melon.com/performance/index.htm?prodId=214071",
       "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF305189",
       "sourceName": "KOPIS 공연예술통합전산망",
-      "verifiedOn": "2026-11-23",
+      "verifiedOn": "2026-11-25",
       "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
     },
     {
@@ -893,7 +953,7 @@
       "ticketUrl": "",
       "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF305672",
       "sourceName": "KOPIS 공연예술통합전산망",
-      "verifiedOn": "2026-11-23",
+      "verifiedOn": "2026-11-25",
       "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
     },
     {
@@ -913,7 +973,7 @@
       "ticketUrl": "https://ticket.melon.com/performance/index.htm?prodId=214232",
       "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF306015",
       "sourceName": "KOPIS 공연예술통합전산망",
-      "verifiedOn": "2026-11-23",
+      "verifiedOn": "2026-11-25",
       "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
     },
     {
@@ -933,7 +993,7 @@
       "ticketUrl": "https://ticket.melon.com/performance/index.htm?prodId=213943",
       "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF302528",
       "sourceName": "KOPIS 공연예술통합전산망",
-      "verifiedOn": "2026-11-23",
+      "verifiedOn": "2026-11-25",
       "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
     },
     {
@@ -953,7 +1013,7 @@
       "ticketUrl": "https://ticket.melon.com/performance/index.htm?prodId=214290",
       "sourceUrl": "https://kopis.or.kr/mob/db/pblprfrView.do?mt20Id=PF306754",
       "sourceName": "KOPIS 공연예술통합전산망",
-      "verifiedOn": "2026-11-23",
+      "verifiedOn": "2026-11-25",
       "selection": "KOPIS 대중음악 + 지정 주요 가수·그룹 확인"
     }
   ]
