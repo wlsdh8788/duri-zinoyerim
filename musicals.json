@@ -1,17 +1,17 @@
 {
   "version": 1,
-  "updated": "2026-11-27 08:20 KST",
+  "updated": "2026-11-28 08:18 KST",
   "auto_update": true,
   "selection_note": "KOPIS에서 뮤지컬 장르 확인 + 사전 지정 대형 작품 + 지정 배우 출연 확인. 배우별 회차 출연은 별도 확인 필요.",
   "stats": {
-    "candidates": 46,
-    "checked": 46,
+    "candidates": 44,
+    "checked": 44,
     "reused": 0,
     "selected": 10,
-    "not_selected": 36,
-    "failures": 0,
+    "not_selected": 0,
+    "failures": 44,
     "limited": false,
-    "genre_listing": "ok"
+    "genre_listing": "error_URLError"
   },
   "performances": [
     {
